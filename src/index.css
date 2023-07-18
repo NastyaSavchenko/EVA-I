@@ -1,0 +1,101 @@
+:root {
+  /* color */
+
+  /* font */
+  --regular-font-weight: 400;
+  --medium-font-weight: 500;
+  --semibold-font-weight: 600;
+  --bold-font-weight: 700;
+
+  /* responsiveness */
+  --pre-mobile: 374.98px;
+  --mobile: 375px;
+  --pre-tablet: 767.98px;
+  --tablet: 768px;
+  --pre-desktop: 1439.98px;
+  --desktop: 1440px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+.container {
+  padding: 0 20px 40px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+      padding: 0 32px 48px;
+  }
+
+  @media screen and (min-width: 1440px) {
+      padding: 0 128px 64px;
+  }
+}
+
+.section {
+  padding: 40px 0;
+
+  @media screen and (min-width: 768px) {
+      padding: 48px 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+      padding: 64px 0;
+  }
+}
+
+
+
