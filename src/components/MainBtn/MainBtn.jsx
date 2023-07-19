@@ -1,5 +1,3 @@
 export const MainBtn = (title) => {
-    return <button>
-        {title}
-    </button>
-}
+  return <button type="button">{title}</button>;
+};
