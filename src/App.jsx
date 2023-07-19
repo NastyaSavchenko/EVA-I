@@ -1,14 +1,14 @@
-import { Footer } from "./components/Footer/Footer"
+import { Home } from "./pages/Home/Home";
+import { Examples } from "./pages/Examples/Examples";
+import { Pricing } from "./pages/Pricing/Pricing";
+
+import { Navigate, Route, Router } from "react-router-dom";
 
 function App() {
-
-  return (
-    <>
-      <div>EVA-I</div>
-      <div>111</div>
-      <Footer />
-    </>
-  )
+  return <>
+App
+  
+  </>;
 }
 
-export default App
+export default App;
