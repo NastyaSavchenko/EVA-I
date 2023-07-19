@@ -1,34 +1,81 @@
-import { FooterStyles, InfoContainer } from "./Footer.styled";
+import {
+  AppStores,
+  FooterStyles,
+  InfoContainer,
+  InfolList,
+  LeftSide,
+  LegalList,
+  LogoContainer,
+  Rights,
+  RightsSpan,
+  StoreButtons,
+  StoreImg,
+  StoreTitle,
+} from "./Footer.styled";
+
+import Google_Play from "../../assets/images/Google_Play.svg";
+import App_Store from "../../assets/images/App_Store.svg";
 
 export const Footer = () => {
   return (
-    <FooterStyles>
-      {/* <Logo /> */}
-      <InfoContainer>
-        <ul>
-          <li>Download Now</li>
-          <li>License</li>
-        </ul>
+    <>
+      <FooterStyles>
+        <LeftSide>
+          <LogoContainer>
+            LOGO
+            {/* <Logo /> */}
+          </LogoContainer>
 
-        <ul>
-          <li>About</li>
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>News</li>
-          <li>Help</li>
-          <li>Contact</li>
-        </ul>
-      </InfoContainer>
+          <InfoContainer>
+            <LegalList>
+              <li>
+                <a href="#download">Download Now</a>
+              </li>
+              <li>
+                <a href="#license">License</a>
+              </li>
+            </LegalList>
 
-      <div>
-      <p>Get the App</p>
-      <a href="/apple">App Store</a>
-      <a href="/google">Google Play</a>
-      </div>
+            <InfolList>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#features">Features</a>
+              </li>
+              <li>
+                <a href="#pricing">Pricing</a>
+              </li>
+              <li>
+                <a href="#news">News</a>
+              </li>
+              <li>
+                <a href="#help">Help</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </InfolList>
+          </InfoContainer>
+        </LeftSide>
 
-      <div>
-        <span>© 2023 All rights reserved.</span>
-      </div>
-    </FooterStyles>
-  )
-}
+        <AppStores>
+          <StoreTitle>Get the App</StoreTitle>
+
+          <StoreButtons>
+            <a href="/google" target="_blank">
+              <StoreImg src={Google_Play} alt="Google Play button" />
+            </a>
+            <a href="/apple" target="_blank">
+              <StoreImg src={App_Store} alt="Apple store button" />
+            </a>
+          </StoreButtons>
+        </AppStores>
+      </FooterStyles>
+
+      <Rights>
+        <RightsSpan>© 2023 All rights reserved.</RightsSpan>
+      </Rights>
+    </>
+  );
+};
