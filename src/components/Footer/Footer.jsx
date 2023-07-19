@@ -1,7 +1,20 @@
-import { AppStores, FooterStyles, InfoContainer, InfolList, LeftSide, LegalList, LogoContainer, Rights, RightsSpan, StoreButtons, StoreImg, StoreTitle } from "./Footer.styled";
+import {
+  AppStores,
+  FooterStyles,
+  InfoContainer,
+  InfolList,
+  LeftSide,
+  LegalList,
+  LogoContainer,
+  Rights,
+  RightsSpan,
+  StoreButtons,
+  StoreImg,
+  StoreTitle,
+} from "./Footer.styled";
 
-import Google_Play from './../../images/Google_Play.svg'
-import App_Store from './../../images/App_Store.svg'
+import Google_Play from "../../assets/images/Google_Play.svg";
+import App_Store from "../../assets/images/App_Store.svg";
 
 export const Footer = () => {
   return (
@@ -47,9 +60,7 @@ export const Footer = () => {
         </LeftSide>
 
         <AppStores>
-          <StoreTitle>
-            Get the App
-          </StoreTitle>
+          <StoreTitle>Get the App</StoreTitle>
 
           <StoreButtons>
             <a href="/google" target="_blank">
@@ -66,5 +77,5 @@ export const Footer = () => {
         <RightsSpan>© 2023 All rights reserved.</RightsSpan>
       </Rights>
     </>
-  )
-}
+  );
+};
