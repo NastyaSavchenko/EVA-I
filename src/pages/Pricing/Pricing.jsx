@@ -1,5 +1,5 @@
 export const Pricing = () => {
-    return <div>
+    return <main>
         Pricing
-    </div>
+    </main>
 }

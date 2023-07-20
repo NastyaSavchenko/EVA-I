@@ -1,11 +1,19 @@
-import { NavLinkStyles } from "./MainNav.styled";
+import { NavLinkStyles, NavList, NavItem } from "./MainNav.styled";
 
 export const MainNav = () => {
   return (
     <nav>
-       <NavLinkStyles to="/">Why us</NavLinkStyles>
-       <NavLinkStyles to="examples">How it works</NavLinkStyles>
-       <NavLinkStyles to="pricing">Pricing</NavLinkStyles>
+      <NavList>
+        <NavItem>
+          <NavLinkStyles to="/">Why us</NavLinkStyles>
+        </NavItem>
+        <NavItem>
+          <NavLinkStyles to="examples">How it works</NavLinkStyles>
+        </NavItem>
+        <NavItem>
+          <NavLinkStyles to="pricing">Pricing</NavLinkStyles>
+        </NavItem>
+      </NavList>
     </nav>
   );
 };

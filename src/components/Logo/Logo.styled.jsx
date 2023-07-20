@@ -16,3 +16,7 @@ export const LogoName = styled.span`
   font-weight: 600;
   line-height: 1.25;
 `;
+
+export const LogoBox = styled.div`
+  padding: 8px 0px;
+`;

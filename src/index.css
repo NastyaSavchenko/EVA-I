@@ -2,6 +2,7 @@
   /* color */
   --main-white: #ffffff;
   --main-black: #000000;
+  --main-gray: #d9d9d9;
   --text-grey: #545454;
 
   /* font */
@@ -13,8 +14,8 @@
   --mobile: 375px;
   --pre-tablet: 767.98px;
   --tablet: 768px;
-  --pre-desktop: 1199.98px;
-  --desktop: 1200px;
+  --pre-desktop: 1439.98px;
+  --desktop: 1440px;
 }
 
 html {
