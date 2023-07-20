@@ -1,3 +1,5 @@
-export const MainBtn = (title) => {
-  return <button type="button">{title}</button>;
+import { MainBrtStyles } from "./MainBtn.styled";
+
+export const MainBtn = () => {
+  return <MainBrtStyles type="button">button cta</MainBrtStyles>;
 };
