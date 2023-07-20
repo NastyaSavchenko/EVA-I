@@ -1,3 +1,3 @@
-export const MainBtn = (title) => {
-  return <button type="button">{title}</button>;
+export const MainBtn = () => {
+  return <button type="button">MainBtn</button>;
 };

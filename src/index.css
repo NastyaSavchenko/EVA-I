@@ -1,11 +1,10 @@
 :root {
   /* color */
+  --main-black: #000000;
 
   /* font */
   --regular-font-weight: 400;
-  --medium-font-weight: 500;
   --semibold-font-weight: 600;
-  --bold-font-weight: 700;
 
   /* responsiveness */
   --pre-mobile: 374.98px;
@@ -22,13 +21,16 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--main-font-family);
+  font-family: "Inter", sans-serif;
+  font-size: var(--regular-font-weight);
+  color: var(--main-black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 ul,
@@ -66,36 +68,9 @@ img {
 a {
   outline: none;
   text-decoration: none;
+  color: inherit;
 }
 
 input {
   outline: none;
 }
-
-.container {
-  padding: 0 20px 40px;
-  margin: 0 auto;
-
-  @media screen and (min-width: 768px) {
-      padding: 0 32px 48px;
-  }
-
-  @media screen and (min-width: 1440px) {
-      padding: 0 128px 64px;
-  }
-}
-
-.section {
-  padding: 40px 0;
-
-  @media screen and (min-width: 768px) {
-      padding: 48px 0;
-  }
-
-  @media screen and (min-width: 1440px) {
-      padding: 64px 0;
-  }
-}
-
-
-
