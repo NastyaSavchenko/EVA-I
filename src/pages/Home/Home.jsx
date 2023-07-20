@@ -1,14 +1,15 @@
-
-import { Advantages } from "../../components/Advantages/Advantages.jsx"
-import { Reviews } from "../../components/Reviews/Reviews.jsx"
-import { TryBot } from "../../components/TryBot/TryBot"
-
+import { Advantages } from "../../components/Advantages/Advantages.jsx";
+import { Reviews } from "../../components/Reviews/Reviews.jsx";
+import { TryBot } from "../../components/TryBot/TryBot";
+import { FAQ } from "../../components/FAQ/FAQ.jsx";
 
 export const Home = () => {
-    return <div>
-         Home
-         <Reviews />
-         <Advantages />
-         <TryBot />
-    </div>
-}
+  return (
+    <main>
+      <Advantages />
+      <Reviews />
+      <FAQ />
+      <TryBot />
+    </main>
+  );
+};

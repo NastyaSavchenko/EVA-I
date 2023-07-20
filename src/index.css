@@ -13,8 +13,8 @@
   --mobile: 375px;
   --pre-tablet: 767.98px;
   --tablet: 768px;
-  --pre-desktop: 1439.98px;
-  --desktop: 1440px;
+  --pre-desktop: 1199.98px;
+  --desktop: 1200px;
 }
 
 html {
@@ -62,6 +62,7 @@ button {
   margin: 0;
   padding: 0;
   outline: none;
+  cursor: pointer;
 }
 
 img {
@@ -78,4 +79,18 @@ a {
 
 input {
   outline: none;
+}
+
+main {
+  min-height: calc(100vh - 64px);
+}
+
+section {
+  padding: 100px 80px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.container {
+  padding-right: 109px;
+  padding-left: 109px;
 }
