@@ -1,5 +1,6 @@
 :root {
   /* color */
+  --main-white: #ffffff;
   --main-black: #000000;
   --text-grey: #545454;
 
@@ -24,7 +25,10 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   font-size: var(--regular-font-weight);
+  font-size: 16px;
+  line-height: 1.25;
   color: var(--main-black);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

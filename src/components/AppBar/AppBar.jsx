@@ -1,15 +1,14 @@
 import { Logo } from "../Logo/Logo";
 import { MainNav } from "../MainNav/MainNav";
 import { AuthNav } from "../AuthNav/AuthNav";
-import { MainBtn } from "../MainBtn/MainBtn";
+import { Header } from "./AppBar.styled";
 
 export const AppBar = () => {
   return (
-    <header>
+    <Header>
       <Logo />
       <MainNav />
       <AuthNav />
-      <MainBtn />
-    </header>
+    </Header>
   );
 };
