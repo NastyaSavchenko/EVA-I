@@ -12,6 +12,7 @@ import {
   StoreImg,
   StoreTitle,
 } from "./Footer.styled";
+import {Logo} from '../Logo/Logo.jsx'
 
 import Google_Play from "../../assets/images/Google_Play.svg";
 import App_Store from "../../assets/images/App_Store.svg";
@@ -22,8 +23,7 @@ export const Footer = () => {
       <FooterStyles>
         <LeftSide>
           <LogoContainer>
-            LOGO
-            {/* <Logo /> */}
+            <Logo />
           </LogoContainer>
 
           <InfoContainer>
