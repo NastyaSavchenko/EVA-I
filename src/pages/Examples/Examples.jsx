@@ -1,5 +1,5 @@
 export const Examples = () => {
-    return <div>
+    return <main>
         How it works
-    </div>
+    </main>
 }
