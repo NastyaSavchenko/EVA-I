@@ -20,7 +20,6 @@ export const LeftSide = styled.div`
 export const LogoContainer = styled.div`
   width: 186px;
   height: 96px;
-  border: 1px solid #cdcdcd;
 `
 //INFO_CONTAINER
 export const InfoContainer = styled.div`
