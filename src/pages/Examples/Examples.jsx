@@ -1,5 +1,9 @@
+import { Usage } from "../../components/Usage/Usage";
+import { TryBot } from '../../components/TryBot/TryBot'
+
 export const Examples = () => {
     return <main>
-        How it works
+        <Usage />
+        <TryBot />
     </main>
 }
