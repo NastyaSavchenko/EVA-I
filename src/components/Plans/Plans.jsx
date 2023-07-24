@@ -7,6 +7,7 @@ import {
   PlanName,
   PlanPrice,
   PlanBenefitsList,
+  BtnBox,
 } from "./Plans.styled";
 
 const pracingData = [
@@ -40,7 +41,9 @@ export const Plans = () => {
             <PlanBenefitsList>
               <PlanBenefits benefits={plan} />
             </PlanBenefitsList>
-            <MainBtn />
+            <BtnBox>
+              <MainBtn title={"button"} styles={"pay"} />
+            </BtnBox>
           </PlanItem>
         );
       })}

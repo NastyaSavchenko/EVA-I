@@ -9,6 +9,7 @@ export const PlanItem = styled.li`
   padding: 32px;
   border-radius: 8px;
   border: 1px solid #a6a6a6;
+  width: 406px;
 `;
 
 export const PlanInfo = styled.div`
@@ -26,10 +27,14 @@ export const PlanName = styled.p`
 `;
 
 export const PlanPrice = styled.span`
-font-size: 40px;
-font-weight: 600;
-line-height: 1.5;
-`
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.5;
+`;
 export const PlanBenefitsList = styled.ul`
   margin-bottom: 40px;
-`
+`;
+export const BtnBox = styled.div`
+  display: flex;
+  justify-content: center;
+`;

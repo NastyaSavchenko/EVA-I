@@ -5,7 +5,7 @@ import {
   CardImgContainer,
   CardInfo,
   CardInfoText,
-  CardInfoTitle
+  CardInfoTitle,
 } from "./Benefits.styled";
 
 export const Benefits = () => {
@@ -18,21 +18,18 @@ export const Benefits = () => {
           </CardInfoTitle>
 
           <CardInfoText>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed qu
           </CardInfoText>
 
-          <MainBtn />
+          <MainBtn title={"button cta"} styles={"outline"} />
         </CardInfo>
 
-        <CardImgContainer>
-          img card 1
-        </CardImgContainer>
+        <CardImgContainer>img card 1</CardImgContainer>
       </BenefitCard>
 
       <BenefitCard>
-        <CardImgContainer>
-          img card 2
-        </CardImgContainer>
+        <CardImgContainer>img card 2</CardImgContainer>
 
         <CardInfo>
           <CardInfoTitle>
@@ -40,10 +37,11 @@ export const Benefits = () => {
           </CardInfoTitle>
 
           <CardInfoText>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed qu
           </CardInfoText>
 
-          <MainBtn />
+          <MainBtn title={"button cta"} styles={"outline"} />
         </CardInfo>
       </BenefitCard>
 
@@ -54,16 +52,15 @@ export const Benefits = () => {
           </CardInfoTitle>
 
           <CardInfoText>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed qu
           </CardInfoText>
 
-          <MainBtn />
+          <MainBtn title={"button cta"} styles={"outline"} />
         </CardInfo>
 
-        <CardImgContainer>
-          img card 3
-        </CardImgContainer>
+        <CardImgContainer>img card 3</CardImgContainer>
       </BenefitCard>
     </BenefitsStyles>
-  )
+  );
 };

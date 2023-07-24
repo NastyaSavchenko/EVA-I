@@ -7,7 +7,7 @@ export const TryBot = () => {
       <TryBotTitle>
         Encouragement to press CTA
       </TryBotTitle>
-      <MainBtn />
+      <MainBtn title={'button cta'}/>
     </TryBotStyles>
   )
 };

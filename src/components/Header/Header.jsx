@@ -8,7 +8,7 @@ export const Header = () => {
         Headline Clearly Positioning The Primary USP
       </HeaderTitle>
 
-      <MainBtn />
+      <MainBtn title={'button cta'}/>
     </HeaderStyles>
   )
 };
