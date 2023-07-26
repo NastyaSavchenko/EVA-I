@@ -1,13 +1,16 @@
-import {MainBtn} from '../MainBtn/MainBtn.jsx'
-import { TryBotStyles, TryBotTitle } from './TryBot.styled.jsx'
+import { MainBtn } from "../MainBtn/MainBtn.jsx";
+import { MainBtnBox } from "./TryBot.styled.jsx";
+import { SectionTitle } from "../SectionTitle/SectionTitle.jsx";
 
 export const TryBot = () => {
   return (
-    <TryBotStyles>
-      <TryBotTitle>
-        Encouragement to press CTA
-      </TryBotTitle>
-      <MainBtn />
-    </TryBotStyles>
-  )
+    <section>
+      <div className="container">
+        <SectionTitle title={"Encouragement to press CTA"} />
+        <MainBtnBox>
+        <MainBtn title={"button cta"} />
+        </MainBtnBox>
+      </div>
+    </section>
+  );
 };

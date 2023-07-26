@@ -1,4 +1,5 @@
 import { PlanBenefits } from "../PlanBenefits/PlanBenefits";
+import { SectionTitle } from "../SectionTitle/SectionTitle";
 import { MainBtn } from "../MainBtn/MainBtn";
 import {
   PlansList,
@@ -7,6 +8,9 @@ import {
   PlanName,
   PlanPrice,
   PlanBenefitsList,
+  BtnBox,
+  PricingInfo,
+  Container,
 } from "./Plans.styled";
 
 const pracingData = [
@@ -29,21 +33,31 @@ const pracingData = [
 
 export const Plans = () => {
   return (
-    <PlansList>
-      {pracingData.map((plan) => {
-        return (
-          <PlanItem key={plan.plan}>
-            <PlanInfo>
-              <PlanName>{plan.plan}</PlanName>
-              <PlanPrice>${plan.price}/mo</PlanPrice>
-            </PlanInfo>
-            <PlanBenefitsList>
-              <PlanBenefits benefits={plan} />
-            </PlanBenefitsList>
-            <MainBtn />
-          </PlanItem>
-        );
-      })}
-    </PlansList>
+    <section>
+      <Container>
+        <SectionTitle title={"Pricing & Plans"} />
+        <PricingInfo>
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
+        </PricingInfo>
+        <PlansList>
+          {pracingData.map((plan) => {
+            return (
+              <PlanItem key={plan.plan}>
+                <PlanInfo>
+                  <PlanName>{plan.plan}</PlanName>
+                  <PlanPrice>${plan.price}/mo</PlanPrice>
+                </PlanInfo>
+                <PlanBenefitsList>
+                  <PlanBenefits benefits={plan} />
+                </PlanBenefitsList>
+                <BtnBox>
+                  <MainBtn title={"button"} styles={"pay"} />
+                </BtnBox>
+              </PlanItem>
+            );
+          })}
+        </PlansList>
+      </Container>
+    </section>
   );
 };

@@ -1,35 +1,29 @@
 import styled from 'styled-components';
 
-export const BenefitsStyles = styled.div`
+export const BenefitsStyles = styled.ul`
 display: flex;
 flex-direction: column;
-margin: 100px 190px;
 gap: 120px;
 `
 
-export const BenefitCard = styled.div`
+export const BenefitCard = styled.li`
   display: flex;
   justify-content: space-between;
 `
 
 export const CardInfo = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 406px;
-  justify-content: center;
 `
 
 export const CardInfoTitle = styled.h3`
   font-size: 32px;
-  font-style: normal;
   font-weight: 600;
   line-height: 38px;
-  margin-bottom: 20px;
+  margin-bottom: 1.18;
 `
 
 export const CardInfoText = styled.p`
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 60px;

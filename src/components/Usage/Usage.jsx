@@ -1,100 +1,94 @@
-import { CardIcon, CardImg, CardInfo, CardText, CardTitle, CardTop, UsageCard, UsageCards, UsageStyles, UsageTitle } from "./Usage.styled";
+import {
+  CardIcon,
+  CardImg,
+  CardInfo,
+  CardText,
+  CardTitle,
+  CardTop,
+  UsageCard,
+  UsageCards,
+} from "./Usage.styled";
+import { SectionTitle } from "../SectionTitle/SectionTitle";
 
 export const Usage = () => {
   return (
-    <UsageStyles>
-      <UsageTitle>
-        [H2] Check out how it works
-      </UsageTitle>
-      <UsageCards>
-        <UsageCard>
-          <CardImg>
-            <img src="/" alt="PHOTO/VIDEO 1" />
-          </CardImg>
+    <section>
+      <div className="container">
+        <SectionTitle title={"Check out how it works"} />
+        <UsageCards>
+          <UsageCard>
+            <CardImg>
+              <img src="/" alt="PHOTO/VIDEO 1" />
+            </CardImg>
 
-          <CardInfo>
-            <CardTop>
-              <CardIcon>
-                Icon
-              </CardIcon>
+            <CardInfo>
+              <CardTop>
+                <CardIcon>Icon</CardIcon>
 
-              <CardTitle>
-                Step 1
-              </CardTitle>
-            </CardTop>
-            <CardText>
-              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu
-            </CardText>
+                <CardTitle>Step 1</CardTitle>
+              </CardTop>
+              <CardText>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed qu
+              </CardText>
+            </CardInfo>
+          </UsageCard>
 
-          </CardInfo>
-        </UsageCard>
+          <UsageCard>
+            <CardImg>
+              <img src="/" alt="PHOTO/VIDEO 2" />
+            </CardImg>
 
-        <UsageCard>
-          <CardImg>
-          <img src="/" alt="PHOTO/VIDEO 2" />
-          </CardImg>
+            <CardInfo>
+              <CardTop>
+                <CardIcon>Icon</CardIcon>
 
-          <CardInfo>
-            <CardTop>
-              <CardIcon>
-                Icon
-              </CardIcon>
+                <CardTitle>Step 2</CardTitle>
+              </CardTop>
+              <CardText>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed qu
+              </CardText>
+            </CardInfo>
+          </UsageCard>
 
-              <CardTitle>
-                Step 2
-              </CardTitle>
-            </CardTop>
-            <CardText>
-              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu
-            </CardText>
+          <UsageCard>
+            <CardImg>
+              <img src="/" alt="PHOTO/VIDEO 3" />
+            </CardImg>
 
-          </CardInfo>
-        </UsageCard>
+            <CardInfo>
+              <CardTop>
+                <CardIcon>Icon</CardIcon>
 
-        <UsageCard>
-          <CardImg>
-          <img src="/" alt="PHOTO/VIDEO 3" />
-          </CardImg>
+                <CardTitle>Step 3</CardTitle>
+              </CardTop>
+              <CardText>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed qu
+              </CardText>
+            </CardInfo>
+          </UsageCard>
 
-          <CardInfo>
-            <CardTop>
-              <CardIcon>
-                Icon
-              </CardIcon>
+          <UsageCard>
+            <CardImg>
+              <img src="/" alt="PHOTO/VIDEO 4" />
+            </CardImg>
 
-              <CardTitle>
-                Step 3
-              </CardTitle>
-            </CardTop>
-            <CardText>
-              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu
-            </CardText>
+            <CardInfo>
+              <CardTop>
+                <CardIcon>Icon</CardIcon>
 
-          </CardInfo>
-        </UsageCard>
-
-        <UsageCard>
-          <CardImg>
-          <img src="/" alt="PHOTO/VIDEO 4" />
-          </CardImg>
-
-          <CardInfo>
-            <CardTop>
-              <CardIcon>
-                Icon
-              </CardIcon>
-
-              <CardTitle>
-                Step 4
-              </CardTitle>
-            </CardTop>
-            <CardText>
-              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu
-            </CardText>
-
-          </CardInfo>
-        </UsageCard>
-      </UsageCards>
-    </UsageStyles>
+                <CardTitle>Step 4</CardTitle>
+              </CardTop>
+              <CardText>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed qu
+              </CardText>
+            </CardInfo>
+          </UsageCard>
+        </UsageCards>
+      </div>
+    </section>
   );
 };
