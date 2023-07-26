@@ -37,10 +37,10 @@ export const Footer = () => {
                   <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="#features">Features</a>
+                  <a href="/examples">Features</a>
                 </li>
                 <li>
-                  <a href="#pricing">Pricing</a>
+                  <a href="/pricing">Pricing</a>
                 </li>
                 <li>
                   <a href="#news">News</a>

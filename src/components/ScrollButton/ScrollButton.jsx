@@ -2,7 +2,6 @@ import { Button } from "./ScrollButton.styled.jsx";
 import { IoIosArrowUp } from "react-icons/io";
 
 export const ScrollButton = () => {
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -11,10 +10,8 @@ export const ScrollButton = () => {
   };
 
   return (
-    <Button type="button">
-      <IoIosArrowUp
-        onClick={scrollToTop}
-      />
+    <Button type="button" onClick={scrollToTop}>
+      <IoIosArrowUp />
     </Button>
   );
 };

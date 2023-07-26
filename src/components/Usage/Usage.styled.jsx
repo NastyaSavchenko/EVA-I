@@ -1,31 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const UsageStyles = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 100px 190px;
-  font-style: normal;
-`
-export const UsageTitle = styled.h1`
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 80px; 
-  margin-bottom: 80px;
-`
 export const UsageCards = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 34px;
   row-gap: 64px;
   justify-items: center;
-`
+  margin-top: 80px;
+`;
 export const UsageCard = styled.div`
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-`
+`;
 export const CardImg = styled.div`
   display: flex;
   justify-content: center;
@@ -36,16 +24,16 @@ export const CardImg = styled.div`
   height: 352px;
   padding: 10px;
   border: 1px solid grey;
-`
+`;
 export const CardInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-`
+`;
 export const CardTop = styled.div`
   display: flex;
   gap: 24px;
-`
+`;
 export const CardIcon = styled.div`
   display: flex;
   flex-direction: column;
@@ -59,17 +47,16 @@ export const CardIcon = styled.div`
   gap: 10px;
   border: 1px solid grey;
   border-radius: 50%;
-`
+`;
 export const CardTitle = styled.p`
   display: flex;
   align-items: center;
   font-size: 24px;
   font-weight: 600;
-  line-height: 40px;
-`
+  line-height: 1.66;
+`;
 export const CardText = styled.p`
   width: 515px;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-`
+  line-height: 1.25;
+`;

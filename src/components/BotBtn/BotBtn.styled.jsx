@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const BotBtnStyles = styled.button`
-  position: fixed;
-  top: 680px;
-  right: 80px;
+  position: sticky;
+  bottom: 40px;
+  left: calc(100% - 160px);
 
   width: 80px;
   height: 80px;
   border-radius: 50%;
   border: none;
+  z-index: 1;
 
   background-color: var(--main-gray);
 `;

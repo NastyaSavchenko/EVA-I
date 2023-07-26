@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  margin: 0px 80px;
+`
+
+export const PricingInfo = styled.p`
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 80px;
+  margin-top: 28px;
+`;
+
 export const PlansList = styled.ul`
   display: flex;
   gap: 32px;
@@ -38,3 +50,6 @@ export const BtnBox = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+
+
