@@ -1,95 +1,65 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const FooterStyles = styled.footer`
-display: flex;
-box-sizing: border-box;
-margin: 120px 80px 160px 80px;
-align-items: start;
-justify-content: space-between;
+export const InfoBlock = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 120px 80px;
 `;
 
-export const LeftSide = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* width: 423px; */
-  height: 180px;
-  gap: 24px;
-`
-//LOGO
-export const LogoContainer = styled.div`
-  width: 186px;
-  height: 96px;
-`
 //INFO_CONTAINER
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
   gap: 12px;
+  margin-top: 24px;
 
-  font-family: Inter;
-  font-style: normal;
-
-  font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
+`;
 
-  text-decoration: none;
-  a {
-    color: #000000;
-    margin-right: 24px;
+export const LegalList = styled.ul`
+  display: flex;
 
-    /* &:last-child {
-      margin-right: 0;
-    } */
+  > li {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
   }
-`
+`;
 
-export const LegalList = styled.div`
-  display: flex;
-  flex-direction: row;
-`
-export const InfolList = styled.div`
-  display: flex;
-  align-items: center;
-`
 //APP_STORES
 export const AppStores = styled.div`
   display: flex;
   width: 176px;
   flex-direction: column;
-  align-items: flex-start;
   gap: 16px;
-`
+`;
+
 export const StoreTitle = styled.p`
-  font-family: Inter;
   font-size: 18px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 28px; 
-`
-export const StoreButtons = styled.div`
-  display: flex;
-  width: 176px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-`
+  font-weight: 600;
+  line-height: 1.55;
+`;
+
+export const StoreButtons = styled.li`
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+`;
 
 export const StoreImg = styled.img`
   width: 135px;
   height: 40px;
-`
+`;
+
 //RIGHTS
 export const Rights = styled.div`
-  margin: 0 auto 80px 80px;
-`
+  position: relative;
+  padding: 40px 80px 80px;
+  border-top: 1px solid var(--copyright);
+`;
 export const RightsSpan = styled.span`
-  font-family: Inter;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; 
-  color: #D1D5DB;
-`
+  line-height: 1.4;
+  color: var(--copyright);
+`;

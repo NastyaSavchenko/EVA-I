@@ -1,6 +1,5 @@
 import {
   PersonImg,
-  PersonInfo,
   PersonName,
   PersonPosition,
   ReviewsImgContainer,
@@ -9,43 +8,39 @@ import {
   ReviewsPersonContainer,
   ReviewsStyles,
   ReviewsText,
-  ReviewsTitle
 } from "./Reviews.styled";
+import { SectionTitle } from "../SectionTitle/SectionTitle";
 
 export const Reviews = () => {
   return (
-    <ReviewsStyles>
-      <ReviewsTitle>
-        Real stories from real customers
-      </ReviewsTitle>
+    <section>
+      <div className="container">
+        <SectionTitle title={"Real stories from real customers"} />
+        <ReviewsStyles>
+          <ReviewsInfoContainer>
+            <ReviewsInfo>
+              <ReviewsText>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Eveniet velit et magni, quasi fuga amet corporis itaque quia
+              </ReviewsText>
 
-      <ReviewsInfoContainer>
-        <ReviewsInfo>
-          <ReviewsText>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet velit et magni, quasi fuga amet corporis itaque quia
-          </ReviewsText>
+              <ReviewsPersonContainer>
+                <PersonImg>
+                  <img src="" alt="img" />
+                </PersonImg>
+                <div>
+                  <PersonName>Name</PersonName>
+                  <PersonPosition>Position, Company</PersonPosition>
+                </div>
+              </ReviewsPersonContainer>
+            </ReviewsInfo>
 
-          <ReviewsPersonContainer>
-            <PersonImg>
-
-            </PersonImg>
-
-            <PersonInfo>
-              <PersonName>
-                Name
-              </PersonName>
-
-              <PersonPosition>
-                Position, Company
-              </PersonPosition>
-            </PersonInfo>
-          </ReviewsPersonContainer>
-        </ReviewsInfo>
-
-        <ReviewsImgContainer>
-          <img src="/" alt="image" />
-        </ReviewsImgContainer>
-      </ReviewsInfoContainer>
-    </ReviewsStyles>
+            <ReviewsImgContainer>
+              <img src="/" alt="image" />
+            </ReviewsImgContainer>
+          </ReviewsInfoContainer>
+        </ReviewsStyles>
+      </div>
+    </section>
   );
 };

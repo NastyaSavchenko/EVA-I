@@ -10,57 +10,62 @@ import {
 
 export const Benefits = () => {
   return (
-    <BenefitsStyles>
-      <BenefitCard>
-        <CardInfo>
-          <CardInfoTitle>
-            [H3] Core benefit positioned as a value prop
-          </CardInfoTitle>
+    <section>
+      <div className="container">
+        <h2 className="hidden-title">Benefits</h2>
+        <BenefitsStyles>
+          <BenefitCard>
+            <CardInfo>
+              <CardInfoTitle>
+                [H3] Core benefit positioned as a value prop
+              </CardInfoTitle>
 
-          <CardInfoText>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit, sed qu
-          </CardInfoText>
+              <CardInfoText>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed qu
+              </CardInfoText>
 
-          <MainBtn title={"button cta"} styles={"outline"} />
-        </CardInfo>
+              <MainBtn title={"button cta"} styles={"outline"} />
+            </CardInfo>
 
-        <CardImgContainer>img card 1</CardImgContainer>
-      </BenefitCard>
+            <CardImgContainer>img card 1</CardImgContainer>
+          </BenefitCard>
 
-      <BenefitCard>
-        <CardImgContainer>img card 2</CardImgContainer>
+          <BenefitCard>
+            <CardImgContainer>img card 2</CardImgContainer>
 
-        <CardInfo>
-          <CardInfoTitle>
-            [H3] Core benefit positioned as a value prop
-          </CardInfoTitle>
+            <CardInfo>
+              <CardInfoTitle>
+                [H3] Core benefit positioned as a value prop
+              </CardInfoTitle>
 
-          <CardInfoText>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit, sed qu
-          </CardInfoText>
+              <CardInfoText>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed qu
+              </CardInfoText>
 
-          <MainBtn title={"button cta"} styles={"outline"} />
-        </CardInfo>
-      </BenefitCard>
+              <MainBtn title={"button cta"} styles={"outline"} />
+            </CardInfo>
+          </BenefitCard>
 
-      <BenefitCard>
-        <CardInfo>
-          <CardInfoTitle>
-            [H3] Core benefit positioned as a value prop
-          </CardInfoTitle>
+          <BenefitCard>
+            <CardInfo>
+              <CardInfoTitle>
+                [H3] Core benefit positioned as a value prop
+              </CardInfoTitle>
 
-          <CardInfoText>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit, sed qu
-          </CardInfoText>
+              <CardInfoText>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed qu
+              </CardInfoText>
 
-          <MainBtn title={"button cta"} styles={"outline"} />
-        </CardInfo>
+              <MainBtn title={"button cta"} styles={"outline"} />
+            </CardInfo>
 
-        <CardImgContainer>img card 3</CardImgContainer>
-      </BenefitCard>
-    </BenefitsStyles>
+            <CardImgContainer>img card 3</CardImgContainer>
+          </BenefitCard>
+        </BenefitsStyles>
+      </div>
+    </section>
   );
 };

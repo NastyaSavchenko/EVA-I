@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainBrtStyles = styled.button`
-  border-radius: 8px;
+  border-radius: 32px;
   text-transform: uppercase;
   text-align: center;
   font-size: 20px;

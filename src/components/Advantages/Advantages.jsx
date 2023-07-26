@@ -1,56 +1,65 @@
 import {
   AdvantagesStyles,
   AdvantagesContainer,
-  AdvantagesTitle,
   AdvantagesCard,
   CardImg,
   ImgContainer,
   CardTitle,
-  CardText
+  CardText,
 } from "./Advantages.styled";
+import { SectionTitle } from "../SectionTitle/SectionTitle";
 
 export const Advantages = () => {
   return (
-    <AdvantagesStyles>
-      <AdvantagesTitle>Advantages</AdvantagesTitle>
+    <section>
+      <div className="container">
+        <AdvantagesStyles>
+          <SectionTitle title={'Advantages'}/>
+          <AdvantagesContainer>
+            <AdvantagesCard>
+              <ImgContainer>
+                <CardImg src="/" alt="icon-1" />
+              </ImgContainer>
 
-      <AdvantagesContainer>
-        <AdvantagesCard>
-          <ImgContainer>
-            <CardImg src="/" alt="icon-1" />
-          </ImgContainer>
+              <CardTitle>Short core benefit 1</CardTitle>
 
-          <CardTitle>Short core benefit 1</CardTitle>
+              <CardText>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                possimus facilis blanditiis distinctio porro obcaecati magnam,
+                et omnis fugit?.
+              </CardText>
+            </AdvantagesCard>
 
-          <CardText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia possimus facilis blanditiis distinctio porro obcaecati magnam, et omnis fugit?.
-          </CardText>
-        </AdvantagesCard>
+            <AdvantagesCard>
+              <ImgContainer>
+                <CardImg src="/" alt="icon-2" />
+              </ImgContainer>
 
-        <AdvantagesCard>
-          <ImgContainer>
-            <CardImg src="/" alt="icon-2" />
-          </ImgContainer>
+              <CardTitle>Short core benefit 2</CardTitle>
 
-          <CardTitle>Short core benefit 2</CardTitle>
+              <CardText>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                possimus facilis blanditiis distinctio porro obcaecati magnam,
+                et omnis fugit?.
+              </CardText>
+            </AdvantagesCard>
 
-          <CardText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia possimus facilis blanditiis distinctio porro obcaecati magnam, et omnis fugit?.
-          </CardText>
-        </AdvantagesCard>
+            <AdvantagesCard>
+              <ImgContainer>
+                <CardImg src="/" alt="icon-3" />
+              </ImgContainer>
 
-        <AdvantagesCard>
-          <ImgContainer>
-            <CardImg src="/" alt="icon-3" />
-          </ImgContainer>
+              <CardTitle>Short core benefit 3</CardTitle>
 
-          <CardTitle>Short core benefit 3</CardTitle>
-
-          <CardText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia possimus facilis blanditiis distinctio porro obcaecati magnam, et omnis fugit?.
-          </CardText>
-        </AdvantagesCard>
-      </AdvantagesContainer>
-    </AdvantagesStyles>
+              <CardText>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                possimus facilis blanditiis distinctio porro obcaecati magnam,
+                et omnis fugit?.
+              </CardText>
+            </AdvantagesCard>
+          </AdvantagesContainer>
+        </AdvantagesStyles>
+      </div>
+    </section>
   );
 };
