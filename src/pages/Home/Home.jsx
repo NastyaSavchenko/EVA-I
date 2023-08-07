@@ -7,6 +7,7 @@ import { Benefits } from "../../components/Benefits/Benefits.jsx";
 import { Hero } from "../../components/Hero/Hero.jsx";
 
 export const Home = () => {
+
   return (
     <main>
       <Hero />
