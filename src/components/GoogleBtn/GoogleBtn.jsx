@@ -1,11 +1,11 @@
-import { GoogleBtnStyles } from "./GoogleBtn.styled";
+import { GoogleBtnStyles, GoogleImg } from "./GoogleBtn.styled";
 import Google from "../../assets/images/devicon_google.svg";
 
-export const GoogleBtn = ({ title, styles }) => {
+export const GoogleBtn = () => {
   return (
-    <GoogleBtnStyles type="button" $btntype={styles}>
-      <img src={Google} alt="Google logo letter" />
-      {title}
+    <GoogleBtnStyles type="button">
+      <GoogleImg src={Google} alt="Google logo letter" />
+      Continue with Google
     </GoogleBtnStyles>
   );
 };

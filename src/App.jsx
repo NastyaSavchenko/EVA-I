@@ -5,8 +5,8 @@ import { Examples } from "./pages/Examples/Examples";
 import { Pricing } from "./pages/Pricing/Pricing";
 import { Layout } from "./components/Layout/Layout";
 import { Error } from "./pages/Error/Error";
-import { Authentication } from "./pages/Authentication/Authentication";
-import { Registration } from "./components/Registration/Registration";
+import { Login } from "./pages/Authentication/Login";
+import { Registr } from "./pages/Authentication/Registr";
 
 function App() {
   return (
@@ -18,8 +18,8 @@ function App() {
           <Route path="pricing" element={<Pricing />} />
           <Route path="*" element={<Error />} />
         </Route>
-        <Route path="auth" element={<Authentication />} />
-        <Route path="registration" element={<Registration />} />
+        <Route path="login" element={<Login />} />
+        <Route path="registration" element={<Registr />} />
       </Routes>
     </>
   );
