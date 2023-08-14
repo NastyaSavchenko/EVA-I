@@ -9,13 +9,12 @@ import { Hero } from "../../components/Hero/Hero.jsx";
 export const Home = () => {
   return (
     <main>
-        <Hero />
-        <Advantages />
-        <Benefits />
-        <Reviews />
-        <FAQ />
-        <TryBot />
-        <BotBtn />
+      <Hero />
+      <Advantages />
+      <Benefits />
+      <Reviews />
+      <FAQ />
+      <TryBot />
     </main>
   );
 };
