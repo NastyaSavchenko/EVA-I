@@ -8,6 +8,9 @@ import { GoogleBtn } from "../GoogleBtn/GoogleBtn";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { MdOutlineVisibility } from "react-icons/md";
 
+import { useDispatch } from "react-redux";
+import { register } from "../../redux/auth/operations";
+
 import {
   Link,
   LinkText,
@@ -25,15 +28,16 @@ import {
 
 export const Registration = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [user, setUser] = useState("");
+  const dispatch = useDispatch();
 
   const handlePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
-  const handleSubmit = (values) => {
-    setUser(values);
+  const handleSubmit = (values, { resetForm }) => {
     console.log(values);
+    dispatch(register({ name: values.email, ...values }));
+    resetForm();
   };
 
   return (
@@ -61,6 +65,8 @@ export const Registration = () => {
 
           if (!values.password) {
             errors.password = "Password is required";
+          } else if (values.password.length < 6) {
+            errors.password = "Password must be at least 6 characters long";
           }
 
           return errors;

@@ -4,8 +4,10 @@ import { Logo } from "../../components/Logo/Logo";
 export const Registr = () => {
   return (
     <main>
-      <Logo />
-      <Registration />
+      <div className="authContainer">
+        <Logo />
+        <Registration />
+      </div>
     </main>
   );
 };

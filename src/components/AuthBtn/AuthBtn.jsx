@@ -2,7 +2,7 @@ import { AuthBtnStyles } from "./AuthBtn.styled";
 
 export const AuthBtn = ({ title, styles }) => {
   return (
-    <AuthBtnStyles type="button" $btntype={styles}>
+    <AuthBtnStyles type="submit" $btntype={styles}>
       {title}
     </AuthBtnStyles>
   );
