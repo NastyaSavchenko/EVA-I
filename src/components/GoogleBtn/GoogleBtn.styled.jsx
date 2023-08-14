@@ -18,3 +18,4 @@ export const GoogleImg = styled.img`
   width: 22px;
   height: 22px;
 `
+

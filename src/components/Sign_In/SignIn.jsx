@@ -53,8 +53,8 @@ export const SignIn = () => {
           <StyledParagraph>or</StyledParagraph>
           <StyledSpan />
         </SpanDiv>
-
         <GoogleBtn/>
+
       </SignInForm>
 
     </SignInStyles>

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+
 import { NavLink } from 'react-router-dom';
+
 
 export const SignInStyles = styled.div`
   display: flex;
@@ -21,6 +23,7 @@ export const SubtitleSpan = styled.span`
   font-weight: var(--regular-font-weight);
   line-height: 1.25;
 `;
+
 
 export const SubtitleLink = styled(NavLink)`
   text-align: center;

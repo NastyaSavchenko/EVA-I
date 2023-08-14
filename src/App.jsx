@@ -5,8 +5,10 @@ import { Examples } from "./pages/Examples/Examples";
 import { Pricing } from "./pages/Pricing/Pricing";
 import { Layout } from "./components/Layout/Layout";
 import { Error } from "./pages/Error/Error";
+
 import { Login } from "./pages/Authentication/Login";
 import { Registr } from "./pages/Authentication/Registr";
+
 
 function App() {
   return (
