@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-export const LoginLink = styled.button`
+
+export const LoginLink = styled(NavLink)`
   padding: 4px 8px;
   margin-right: 32px;
 

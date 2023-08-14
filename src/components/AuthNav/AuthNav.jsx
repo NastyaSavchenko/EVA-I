@@ -4,7 +4,7 @@ import { LoginLink } from "./AuthNav.styled";
 export const AuthNav = () => {
   return (
     <div>
-      <LoginLink type="button">Login</LoginLink>
+      <LoginLink to="login">Login</LoginLink>
       <MainBtn title={'button cta'}/>
     </div>
   );

@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { AppBar } from "../AppBar/AppBar";
 import { Footer } from "../Footer/Footer";
 import { Loader } from "../Loader/Loader";
+import { BotBtn } from "../BotBtn/BotBtn";
 
 export const Layout = () => {
   return (
@@ -12,6 +13,7 @@ export const Layout = () => {
         <Outlet />
       </Suspense>
       <Footer />
+      <BotBtn />
     </>
   );
 };

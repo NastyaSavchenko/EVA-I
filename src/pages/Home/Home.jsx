@@ -16,7 +16,6 @@ export const Home = () => {
       <Reviews />
       <FAQ />
       <TryBot />
-      <BotBtn />
     </main>
   );
 };

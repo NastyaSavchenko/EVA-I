@@ -22,7 +22,7 @@ export const SignIn = () => {
       <Title>Sign in</Title>
       <SubtitleSpan>
         Don’t have an account?
-        <SubtitleLink href="/create"> Create an account</SubtitleLink>
+        <SubtitleLink to="/registration"> Create an account</SubtitleLink>
       </SubtitleSpan>
 
       <SignInForm action="" method="POST">
@@ -53,8 +53,8 @@ export const SignIn = () => {
           <StyledParagraph>or</StyledParagraph>
           <StyledSpan />
         </SpanDiv>
+        <GoogleBtn/>
 
-        <GoogleBtn styles={'outline'} title={'Sign in with Google'}/>
       </SignInForm>
 
     </SignInStyles>

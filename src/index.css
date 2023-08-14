@@ -5,7 +5,7 @@
   --main-gray: #d9d9d9;
   --text-grey: #545454;
   --light-grey: #e5e5e5;
-  --copyright: #D1D5DB;
+  --copyright: #d1d5db;
 
   /* font */
   --regular-font-weight: 400;
@@ -98,6 +98,13 @@ section {
 .container {
   margin-left: 189px;
   margin-right: 189px;
+}
+
+.authContainer {
+ padding: 32px 80px 232px;
+ display: flex;
+ flex-direction: column;
+ gap: 40px;
 }
 
 .hidden-title {
