@@ -3,7 +3,7 @@ import { GoogleBtnStyles, GoogleImg } from "./GoogleBtn.styled";
 import Google from "../../assets/images/devicon_google.svg";
 import { googleAuth } from "../../services/googleAuth";
 
-export const GoogleBtn = () => {
+export const GoogleBtn = ({title}) => {
   const onGoogleBtnClick = async () => {
    
     try {
@@ -17,7 +17,7 @@ export const GoogleBtn = () => {
   return (
     <GoogleBtnStyles type="button" onClick={onGoogleBtnClick}>
       <GoogleImg src={Google} alt="Google logo letter" />
-      Continue with Google
+      {title}
     </GoogleBtnStyles>
   );
 };
