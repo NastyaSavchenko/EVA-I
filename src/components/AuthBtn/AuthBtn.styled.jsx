@@ -5,7 +5,6 @@ export const AuthBtnStyles = styled.button`
   justify-content: center;
   align-items: center;
   gap: 16px;
-  width: 624px;
   padding: 16px 32px;
   border-radius: 32px;
   text-align: center;

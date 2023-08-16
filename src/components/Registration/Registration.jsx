@@ -77,7 +77,7 @@ export const Registration = () => {
           <FormStyles>
             <Email>
               <Label htmlFor="email">Email</Label>
-              <FieldEmail type="email" id="email" name="email" />
+              <FieldEmail type="email" id="email" name="email" autoComplete="username" />
               {errors.email && touched.email && <Error>{errors.email}</Error>}
             </Email>
 
@@ -88,6 +88,7 @@ export const Registration = () => {
                   type={showPassword ? "text" : "password"}
                   id="password"
                   name="password"
+                  autoComplete="current-password"
                 />
                 <VisibilityBtn type="button" onClick={handlePasswordVisibility}>
                   {showPassword ? (
@@ -126,7 +127,7 @@ export const Registration = () => {
             >
               or
             </Divider>
-            <GoogleBtn />
+            <GoogleBtn title={"Continue with Google"} />
           </FormStyles>
         )}
       </Formik>

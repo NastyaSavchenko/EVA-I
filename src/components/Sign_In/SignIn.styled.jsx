@@ -1,89 +1,87 @@
 import styled from 'styled-components';
-
 import { NavLink } from 'react-router-dom';
+import { Form, Field } from "formik";
 
-
-export const SignInStyles = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-`;
-
-export const Title = styled.h1`
+export const LinkText = styled.p`
+  margin-top: 8px;
+  margin-bottom: 40px;
   text-align: center;
-  font-size: 40px;
-  font-weight: var(--semibold-font-weight);
-  line-height: 2;
-  color: var(--main-black);
-`;
-
-export const SubtitleSpan = styled.span`
-  text-align: center;
-  font-weight: var(--regular-font-weight);
+  font-size: 16px;
   line-height: 1.25;
 `;
 
-
-export const SubtitleLink = styled(NavLink)`
-  text-align: center;
+export const Link = styled(NavLink)`
   font-weight: var(--semibold-font-weight);
-  line-height: 2;
 `;
 
-export const SignInForm = styled.form`
+export const FormStyles = styled(Form)`
+  max-width: 624px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 0 auto;
 `;
 
-export const InpWrapper = styled.div`
+export const Email = styled.div`
   display: flex;
   flex-direction: column;
-  width: 624px;
-  gap: 0;
-`;
-
-export const FormLabel = styled.label`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 20px;
-  line-height: 1.1;
-  margin-bottom: 8px;
-`;
-
-export const FormInput = styled.input`
-  border: transparent;
-  border-bottom: 1px solid var(--light-grey);
-  padding: 12px 8px;
   margin-bottom: 16px;
 `;
 
-export const ForgotLink = styled(SubtitleLink)`
+export const Label = styled.label`
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 1.1;
+`;
+
+export const FieldEmail = styled(Field)`
+  padding: 12px 8px;
+  font-size: 24px;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--light-grey);
+`;
+
+export const Password = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+`;
+
+export const PasswordWrapper = styled.div`
+  display: flex;
+`;
+
+export const FieldPass = styled(Field)`
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 8px;
+  font-size: 24px;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--light-grey);
+`;
+
+export const VisibilityBtn = styled.button`
+  cursor: pointer;
+  padding: 0 12px 8px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid var(--light-grey);
+`;
+
+export const Error = styled.div`
+  padding-top: 8px;
+  color: red;
+  font-size: 12px;
+`;
+
+export const ForgotLink = styled.a`
   display: flex;
   font-weight: var(--regular-font-weight);
   justify-content: flex-start;
   line-height: 1.25;
   margin-bottom: 40px;
-`;
-
-export const SpanDiv = styled.div`
-  display: flex;
-`;
-
-export const StyledSpan = styled.span`
-  display: inline-block;
-  width: 296px;
-  height: 1px;
-  border-top: 1px solid var(--light-grey);
-  margin: 40px 0;
-`;
-
-export const StyledParagraph = styled.p`
-  display: flex;
-  position: relative;
-  top: 30px;
-  justify-content: center;
-  margin: 0 8px;
 `;
