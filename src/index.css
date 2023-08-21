@@ -6,6 +6,18 @@
   --text-grey: #545454;
   --light-grey: #e5e5e5;
   --copyright: #d1d5db;
+ 
+  --primary-pink: #ed3984;
+  --primary-purple: #7552c8;
+  --primary-gradient: linear-gradient(90deg, #ed3984, #7552c8);
+  --dark: #07061f;
+  --white: #fff;
+  --light-grey: #f2f2f2 ;
+  --grey: #5b5b5b;
+  --light-pink: #fdE8f0;
+  --light-purple: #efdaf3;
+  --light-gradient: linear-gradient(90deg, #fdE8f0, #efdaf3);
+
 
   /* font */
   --regular-font-weight: 400;
