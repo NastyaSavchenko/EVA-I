@@ -14,7 +14,7 @@ export const LoginLink = styled(NavLink)`
 
   transition: color var(--anim);
 
-  &:hover {
+  &:hover, &:focus {
     color: var(--primary-pink);
   }
 `;

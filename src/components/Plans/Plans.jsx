@@ -15,16 +15,19 @@ import {
 
 const pracingData = [
   {
+    id: 1,
     plan: "Starter",
     price: 19,
     benefits: ["value", "value", "value", "value", "value", "value"],
   },
   {
+    id: 2,
     plan: "Pro",
     price: 79,
     benefits: ["value", "value", "value", "value", "value"],
   },
   {
+    id: 3,
     plan: "Premium",
     price: 199,
     benefits: ["value", "value", "value", "value", "value"],
@@ -42,7 +45,7 @@ export const Plans = () => {
         <PlansList>
           {pracingData.map((plan) => {
             return (
-              <PlanItem key={plan.plan}>
+              <PlanItem key={plan.id} tabIndex={0}>
                 <PlanInfo>
                   <PlanName>{plan.plan}</PlanName>
                   <PlanPrice>${plan.price}/mo</PlanPrice>

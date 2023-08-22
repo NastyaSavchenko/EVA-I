@@ -78,10 +78,6 @@ const QuestionWrapp = {
     "&:hover": {
       boxShadow: " 0px 0px 15px 2px var(--primary-purple)",
     },
-
-    "&:focus": {
-      boxShadow: " 0px 0px 15px 2px var(--primary-purple)",
-    },
   },
 
   "&:before": {
@@ -135,9 +131,10 @@ export const FAQ = () => {
         <QuestionsList>
           {accordionData.map((accordion) => {
             return (
-              <QuestionsItem key={accordion.id}>
+              <QuestionsItem key={accordion.id} tabIndex={0}>
                 <Accordion sx={QuestionWrapp}>
                   <AccordionSummary
+                    
                     expandIcon={<CustomExpandIcon />}
                     aria-controls={accordion.ariaControls}
                     id={accordion.id}
