@@ -62,6 +62,12 @@ code {
     monospace;
 }
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 ul,
 ol,
 li {
