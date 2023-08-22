@@ -8,7 +8,7 @@ export const Logo = () => {
       <a href="/">
         <LogoWrapp>
           <LogoImg src={logo} alt="EVA-I logo" />
-          <LogoName>Name</LogoName>
+          <LogoName>Eva-I</LogoName>
         </LogoWrapp>
       </a>
     </LogoBox>

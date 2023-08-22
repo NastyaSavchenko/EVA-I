@@ -77,7 +77,13 @@ export const Registration = () => {
           <FormStyles>
             <Email>
               <Label htmlFor="email">Email</Label>
-              <FieldEmail type="email" id="email" name="email" autoComplete="username" />
+              <FieldEmail
+                type="email"
+                id="email"
+                name="email"
+                autoComplete="username"
+                placeholder="Email"
+              />
               {errors.email && touched.email && <Error>{errors.email}</Error>}
             </Email>
 
@@ -89,6 +95,7 @@ export const Registration = () => {
                   id="password"
                   name="password"
                   autoComplete="current-password"
+                  placeholder="Password"
                 />
                 <VisibilityBtn type="button" onClick={handlePasswordVisibility}>
                   {showPassword ? (
@@ -122,7 +129,14 @@ export const Registration = () => {
             <Divider
               sx={{
                 marginBottom: "50px",
+                color: "var(--light-grey)",
                 "&.MuiDivider-root": { fontSize: "16px", lineHeight: "1.25" },
+                "&.MuiDivider-root::after": {
+                  borderTop: "thin solid var(--light-grey)",
+                },
+                "&.MuiDivider-root::before": {
+                  borderTop: "thin solid var(--light-grey)",
+                },
               }}
             >
               or

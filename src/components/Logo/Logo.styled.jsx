@@ -12,9 +12,12 @@ export const LogoWrapp = styled.div`
 `;
 
 export const LogoName = styled.span`
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.16;
+  color: var(--white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 `;
 
 export const LogoBox = styled.div`

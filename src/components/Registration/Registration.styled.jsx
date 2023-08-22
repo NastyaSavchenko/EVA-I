@@ -8,10 +8,12 @@ export const LinkText = styled.p`
   text-align: center;
   font-size: 16px;
   line-height: 1.25;
+  color: var(--white);
 `;
 
 export const Link = styled(NavLink)`
-  font-weight: 600;
+  font-weight: var(--semibold-font-weight);
+  color: var(--primary-pink);
 `;
 
 export const FormStyles = styled(Form)`
@@ -19,14 +21,14 @@ export const FormStyles = styled(Form)`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 `;
 
 export const Email = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+  color: var(--white);
 `;
 export const Password = styled.div`
   display: flex;
@@ -36,40 +38,60 @@ export const Password = styled.div`
 
 export const PasswordWrapper = styled.div`
   display: flex;
+  border: 1px solid var(--light-grey);
+  border-radius: 32px;
 `;
 
 export const Label = styled.label`
   margin-bottom: 8px;
-  font-size: 20px;
-  line-height: 1.1;
+  font-size: 16px;
+  font-weight: var(--semibold-font-weight);
+  line-height: 1.5;
+  color: var(--white);
 `;
 
 export const FieldEmail = styled(Field)`
-  padding: 12px 8px;
-  font-size: 24px;
-  line-height: 1;
   background-color: transparent;
-  border: none;
-  border-bottom: 1px solid var(--light-grey);
+  line-height: 1.5;
+  padding: 16px 24px;
+  border: 1px solid var(--light-grey);
+  border-radius: 32px;
+  color: var(--light-grey);
+  color: var(--light-grey);
+  
+  &::placeholder {
+    color: var(--light-grey);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
 `;
 
 export const FieldPass = styled(Field)`
   cursor: pointer;
   width: 100%;
-  padding: 12px 8px;
-  font-size: 24px;
-  line-height: 1;
+  padding: 16px 24px;
+  line-height: 1.5;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid var(--light-grey);
+  color: var(--light-grey);
+
+  &::placeholder {
+    color: var(--light-grey);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
 `;
 
 export const VisibilityBtn = styled.button`
   cursor: pointer;
-  padding: 0 12px 8px;
+  padding: 0 24px ;
   background-color: inherit;
   border: none;
-  border-bottom: 1px solid var(--light-grey);
+  color: var(--light-grey);
 `;
 
 export const Error = styled.div`
@@ -81,12 +103,14 @@ export const Error = styled.div`
 export const PolicyText = styled.p`
   text-align: center;
   font-size: 16px;
-  line-height: 1.25;
+  line-height: 1.5;
   margin-top: 16px;
   margin-bottom: 40px;
+  color: var(--white);
 
   > a {
     cursor: pointer;
     text-decoration-line: underline;
+    color: var(--primary-pink);
   }
 `;
