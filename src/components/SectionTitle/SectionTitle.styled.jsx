@@ -5,5 +5,6 @@ export const TitleSlyles = styled.h2`
   font-size: 40px;
   font-weight: 600;
   line-height: 2;
-  color: var(--white);
 `;
+
+
