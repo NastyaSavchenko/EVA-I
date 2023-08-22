@@ -33,6 +33,7 @@ export const Email = styled.div`
 
 export const Label = styled.label`
   margin-bottom: 8px;
+  font-size: 16px;
   font-weight: var(--semibold-font-weight);
   line-height: 1.5;
   color: var(--white);
@@ -91,6 +92,7 @@ export const VisibilityBtn = styled.button`
   padding: 0 24px ;
   background-color: inherit;
   border: none;
+  color: var(--light-grey);
 `;
 
 export const Error = styled.div`
