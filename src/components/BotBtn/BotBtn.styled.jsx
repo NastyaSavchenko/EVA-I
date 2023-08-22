@@ -28,13 +28,13 @@ export const BotContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2px;
 
   > img {
     display: flex;
     align-content: center;
     width: 52px;
     height: 52px;
-    padding: 3px 2px;
   }
 
   ${BotBtnStyles}:hover & > img, ${BotBtnStyles}:focus & > img {

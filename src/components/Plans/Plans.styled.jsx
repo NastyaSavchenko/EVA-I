@@ -19,12 +19,12 @@ export const PlansList = styled.ul`
 
 export const PlanItem = styled.li`
   padding: 32px;
-  border-radius: 12px;
   width: 406px;
 
   border: 1px solid transparent;
+  border-radius: 12px;
   border-image: var(--primary-gradient);
-  border-image-slice: 1;
+  border-image-slice: 1; 
 `;
 
 export const PlanInfo = styled.div`
