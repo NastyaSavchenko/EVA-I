@@ -82,6 +82,7 @@ export const SignIn = () => {
                 id="email"
                 name="email"
                 autoComplete="username"
+                placeholder="Email"
               />
               {errors.email && touched.email && <Error>{errors.email}</Error>}
             </Email>
@@ -94,6 +95,7 @@ export const SignIn = () => {
                   id="password"
                   name="password"
                   autoComplete="current-password"
+                  placeholder="Password"
                 />
                 <VisibilityBtn type="button" onClick={handlePasswordVisibility}>
                   {showPassword ? (
@@ -121,7 +123,17 @@ export const SignIn = () => {
               sx={{
                 marginBottom: "50px",
                 marginTop: "50px",
-                "&.MuiDivider-root": { fontSize: "16px", lineHeight: "1.25" },
+                color: "var(--light-grey)",
+                "&.MuiDivider-root": {
+                  fontSize: "16px",
+                  lineHeight: "1.25",
+                },
+                "&.MuiDivider-root::after": {
+                  borderTop: "thin solid var(--light-grey)",
+                },
+                "&.MuiDivider-root::before": {
+                  borderTop: "thin solid var(--light-grey)",
+                },
               }}
             >
               or

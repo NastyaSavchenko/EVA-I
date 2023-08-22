@@ -38,8 +38,8 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  font-size: var(--regular-font-weight);
+  font-family: 'Manrope', sans-serif;
+  font-weight: var(--regular-font-weight);
   font-size: 16px;
   line-height: 1.25;
   color: var(--main-black);
@@ -117,6 +117,7 @@ section {
  display: flex;
  flex-direction: column;
  gap: 40px;
+ background-color: var(--dark);
 }
 
 .hidden-title {

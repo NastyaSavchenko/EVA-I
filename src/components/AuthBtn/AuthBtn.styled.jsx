@@ -13,11 +13,11 @@ export const AuthBtnStyles = styled.button`
   line-height: 1;
 
   color: ${(props) =>
-    props.$btntype === "outline" ? "var(--main-black)" : "var(--main-white)"};
+    props.$btntype === "outline" ? "var(--primary-pink)" : "var(--white)"};
 
   background: ${(props) =>
-    props.$btntype === "outline" ? "var(--main-white)" : "var(--main-black)"};
+    props.$btntype === "outline" ? "var(--dark)" : "var(--primary-pink)"};
 
   border: ${(props) =>
-    props.$btntype === "outline" ? "1px solid #A6A6A6" : "none"};
+    props.$btntype === "outline" ? "1px solid var(--primary-pink)" : "none"};
 `;

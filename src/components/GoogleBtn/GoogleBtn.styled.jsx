@@ -10,8 +10,9 @@ export const GoogleBtnStyles = styled.button`
   text-align: center;
   font-size: 24px;
   line-height: 1;
-  border: 1px solid #A6A6A6;
+  border: 1px solid var(--primary-pink) ;
   background-color: transparent;
+  color: var(--primary-pink);
 `;
 
 export const GoogleImg = styled.img`
