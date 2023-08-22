@@ -15,7 +15,6 @@ export const LogoName = styled.span`
   font-size: 24px;
   font-weight: 600;
   line-height: 1.16;
-  color: var(--white);
   letter-spacing: 2px;
   text-transform: uppercase;
 `;

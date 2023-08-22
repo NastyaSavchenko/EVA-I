@@ -5,15 +5,16 @@ export const NavLinkStyles = styled(NavLink)`
   font-size: 24px;
   font-weight: 600;
   line-height: 1.16;
-  color: var(--text-grey);
+
+  transition: color var(--anim);
 
   &.active {
-    color: var(--main-black);
+    color: var(--primary-pink);
   }
 
   &:hover,
   &:focus {
-    color: var(--main-black);
+    color: var(--primary-pink);
   }
 `;
 
