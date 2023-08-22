@@ -49,12 +49,12 @@ const CustomExpandIcon = () => {
 //     color: "var(--white)",
 //     backgroundColor: "transparent",
 //     border: "1px solid var(--primary-purple)",
-    
+
 //     "&:hover, &:active": {
 //       border: "2px solid var(--primary-purple)",
 //     }
 //   },
-  
+
 //   "&:before": {
 //     content: "none",
 //   },
@@ -64,24 +64,30 @@ const QuestionWrapp = {
   boxShadow: "none",
   background: "var(--dark)",
 
+  // ".Mui-focused": {
+  //   boxShadow: "0px 0px 15px 2px var(--primary-purple) !important",
+  // },
+
   "&:first-of-type, &:last-of-type": {
     borderRadius: "12px",
     color: "var(--white)",
     backgroundColor: "transparent",
     border: "1px solid var(--primary-purple)",
-    transition: 'box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-    
-    "&:hover, &:active": {
-      boxShadow:' 0px 0px 15px 2px var(--primary-purple)',
-    }
+    transition: "box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+
+    "&:hover": {
+      boxShadow: " 0px 0px 15px 2px var(--primary-purple)",
+    },
+
+    "&:focus": {
+      boxShadow: " 0px 0px 15px 2px var(--primary-purple)",
+    },
   },
-  
+
   "&:before": {
     content: "none",
   },
 };
-
-
 
 const accordionData = [
   {
