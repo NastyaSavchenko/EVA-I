@@ -25,7 +25,7 @@ export const Benefits = () => {
                 consectetur, adipisci velit, sed qu
               </CardInfoText>
 
-              <MainBtn title={"button cta"} styles={"outline"} />
+              <MainBtn title={"Button"} styles={"outline"} />
             </CardInfo>
 
             <CardImgContainer>img card 1</CardImgContainer>
@@ -44,7 +44,7 @@ export const Benefits = () => {
                 consectetur, adipisci velit, sed qu
               </CardInfoText>
 
-              <MainBtn title={"button cta"} styles={"outline"} />
+              <MainBtn title={"Button"} styles={"outline"} />
             </CardInfo>
           </BenefitCard>
 
@@ -59,7 +59,7 @@ export const Benefits = () => {
                 consectetur, adipisci velit, sed qu
               </CardInfoText>
 
-              <MainBtn title={"button cta"} styles={"outline"} />
+              <MainBtn title={"Button"} styles={"outline"} />
             </CardInfo>
 
             <CardImgContainer>img card 3</CardImgContainer>

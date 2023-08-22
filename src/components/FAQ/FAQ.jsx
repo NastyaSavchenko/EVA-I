@@ -10,7 +10,8 @@ import { QuestionsList, QuestionsItem } from "./FAQ.styled";
 
 const CustomExpandIcon = () => {
   const iconStyles = {
-    color: "#111111",
+    // color: "var(--primary-gradient)",
+    color: "violet",
     width: { xs: "20px", md: "40px" },
     height: { xs: "20px", md: "40px" },
   };
@@ -51,9 +52,15 @@ const QuestionWrapp = {
 
   "&:first-of-type": {
     borderRadius: "0",
+    color: "var(--white)",
+    backgroundColor: "transparent",
+    border: "none",
   },
   "&:last-of-type": {
     borderRadius: "0",
+    color: "var(--white)",
+    backgroundColor: "transparent",
+    border: "none",
   },
   "&:before ": {
     content: "none",
@@ -117,11 +124,17 @@ export const FAQ = () => {
                       fontSize: "32px",
                       fontWeight: 600,
                       lineHeight: 1.37,
+                      background: "var(--dark)",
+                      borderRadius: "12px",
+                      border: "1px solid var(--primary-purple)",
                     }}
                   >
                     <p>{accordion.title}</p>
                   </AccordionSummary>
-                  <AccordionDetails sx={{ padding: "0 32px 32px" }}>
+                  <AccordionDetails sx={{
+                    padding: "32px 32px",
+                    fontSize: "24px"
+                  }}>
                     <p>{accordion.accordionDetails}</p>
                   </AccordionDetails>
                 </Accordion>

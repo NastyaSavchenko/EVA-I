@@ -11,6 +11,14 @@ export const HeroTitle = styled.h1`
   margin-bottom: 40px;
   text-align: center;
   font-size: 64px;
-  font-weight: 600;
-  line-height: 1.33;
+  font-weight: var(--semibold-font-weight);
+  line-height: 1.25;
+  color: var(--white);
+`;
+
+export const HeroSubTitle = styled.p`
+  background-image: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 `;

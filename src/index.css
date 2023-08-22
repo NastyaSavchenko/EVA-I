@@ -17,6 +17,7 @@
   --light-pink: #fdE8f0;
   --light-purple: #efdaf3;
   --light-gradient: linear-gradient(90deg, #fdE8f0, #efdaf3);
+  --special-background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(90deg, #ED3984 0%, #ED3984 1.56%, #7452C8 100%);
 
 
   /* font */
@@ -30,6 +31,10 @@
   --tablet: 768px;
   --pre-desktop: 1439.98px;
   --desktop: 1440px;
+}
+
+#specialBackground {
+  background-color: transparent;
 }
 
 html {
@@ -104,7 +109,7 @@ main {
 section {
   padding-top: 100px;
   padding-bottom: 100px;
-  border-bottom: 1px solid #e5e5e5;
+  background-color: var(--dark);
 }
 
 .container {
