@@ -26,6 +26,7 @@ export const ImgContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
+  background-color: lightgray;
 `;
 
 export const CardImg = styled.img`
@@ -35,13 +36,15 @@ export const CardImg = styled.img`
 
 export const CardTitle = styled.h3`
   font-size: 24px;
-  font-weight: 600;
+  font-weight: var(--semibold-font-weight);
   line-height: 1.16;
   margin-bottom: 16px;
+  color: var(--white);
 `;
 
-export const CardText = styled.div`
+export const CardText = styled.p`
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: var(--regular-font-weight);
+  line-height: 1.5;
+  color: var(--white);
 `;

@@ -2,7 +2,7 @@ import {
   PersonImg,
   PersonName,
   PersonPosition,
-  ReviewsImgContainer,
+  // ReviewsImgContainer,
   ReviewsInfo,
   ReviewsInfoContainer,
   ReviewsPersonContainer,
@@ -35,9 +35,9 @@ export const Reviews = () => {
               </ReviewsPersonContainer>
             </ReviewsInfo>
 
-            <ReviewsImgContainer>
+            {/* <ReviewsImgContainer>
               <img src="/" alt="image" />
-            </ReviewsImgContainer>
+            </ReviewsImgContainer> */}
           </ReviewsInfoContainer>
         </ReviewsStyles>
       </div>
