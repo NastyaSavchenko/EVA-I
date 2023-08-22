@@ -1,22 +1,16 @@
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import AddIcon from "@mui/icons-material/Add";
-import CloseIcon from "@mui/icons-material/Close";
-import { Box } from "@mui/material";
+import Plus from "../../assets/images/plus.svg";
+import Minus from "../../assets/images/minus.svg";
+import { IconButton } from "@mui/material";
 
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 import { QuestionsList, QuestionsItem } from "./FAQ.styled";
 
 const CustomExpandIcon = () => {
-  const iconStyles = {
-    // color: "var(--primary-gradient)",
-    color: "violet",
-    width: { xs: "20px", md: "40px" },
-    height: { xs: "20px", md: "40px" },
-  };
   return (
-    <Box
+    <IconButton
       sx={{
         ".collapsIconWrapper": {
           display: "flex",
@@ -37,35 +31,57 @@ const CustomExpandIcon = () => {
       }}
     >
       <div className="expandIconWrapper">
-        <CloseIcon sx={iconStyles} />
+        <img src={Minus} alt="Close FAQ" />
       </div>
       <div className="collapsIconWrapper">
-        <AddIcon sx={iconStyles} />
+        <img src={Plus} alt="Open FAQ" />
       </div>
-    </Box>
+    </IconButton>
   );
 };
 
-const QuestionWrapp = {
-  border: "1px solid #A6A6A6",
-  boxShadow: "none",
+// const QuestionWrapp = {
+//   boxShadow: "none",
+//   background: "var(--dark)",
 
-  "&:first-of-type": {
-    borderRadius: "0",
+//   "&:first-of-type, &:last-of-type": {
+//     borderRadius: "12px",
+//     color: "var(--white)",
+//     backgroundColor: "transparent",
+//     border: "1px solid var(--primary-purple)",
+    
+//     "&:hover, &:active": {
+//       border: "2px solid var(--primary-purple)",
+//     }
+//   },
+  
+//   "&:before": {
+//     content: "none",
+//   },
+// };
+
+const QuestionWrapp = {
+  boxShadow: "none",
+  background: "var(--dark)",
+
+  "&:first-of-type, &:last-of-type": {
+    borderRadius: "12px",
     color: "var(--white)",
     backgroundColor: "transparent",
-    border: "none",
+    border: "1px solid var(--primary-purple)",
+    transition: 'box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+    
+    "&:hover, &:active": {
+      boxShadow:' 0px 0px 15px 2px var(--primary-purple)',
+    }
   },
-  "&:last-of-type": {
-    borderRadius: "0",
-    color: "var(--white)",
-    backgroundColor: "transparent",
-    border: "none",
-  },
-  "&:before ": {
+  
+  "&:before": {
     content: "none",
   },
 };
+
+
 
 const accordionData = [
   {
@@ -117,24 +133,24 @@ export const FAQ = () => {
                 <Accordion sx={QuestionWrapp}>
                   <AccordionSummary
                     expandIcon={<CustomExpandIcon />}
-                    aria-controls={accordion.panel1aContent}
+                    aria-controls={accordion.ariaControls}
                     id={accordion.id}
                     sx={{
                       padding: "32px",
                       fontSize: "32px",
                       fontWeight: 600,
                       lineHeight: 1.37,
-                      background: "var(--dark)",
-                      borderRadius: "12px",
-                      border: "1px solid var(--primary-purple)",
                     }}
                   >
                     <p>{accordion.title}</p>
                   </AccordionSummary>
-                  <AccordionDetails sx={{
-                    padding: "32px 32px",
-                    fontSize: "24px"
-                  }}>
+                  <AccordionDetails
+                    sx={{
+                      padding: "32px 32px",
+                      fontSize: "16px",
+                      lineHeight: "1.5",
+                    }}
+                  >
                     <p>{accordion.accordionDetails}</p>
                   </AccordionDetails>
                 </Accordion>
