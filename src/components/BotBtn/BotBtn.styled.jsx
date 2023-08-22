@@ -16,18 +16,29 @@ export const BotBtnStyles = styled.button`
   z-index: 1;
 
   background: var(--light-gradient);
+
+  &:hover,
+  :focus {
+    width: 68px;
+    height: 68px;
+  }
 `;
 
 export const BotContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
 
-export const BotImg = styled.img`
-  display: flex;
-  align-content: center;
-  width: 52px;
-  height: 52px;
-  padding: 3px 2px;
+  > img {
+    display: flex;
+    align-content: center;
+    width: 52px;
+    height: 52px;
+    padding: 3px 2px;
+  }
+
+  ${BotBtnStyles}:hover & > img, ${BotBtnStyles}:focus & > img {
+    width: 56px;
+    height: 56px;
+  }
 `;
