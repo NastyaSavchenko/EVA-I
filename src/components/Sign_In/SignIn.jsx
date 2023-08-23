@@ -27,6 +27,7 @@ import { logIn } from "../../redux/auth/operations";
 
 export const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   const dispatch = useDispatch();
 
   const handlePasswordVisibility = () => {
@@ -83,6 +84,9 @@ export const SignIn = () => {
                 name="email"
                 autoComplete="username"
                 placeholder="Email"
+                onInput={() => setIsTyping(true)}
+                onBlur={() => setIsTyping(false)}
+                // isTyping={isTyping}
               />
               {errors.email && touched.email && <Error>{errors.email}</Error>}
             </Email>
@@ -96,6 +100,8 @@ export const SignIn = () => {
                   name="password"
                   autoComplete="current-password"
                   placeholder="Password"
+                  onInput={() => setIsTyping(true)}
+                  onBlur={() => setIsTyping(false)}
                 />
                 <VisibilityBtn type="button" onClick={handlePasswordVisibility}>
                   {showPassword ? (
@@ -138,7 +144,7 @@ export const SignIn = () => {
             >
               or
             </Divider>
-            <GoogleBtn title={"Sign in with Google"} />
+            <GoogleBtn title={"Sign in with Google"}/>
           </FormStyles>
         )}
       </Formik>

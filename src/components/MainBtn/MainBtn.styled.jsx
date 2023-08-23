@@ -46,8 +46,7 @@ transition: all var(--anim);
   :focus {
     color: ${(props) =>
       props.$btntype === "outline" ? "var(--primary-purple)" : "var(--white)"};
-    background: ${(props) =>
-      props.$btntype === "outline" ? "var(--dark)" : "var(--primary-purple)"};
+     
     border: ${(props) =>
       props.$btntype === "outline"
         ? "1px solid var(--primary-purple)"

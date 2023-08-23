@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { Form, Field } from "formik";
 
@@ -14,6 +14,11 @@ export const LinkText = styled.p`
 export const Link = styled(NavLink)`
   font-weight: var(--semibold-font-weight);
   color: var(--primary-pink);
+  transition: all var(--anim);
+
+  &:hover {
+    color: var(--primary-purple);
+  }
 `;
 
 export const FormStyles = styled(Form)`
@@ -42,17 +47,22 @@ export const Label = styled.label`
 export const FieldEmail = styled(Field)`
   line-height: 1.5;
   padding: 16px 24px;
-  background-color: transparent;
-  border: 1px solid var(--light-grey);
+  background-color: var(--dark);
+  border: 1px solid var(--white);
   border-radius: 32px;
-  color: var(--light-grey);
+  color: var(--white);
+  transition: border-color 0.3s;
   
   &::placeholder {
     color: var(--light-grey);
   }
 
+  &:focus {
+    border-color: var(--primary-pink);
+  }
+
   &:focus::placeholder {
-    color: transparent; 
+    color: transparent;
   }
 `;
 
@@ -82,8 +92,12 @@ export const FieldPass = styled(Field)`
     color: var(--light-grey);
   }
 
+  &:focus {
+    border-color: var(--primary-pink);
+  }
+
   &:focus::placeholder {
-    color: transparent; 
+    color: transparent;
   }
 `;
 
@@ -108,4 +122,9 @@ export const ForgotLink = styled.a`
   line-height: 1.25;
   margin-bottom: 40px;
   color: var(--primary-pink);
+  transition: all var(--anim);
+
+  &:hover {
+    color: var(--primary-purple);
+  }
 `;
