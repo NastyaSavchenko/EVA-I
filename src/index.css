@@ -18,6 +18,7 @@
   --light-purple: #efdaf3;
   --light-gradient: linear-gradient(90deg, #fdE8f0, #efdaf3);
   --special-background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(90deg, #ED3984 0%, #ED3984 1.56%, #7452C8 100%);
+  --neutral: #d1d5db;
 
 
   /* font */

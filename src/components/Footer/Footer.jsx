@@ -12,8 +12,8 @@ import {
 import { Logo } from "../Logo/Logo.jsx";
 import { ScrollButton } from "../ScrollButton/ScrollButton";
 
-import Google_Play from "../../assets/images/Google_Play.svg";
-import App_Store from "../../assets/images/App_Store.svg";
+import Google_Play from "../../assets/images/Google_Play_light.svg";
+import App_Store from "../../assets/images/App_Store_light.svg";
 
 export const Footer = () => {
   return (

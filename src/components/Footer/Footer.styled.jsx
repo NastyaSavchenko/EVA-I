@@ -12,8 +12,10 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   gap: 12px;
   margin-top: 24px;
+  color: var(--white);
 
   font-size: 16px;
+  font-weight: var(--semibold-font-weight);
   line-height: 1.5;
 `;
 
@@ -21,8 +23,13 @@ export const LegalList = styled.ul`
   display: flex;
 
   > li {
+    transition: transform 0.3s ease-in-out;
     &:not(:last-child) {
       margin-right: 24px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 `;
@@ -37,14 +44,19 @@ export const AppStores = styled.div`
 
 export const StoreTitle = styled.p`
   font-size: 18px;
-  font-weight: 600;
+  font-weight: var(--semibold-font-weight);
   line-height: 1.55;
 `;
 
 export const StoreButtons = styled.li`
+  transition: transform 0.3s ease-in-out;
+
   &:not(:last-child) {
     margin-bottom: 16px;
   }
+  &:hover {
+      transform: scale(1.08);
+    }
 `;
 
 export const StoreImg = styled.img`
@@ -55,11 +67,11 @@ export const StoreImg = styled.img`
 //RIGHTS
 export const Rights = styled.div`
   position: relative;
-  padding: 40px 80px 80px;
-  border-top: 1px solid var(--copyright);
+  padding: 40px 80px 0;
 `;
+
 export const RightsSpan = styled.span`
   font-size: 14px;
-  line-height: 1.4;
-  color: var(--copyright);
+  line-height: 1.71;
+  color: var(--neutral);
 `;
