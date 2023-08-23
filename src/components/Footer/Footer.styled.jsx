@@ -23,7 +23,7 @@ export const LegalList = styled.ul`
   display: flex;
 
   > li {
-    transition: transform 0.3s ease-in-out;
+    transition: all var(--anim);
     &:not(:last-child) {
       margin-right: 24px;
     }
@@ -49,7 +49,7 @@ export const StoreTitle = styled.p`
 `;
 
 export const StoreButtons = styled.li`
-  transition: transform 0.3s ease-in-out;
+  transition: all var(--anim);
 
   &:not(:last-child) {
     margin-bottom: 16px;

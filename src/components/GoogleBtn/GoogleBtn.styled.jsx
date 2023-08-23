@@ -13,6 +13,28 @@ export const GoogleBtnStyles = styled.button`
   border: 1px solid var(--primary-pink) ;
   background-color: transparent;
   color: var(--primary-pink);
+  transition: all var(--anim);
+
+  &:hover {
+    border-color: var(--primary-purple);
+    color: var(--primary-purple);
+  }
+
+  &:focus {
+    border: 2px solid var(--white);
+    color: var(--primary-purple);
+  }
+
+  &:active {
+    border-color: var(--primary-purple);
+    color: var(--primary-purple);
+  }
+
+  border-color: ${(props) =>
+    props.$btntype === "disabled" ? "rgba(237, 57, 132, 0.20)" : "var(--primary-pink)"};
+
+  color: ${(props) =>
+    props.$btntype === "disabled" ? "rgba(237, 57, 132, 0.20)" : "var(--primary-pink)"};
 `;
 
 export const GoogleImg = styled.img`

@@ -14,6 +14,11 @@ export const LinkText = styled.p`
 export const Link = styled(NavLink)`
   font-weight: var(--semibold-font-weight);
   color: var(--primary-pink);
+  transition: all var(--anim);
+
+  &:hover {
+    color: var(--primary-purple);
+  }
 `;
 
 export const FormStyles = styled(Form)`
@@ -107,10 +112,16 @@ export const PolicyText = styled.p`
   margin-top: 16px;
   margin-bottom: 40px;
   color: var(--white);
+  
 
   > a {
     cursor: pointer;
     text-decoration-line: underline;
     color: var(--primary-pink);
+    transition: all var(--anim);
+
+    &:hover {
+      color: var(--primary-purple);
+    }
   }
 `;

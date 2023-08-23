@@ -4,19 +4,22 @@
   --main-black: #000000;
   --main-gray: #d9d9d9;
   --text-grey: #545454;
-  --light-grey: #e5e5e5;
+  /* --light-grey: #e5e5e5; */
   --copyright: #d1d5db;
  
   --primary-pink: #ed3984;
   --primary-purple: #7552c8;
   --primary-gradient: linear-gradient(90deg, #ed3984, #7552c8);
+
   --dark: #07061f;
   --white: #fff;
-  --light-grey: #f2f2f2 ;
   --grey: #5b5b5b;
+  --light-grey: #f2f2f2;
+
   --light-pink: #fdE8f0;
   --light-purple: #efdaf3;
   --light-gradient: linear-gradient(90deg, #fdE8f0, #efdaf3);
+
   --special-background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(90deg, #ED3984 0%, #ED3984 1.56%, #7452C8 100%);
   --neutral: #d1d5db;
 
