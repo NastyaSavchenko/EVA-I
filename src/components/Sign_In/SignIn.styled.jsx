@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 import { Form, Field } from "formik";
 
 export const LinkText = styled.p`
@@ -52,17 +52,13 @@ export const FieldEmail = styled(Field)`
   border-radius: 32px;
   color: var(--white);
   transition: border-color 0.3s;
-  
+
   &::placeholder {
     color: var(--light-grey);
   }
 
   &:focus {
     border-color: var(--primary-pink);
-  }
-
-  &:focus::placeholder {
-    color: transparent;
   }
 `;
 
@@ -77,6 +73,10 @@ export const PasswordWrapper = styled.div`
   display: flex;
   border: 1px solid var(--light-grey);
   border-radius: 32px;
+
+  &:focus, &:hover {
+    border: 1px solid var(--primary-pink);
+  }
 `;
 
 export const FieldPass = styled(Field)`
@@ -91,19 +91,11 @@ export const FieldPass = styled(Field)`
   &::placeholder {
     color: var(--light-grey);
   }
-
-  &:focus {
-    border-color: var(--primary-pink);
-  }
-
-  &:focus::placeholder {
-    color: transparent;
-  }
 `;
 
 export const VisibilityBtn = styled.button`
   cursor: pointer;
-  padding: 0 24px ;
+  padding: 0 24px;
   background-color: inherit;
   border: none;
   color: var(--light-grey);

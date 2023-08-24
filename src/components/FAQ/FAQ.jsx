@@ -64,10 +64,6 @@ const QuestionWrapp = {
   boxShadow: "none",
   background: "var(--dark)",
 
-  // ".Mui-focused": {
-  //   boxShadow: "0px 0px 15px 2px var(--primary-purple) !important",
-  // },
-
   "&:first-of-type, &:last-of-type": {
     borderRadius: "12px",
     color: "var(--white)",
