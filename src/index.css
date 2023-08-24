@@ -130,6 +130,10 @@ section {
   margin-right: 189px;
 }
 
+.container--hero {
+  margin: 0;
+}
+
 .authContainer {
  padding: 32px 80px 232px;
  display: flex;
