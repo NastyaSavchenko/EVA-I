@@ -1,16 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
-import { AuthBtn } from "../AuthBtn/AuthBtn";
-import Divider from "@mui/material/Divider";
-import { GoogleBtn } from "../GoogleBtn/GoogleBtn";
-
-import { AiOutlineEyeInvisible } from "react-icons/ai";
-import { MdOutlineVisibility } from "react-icons/md";
-
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
-
 import {
   Link,
   LinkText,
@@ -22,22 +13,26 @@ import {
   FieldPass,
   FieldEmail,
   VisibilityBtn,
-  Error,
+  Notification,
   PolicyText,
 } from "./Registration.styled.jsx";
+import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { AuthBtn } from "../AuthBtn/AuthBtn";
+import Divider from "@mui/material/Divider";
+import { GoogleBtn } from "../GoogleBtn/GoogleBtn";
+import ErrorImg from "../../assets/images/error_input.svg";
+import Loader from "../../assets/images/loader_Input.svg";
+import { AiOutlineEyeInvisible } from "react-icons/ai";
+import { MdOutlineVisibility } from "react-icons/md";
 
 export const Registration = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [emailFocused, setEmailFocused] = useState(false);
+  const [passwordFocused, setPasswordFocused] = useState(false);
   const dispatch = useDispatch();
 
   const handlePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
-  };
-
-  const handleSubmit = (values, { resetForm }) => {
-    console.log(values);
-    dispatch(register(values));
-    resetForm();
   };
 
   return (
@@ -71,10 +66,15 @@ export const Registration = () => {
 
           return errors;
         }}
-        onSubmit={handleSubmit}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          console.log(values);
+          dispatch(register(values));
+          resetForm();
+          setSubmitting(false);
+        }}
       >
-        {({ errors, touched }) => (
-          <FormStyles>
+        {({ errors, touched, handleSubmit, isSubmitting }) => (
+          <FormStyles onSubmit={handleSubmit}>
             <Email>
               <Label htmlFor="email">Email</Label>
               <FieldEmail
@@ -83,8 +83,25 @@ export const Registration = () => {
                 name="email"
                 autoComplete="username"
                 placeholder="Email"
+                onFocus={() => setEmailFocused(true)}
+                onBlur={() => setEmailFocused(false)}
+                error={errors.email}
               />
-              {errors.email && touched.email && <Error>{errors.email}</Error>}
+              {emailFocused ? (
+                <Notification type={"Verification"}>
+                  <>
+                    <img src={Loader} alt="Loader" />
+                    Verification...
+                  </>
+                </Notification>
+              ) : errors.email ? (
+                <Notification type={"error"}>
+                  <>
+                    <img src={ErrorImg} alt="Error" />
+                    {errors.email}
+                  </>
+                </Notification>
+              ) : null}
             </Email>
 
             <Password>
@@ -96,8 +113,17 @@ export const Registration = () => {
                   name="password"
                   autoComplete="current-password"
                   placeholder="Password"
+                  onFocus={() => setPasswordFocused(true)}
+                  onBlur={() => setPasswordFocused(false)}
+                  error={errors.password}
                 />
-                <VisibilityBtn type="button" onClick={handlePasswordVisibility}>
+                <VisibilityBtn
+                  type="button"
+                  onClick={handlePasswordVisibility}
+                  hasError={
+                    errors.password ? "true" : "false"
+                  }
+                >
                   {showPassword ? (
                     <MdOutlineVisibility
                       style={{ width: "32px", height: "32px" }}
@@ -110,12 +136,25 @@ export const Registration = () => {
                 </VisibilityBtn>
               </PasswordWrapper>
 
-              {errors.password && touched.password && (
-                <Error>{errors.password}</Error>
-              )}
+              {passwordFocused ? (
+                <Notification type={"Verification"}>
+                  <>
+                    <img src={Loader} alt="Loader" />
+                    Verification...
+                  </>
+                </Notification>
+              ) : errors.password ? (
+                <Notification type={"error"}>
+                  <>
+                    <img src={ErrorImg} alt="Error" />
+                    {errors.password}
+                  </>
+                </Notification>
+              ) : null}
             </Password>
 
-            <AuthBtn title={"Continue"} />
+            <AuthBtn title={"Continue"} disabled={isSubmitting} />
+
             <PolicyText>
               <span>By clicking Continue, you agree with the </span>
               <a href="https://reply.io/terms-of-service/" target="_blank">
@@ -126,6 +165,7 @@ export const Registration = () => {
                 Privacy Policy
               </a>
             </PolicyText>
+
             <Divider
               sx={{
                 marginBottom: "50px",
@@ -141,6 +181,7 @@ export const Registration = () => {
             >
               or
             </Divider>
+
             <GoogleBtn title={"Continue with Google"} />
           </FormStyles>
         )}

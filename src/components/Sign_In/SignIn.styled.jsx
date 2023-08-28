@@ -45,10 +45,12 @@ export const Label = styled.label`
 `;
 
 export const FieldEmail = styled(Field)`
+  cursor: pointer;
+  background-color: transparent;
   line-height: 1.5;
   padding: 16px 24px;
-  background-color: var(--dark);
-  border: 1px solid var(--white);
+  border: ${(props) =>
+    props.error ? "1px solid var(--neutral-red)" : "1px solid var(--white)"};
   border-radius: 32px;
   color: var(--white);
   transition: border-color 0.3s;
@@ -57,7 +59,8 @@ export const FieldEmail = styled(Field)`
     color: var(--light-grey);
   }
 
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: var(--primary-pink);
   }
 `;
@@ -71,22 +74,33 @@ export const Password = styled.div`
 
 export const PasswordWrapper = styled.div`
   display: flex;
-  border: 1px solid var(--light-grey);
-  border-radius: 32px;
-
-  &:focus, &:hover {
-    border: 1px solid var(--primary-pink);
-  }
 `;
 
 export const FieldPass = styled(Field)`
   cursor: pointer;
   width: 100%;
-  padding: 16px 24px;
+
+  border-left: ${(props) =>
+    props.error ? "1px solid var(--neutral-red)" : "1px solid var(--white)"};
+  border-right: none;
+  border-top: ${(props) =>
+    props.error ? "1px solid var(--neutral-red)" : "1px solid var(--white)"};
+  border-bottom: ${(props) =>
+    props.error ? "1px solid var(--neutral-red)" : "1px solid var(--white)"};
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+
   line-height: 1.5;
-  background-color: transparent;
-  border: none;
-  color: var(--light-grey);
+  padding: 16px 24px;
+  background-color: var(--dark);
+
+  color: var(--white);
+  transition: border-color 0.3s;
+
+  &:focus,
+  &:hover {
+    border-color: var(--primary-pink);
+  }
 
   &::placeholder {
     color: var(--light-grey);
@@ -98,13 +112,42 @@ export const VisibilityBtn = styled.button`
   padding: 0 24px;
   background-color: inherit;
   border: none;
-  color: var(--light-grey);
+  color: ${(props) =>
+    props.hasError === "true" ? "var(--neutral-red)" : "var(--light-grey)"};
+
+  border-right: ${(props) =>
+    props.hasError === "true"
+      ? "1px solid var(--neutral-red)"
+      : "1px solid var(--white)"};
+  border-left: none;
+  border-top: ${(props) =>
+    props.hasError === "true"
+      ? "1px solid var(--neutral-red)"
+      : "1px solid var(--white)"};
+  border-bottom: ${(props) =>
+    props.hasError === "true"
+      ? "1px solid var(--neutral-red)"
+      : "1px solid var(--white)"};
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+
+  transition: all 0.3s;
+
+  ${FieldPass}:focus + &,
+  ${FieldPass}:hover + & {
+    border-color: var(--primary-pink);
+    color: var(--primary-pink);
+  }
 `;
 
-export const Error = styled.div`
+export const Notification = styled.div`
+  display: flex;
+  gap: 4px;
   padding-top: 8px;
-  color: red;
-  font-size: 12px;
+  color: ${(props) =>
+    props.type === "error" ? "var(--neutral-red)" : "var(--primary-pink)"};
+  font-size: 14px;
+  line-height: 1.7;
 `;
 
 export const ForgotLink = styled.a`
