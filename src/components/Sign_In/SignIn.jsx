@@ -9,12 +9,14 @@ import {
   Password,
   FieldPass,
   VisibilityBtn,
-  Error,
+  Notification,
   ForgotLink,
 } from "./SignIn.styled";
 
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { MdOutlineVisibility } from "react-icons/md";
+import ErrorImg from "../../assets/images/error_input.svg";
+import Loader from "../../assets/images/loader_Input.svg";
 
 import { GoogleBtn } from "../GoogleBtn/GoogleBtn";
 import { AuthBtn } from "../AuthBtn/AuthBtn";
@@ -27,18 +29,20 @@ import { logIn } from "../../redux/auth/operations";
 
 export const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [isTyping, setIsTyping] = useState(false);
+  const [emailFocused, setEmailFocused] = useState(false);
+  const [passwordFocused, setPasswordFocused] = useState(false);
   const dispatch = useDispatch();
 
   const handlePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
-  const handleSubmit = (values, { resetForm }) => {
-    console.log(values);
-    dispatch(logIn(values));
-    resetForm();
-  };
+  // const handleSubmit = (values, { setSubmitting, resetForm  }) => {
+  //   console.log(values);
+  //   dispatch(logIn(values));
+  //   resetForm();
+  //   setSubmitting(false);
+  // };
 
   return (
     <div>
@@ -72,10 +76,15 @@ export const SignIn = () => {
 
           return errors;
         }}
-        onSubmit={handleSubmit}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          console.log(values);
+          dispatch(logIn(values));
+          resetForm();
+          setSubmitting(false);
+        }}
       >
-        {({ errors, touched }) => (
-          <FormStyles>
+        {({ errors, touched, handleSubmit, isSubmitting  }) => (
+          <FormStyles  onSubmit={handleSubmit}>
             <Email>
               <Label htmlFor="email">Email</Label>
               <FieldEmail
@@ -84,11 +93,25 @@ export const SignIn = () => {
                 name="email"
                 autoComplete="username"
                 placeholder="Email"
-                onInput={() => setIsTyping(true)}
-                onBlur={() => setIsTyping(false)}
-                // isTyping={isTyping}
+                onFocus={() => setEmailFocused(true)}
+                onBlur={() => setEmailFocused(false)}
+                error={errors.email}
               />
-              {errors.email && touched.email && <Error>{errors.email}</Error>}
+        {emailFocused ? (
+                <Notification type={"Verification"}>
+                  <>
+                    <img src={Loader} alt="Loader" />
+                    Verification...
+                  </>
+                </Notification>
+              ) : errors.email ? (
+                <Notification type={"error"}>
+                  <>
+                    <img src={ErrorImg} alt="Error" />
+                    {errors.email}
+                  </>
+                </Notification>
+              ) : null}
             </Email>
 
             <Password>
@@ -100,10 +123,17 @@ export const SignIn = () => {
                   name="password"
                   autoComplete="current-password"
                   placeholder="Password"
-                  onInput={() => setIsTyping(true)}
-                  onBlur={() => setIsTyping(false)}
+                  onFocus={() => setPasswordFocused(true)}
+                  onBlur={() => setPasswordFocused(false)}
+                  error={errors.password}
                 />
-                <VisibilityBtn type="button" onClick={handlePasswordVisibility}>
+                   <VisibilityBtn
+                  type="button"
+                  onClick={handlePasswordVisibility}
+                  hasError={
+                    errors.password ? "true" : "false"
+                  }
+                >
                   {showPassword ? (
                     <MdOutlineVisibility
                       style={{ width: "32px", height: "32px" }}
@@ -116,14 +146,26 @@ export const SignIn = () => {
                 </VisibilityBtn>
               </PasswordWrapper>
 
-              {errors.password && touched.password && (
-                <Error>{errors.password}</Error>
-              )}
+              {passwordFocused ? (
+                <Notification type={"Verification"}>
+                  <>
+                    <img src={Loader} alt="Loader" />
+                    Verification...
+                  </>
+                </Notification>
+              ) : errors.password ? (
+                <Notification type={"error"}>
+                  <>
+                    <img src={ErrorImg} alt="Error" />
+                    {errors.password}
+                  </>
+                </Notification>
+              ) : null}
             </Password>
 
             <ForgotLink href="">Forgot password?</ForgotLink>
 
-            <AuthBtn title={"Log in"} />
+            <AuthBtn title={"Log in"} disabled={isSubmitting}/>
 
             <Divider
               sx={{
@@ -144,7 +186,7 @@ export const SignIn = () => {
             >
               or
             </Divider>
-            <GoogleBtn title={"Sign in with Google"}/>
+            <GoogleBtn title={"Sign in with Google"} />
           </FormStyles>
         )}
       </Formik>

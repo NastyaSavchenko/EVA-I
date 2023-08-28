@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 import { Form, Field } from "formik";
 
 export const LinkText = styled.p`
@@ -45,24 +45,23 @@ export const Label = styled.label`
 `;
 
 export const FieldEmail = styled(Field)`
+  cursor: pointer;
+  background-color: transparent;
   line-height: 1.5;
   padding: 16px 24px;
-  background-color: var(--dark);
-  border: 1px solid var(--white);
+  border: ${(props) =>
+    props.error ? "1px solid var(--neutral-red)" : "1px solid var(--white)"};
   border-radius: 32px;
   color: var(--white);
   transition: border-color 0.3s;
-  
+
   &::placeholder {
     color: var(--light-grey);
   }
 
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: var(--primary-pink);
-  }
-
-  &:focus::placeholder {
-    color: transparent;
   }
 `;
 
@@ -75,44 +74,80 @@ export const Password = styled.div`
 
 export const PasswordWrapper = styled.div`
   display: flex;
-  border: 1px solid var(--light-grey);
-  border-radius: 32px;
 `;
 
 export const FieldPass = styled(Field)`
   cursor: pointer;
   width: 100%;
-  padding: 16px 24px;
+
+  border-left: ${(props) =>
+    props.error ? "1px solid var(--neutral-red)" : "1px solid var(--white)"};
+  border-right: none;
+  border-top: ${(props) =>
+    props.error ? "1px solid var(--neutral-red)" : "1px solid var(--white)"};
+  border-bottom: ${(props) =>
+    props.error ? "1px solid var(--neutral-red)" : "1px solid var(--white)"};
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+
   line-height: 1.5;
-  background-color: transparent;
-  border: none;
-  color: var(--light-grey);
+  padding: 16px 24px;
+  background-color: var(--dark);
 
-  &::placeholder {
-    color: var(--light-grey);
-  }
+  color: var(--white);
+  transition: border-color 0.3s;
 
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: var(--primary-pink);
   }
 
-  &:focus::placeholder {
-    color: transparent;
+  &::placeholder {
+    color: var(--light-grey);
   }
 `;
 
 export const VisibilityBtn = styled.button`
   cursor: pointer;
-  padding: 0 24px ;
+  padding: 0 24px;
   background-color: inherit;
   border: none;
-  color: var(--light-grey);
+  color: ${(props) =>
+    props.hasError === "true" ? "var(--neutral-red)" : "var(--light-grey)"};
+
+  border-right: ${(props) =>
+    props.hasError === "true"
+      ? "1px solid var(--neutral-red)"
+      : "1px solid var(--white)"};
+  border-left: none;
+  border-top: ${(props) =>
+    props.hasError === "true"
+      ? "1px solid var(--neutral-red)"
+      : "1px solid var(--white)"};
+  border-bottom: ${(props) =>
+    props.hasError === "true"
+      ? "1px solid var(--neutral-red)"
+      : "1px solid var(--white)"};
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+
+  transition: all 0.3s;
+
+  ${FieldPass}:focus + &,
+  ${FieldPass}:hover + & {
+    border-color: var(--primary-pink);
+    color: var(--primary-pink);
+  }
 `;
 
-export const Error = styled.div`
+export const Notification = styled.div`
+  display: flex;
+  gap: 4px;
   padding-top: 8px;
-  color: red;
-  font-size: 12px;
+  color: ${(props) =>
+    props.type === "error" ? "var(--neutral-red)" : "var(--primary-pink)"};
+  font-size: 14px;
+  line-height: 1.7;
 `;
 
 export const ForgotLink = styled.a`

@@ -34,19 +34,19 @@ export const Hero = () => {
   }, [vantaEffect]);
 
   return (
-    <section>
-      <div className="container container--hero" ref={myRef}>
-        <HeroStyles>
-          <HeroTitle>
-            Your
-            <HeroSubTitle>
-              AI Companion
-            </HeroSubTitle>
-            for Business Success
 
-          </HeroTitle>
-          <MainBtn title={"Try for free"} />
-        </HeroStyles>
+    <section ref={myRef}>
+      <div className="container container--hero" >
+      <HeroStyles>
+        <HeroTitle>
+          Headline Clearly Positioning
+          <HeroSubTitle>
+            The Primary USP
+          </HeroSubTitle>
+        </HeroTitle>
+        <MainBtn title={"Button"} />
+      </HeroStyles>
+
       </div>
     </section>
   );
