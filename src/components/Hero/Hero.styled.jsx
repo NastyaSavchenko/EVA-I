@@ -16,7 +16,7 @@ export const HeroTitle = styled.h1`
   color: var(--white);
 `;
 
-export const HeroSubTitle = styled.p`
+export const HeroSubTitle = styled.span`
   background-image: var(--primary-gradient);
   -webkit-background-clip: text;
   background-clip: text;

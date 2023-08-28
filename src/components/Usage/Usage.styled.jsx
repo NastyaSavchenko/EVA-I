@@ -68,6 +68,8 @@ export const CardIcon = styled.div`
 `;
 
 export const CardTitle = styled.p`
+  display: flex;
+  align-items: center;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.66;
@@ -75,5 +77,5 @@ export const CardTitle = styled.p`
 
 export const CardText = styled.p`
   font-size: 16px;
-  line-height: 1.25;
+  line-height: 1.5;
 `;

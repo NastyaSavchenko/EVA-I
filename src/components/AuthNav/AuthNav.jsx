@@ -5,7 +5,7 @@ export const AuthNav = () => {
   return (
     <div>
       <LoginLink to="login">Login</LoginLink>
-      <MainBtn title={'Button'}/>
+      <MainBtn title={'Try for free'}/>
     </div>
   );
 };

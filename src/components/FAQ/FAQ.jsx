@@ -89,37 +89,37 @@ const accordionData = [
   {
     ariaControls: "panel1a-content",
     id: "panel1a-header",
-    title: "[Question] Neque porro quisquam est? ",
+    title: "How does EVA-I work? ",
     accordionDetails:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "EVA-I operates through advanced AI technology. It employs natural language processing and machine learning algorithms to understand user input. When a user interacts with EVA-I, the AI analyzes their query, processes it, and generates a relevant response. This enables EVA-I to provide accurate information, assist with tasks, and engage in meaningful conversations. In essence, EVA-I functions as a virtual assistant, using cutting-edge AI techniques to assist users, answer questions, and provide valuable support to businesses.",
   },
   {
     ariaControls: "panel2a-content",
     id: "panel2a-header",
-    title: "[Question] Neque porro quisquam est? ",
+    title: "How does EVA-I handle customer data and privacy? ",
     accordionDetails:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "EVA-I is designed with a strong commitment to data privacy and security, employing measures that align with industry best practices and regulatory requirements.",
   },
   {
     ariaControls: "panel3a-content",
     id: "panel3a-header",
-    title: "[Question] Neque porro quisquam est? ",
+    title: "Are there customization options available for the AI's responses? ",
     accordionDetails:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "EVA-I offers extensive response customization, allowing you to mold its answers to match your brand's voice. Customize templates, incorporate industry terms, and provide contextual guidance for tailored interactions that reflect your business uniquely.",
   },
   {
     ariaControls: "panel4a-content",
     id: "panel4a-header",
-    title: "[Question] Neque porro quisquam est? ",
+    title: "What industries is EVA-I most suited for? ",
     accordionDetails:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "EVA-I suits a variety of industries, excelling in e-commerce, customer service, healthcare, hospitality, finance, technology, education, and retail. Its adaptability enhances engagement, automates tasks, and provides efficient support.",
   },
   {
     ariaControls: "panel5a-content",
     id: "panel5a-header",
-    title: "[Question] Neque porro quisquam est? ",
+    title: "Is there a free trial or demo available? ",
     accordionDetails:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "EVA-I offers a free trial period, allowing you to experience its capabilities firsthand. You can explore its features, see how it integrates with your business, and evaluate its benefits before making a commitment. Don't miss the chance to discover how EVA-I can elevate your operations and customer interactions.",
   },
 ];
 
@@ -134,7 +134,7 @@ export const FAQ = () => {
               <QuestionsItem key={accordion.id} tabIndex={0}>
                 <Accordion sx={QuestionWrapp}>
                   <AccordionSummary
-                    
+
                     expandIcon={<CustomExpandIcon />}
                     aria-controls={accordion.ariaControls}
                     id={accordion.id}

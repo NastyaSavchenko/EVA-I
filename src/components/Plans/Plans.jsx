@@ -18,19 +18,37 @@ const pracingData = [
     id: 1,
     plan: "Starter",
     price: 19,
-    benefits: ["value", "value", "value", "value", "value", "value"],
+    benefits: [
+      "No-Code builder",
+      "Access to templates",
+      "Basic analytics",
+      "Deploy on Web",
+      "Automate up to 30% of your workflow"
+    ],
   },
   {
     id: 2,
     plan: "Pro",
     price: 79,
-    benefits: ["value", "value", "value", "value", "value"],
+    benefits: [
+      "Integrate with your systems & apps",
+      "Collaborate with your team members",
+      "Multilingual support",
+      "Advanced analytics",
+      "Automate up to 60% of your workflow"
+    ],
   },
   {
     id: 3,
     plan: "Premium",
     price: 199,
-    benefits: ["value", "value", "value", "value", "value"],
+    benefits: [
+      "Advanced out of the box integrations",
+      "User Flow analytics",
+      "Intent based pop-ups",
+      "Proactive messaging campaigns",
+      "Automate up to 80% of your workflow"
+    ],
   },
 ];
 
@@ -40,7 +58,7 @@ export const Plans = () => {
       <Container>
         <SectionTitle title={"Pricing & Plans"} />
         <PricingInfo>
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
+          For personal, team, or client use, we've got the perfect package.
         </PricingInfo>
         <PlansList>
           {pracingData.map((plan) => {
@@ -54,7 +72,7 @@ export const Plans = () => {
                   <PlanBenefits benefits={plan} />
                 </PlanBenefitsList>
                 <BtnBox>
-                  <MainBtn title={"button"} styles={"pay"} />
+                  <MainBtn title={"Get plan"} styles={"pay"} />
                 </BtnBox>
               </PlanItem>
             );

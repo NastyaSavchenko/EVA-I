@@ -14,6 +14,7 @@ export const PricingInfo = styled.p`
 
 export const PlansList = styled.ul`
   display: flex;
+  justify-content: center;
   gap: 32px;
 `;
 
