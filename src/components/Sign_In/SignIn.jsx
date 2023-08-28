@@ -37,13 +37,6 @@ export const SignIn = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
-  // const handleSubmit = (values, { setSubmitting, resetForm  }) => {
-  //   console.log(values);
-  //   dispatch(logIn(values));
-  //   resetForm();
-  //   setSubmitting(false);
-  // };
-
   return (
     <div>
       <SectionTitle title={"Sign in"} />
@@ -165,7 +158,7 @@ export const SignIn = () => {
 
             <ForgotLink href="">Forgot password?</ForgotLink>
 
-            <AuthBtn title={"Log in"} disabled={isSubmitting}/>
+            <AuthBtn title={"Log in"} handleSubmit={handleSubmit}/>
 
             <Divider
               sx={{

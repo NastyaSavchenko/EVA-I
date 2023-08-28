@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
@@ -25,7 +25,7 @@ import Loader from "../../assets/images/loader_Input.svg";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { MdOutlineVisibility } from "react-icons/md";
 
-export const Registration = () => {
+export const Registration = ({ setIsRegistrationSuccess, setUserEmail }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [emailFocused, setEmailFocused] = useState(false);
   const [passwordFocused, setPasswordFocused] = useState(false);
@@ -66,14 +66,15 @@ export const Registration = () => {
 
           return errors;
         }}
-        onSubmit={(values, { setSubmitting, resetForm }) => {
+        onSubmit={(values, { resetForm }) => {
           console.log(values);
           dispatch(register(values));
+          setIsRegistrationSuccess(true);
+          setUserEmail(values.email);
           resetForm();
-          setSubmitting(false);
         }}
       >
-        {({ errors, touched, handleSubmit, isSubmitting }) => (
+        {({ errors, touched, handleSubmit}) => (
           <FormStyles onSubmit={handleSubmit}>
             <Email>
               <Label htmlFor="email">Email</Label>
@@ -120,9 +121,7 @@ export const Registration = () => {
                 <VisibilityBtn
                   type="button"
                   onClick={handlePasswordVisibility}
-                  hasError={
-                    errors.password ? "true" : "false"
-                  }
+                  hasError={errors.password ? "true" : "false"}
                 >
                   {showPassword ? (
                     <MdOutlineVisibility
@@ -153,7 +152,7 @@ export const Registration = () => {
               ) : null}
             </Password>
 
-            <AuthBtn title={"Continue"} disabled={isSubmitting} />
+            <AuthBtn title={"Continue"} handleSubmit={handleSubmit}/>
 
             <PolicyText>
               <span>By clicking Continue, you agree with the </span>
