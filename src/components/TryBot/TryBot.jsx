@@ -7,9 +7,9 @@ export const TryBot = () => {
     <GradientBackground>
       <section id="specialBackground">
         <div className="container">
-          <SectionTitle title={"Encouragement to press CTA"} />
+          <SectionTitle title={"Ready to Experience the Future? Try for free today!"} />
           <MainBtnBox>
-            <MainBtn title={"Button"} />
+            <MainBtn title={"Try for free"} />
           </MainBtnBox>
         </div>
       </section>

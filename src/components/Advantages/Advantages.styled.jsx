@@ -6,6 +6,22 @@ export const AdvantagesStyles = styled.div`
   flex-direction: column;
 `;
 
+export const AdvantagesTop = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const AdvantagesSpan = styled.span`
+  background-image: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 2;
+  margin-right: 8px;
+`;
+
 export const AdvantagesContainer = styled.div`
   display: flex;
   gap: 32px;

@@ -17,15 +17,14 @@ export const Benefits = () => {
           <BenefitCard>
             <CardInfo>
               <CardInfoTitle>
-                [H3] Core benefit positioned as a value prop
+                Boost Sales Through Chat Conversations
               </CardInfoTitle>
 
               <CardInfoText>
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit, sed qu
+                Transform chats into purchases with tailored product suggestions, real-time stock updates, and timely promotions. Showcase your offerings non-stop, across all platforms, and at any volume.
               </CardInfoText>
 
-              <MainBtn title={"Button"} styles={"outline"} />
+              <MainBtn title={"Try for free"} styles={"outline"} />
             </CardInfo>
 
             <CardImgContainer>img card 1</CardImgContainer>
@@ -36,30 +35,28 @@ export const Benefits = () => {
 
             <CardInfo>
               <CardInfoTitle>
-                [H3] Core benefit positioned as a value prop
+                Elevate Your Team with AI Assistance
               </CardInfoTitle>
 
               <CardInfoText>
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit, sed qu
+                Manage customer messages, enable order tracking, and automate FAQs. Let your team concentrate on important inquiries as EVA-I takes care of the rest.
               </CardInfoText>
 
-              <MainBtn title={"Button"} styles={"outline"} />
+              <MainBtn title={"Try for free"} styles={"outline"} />
             </CardInfo>
           </BenefitCard>
 
           <BenefitCard>
             <CardInfo>
               <CardInfoTitle>
-                [H3] Core benefit positioned as a value prop
+                Master Your Chatbot's Performance
               </CardInfoTitle>
 
               <CardInfoText>
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit, sed qu
+                You wield full authority over training, knowledge base, persona, and user experience, crafting a customized chatbot solution that's uniquely yours.
               </CardInfoText>
 
-              <MainBtn title={"Button"} styles={"outline"} />
+              <MainBtn title={"Try for free"} styles={"outline"} />
             </CardInfo>
 
             <CardImgContainer>img card 3</CardImgContainer>

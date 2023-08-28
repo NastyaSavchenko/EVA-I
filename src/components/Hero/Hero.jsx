@@ -34,6 +34,7 @@ export const Hero = () => {
   }, [vantaEffect]);
 
   return (
+
     <section ref={myRef}>
       <div className="container container--hero" >
       <HeroStyles>
@@ -45,6 +46,7 @@ export const Hero = () => {
         </HeroTitle>
         <MainBtn title={"Button"} />
       </HeroStyles>
+
       </div>
     </section>
   );

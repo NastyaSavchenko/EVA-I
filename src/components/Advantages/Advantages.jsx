@@ -1,11 +1,13 @@
 import {
   AdvantagesStyles,
+  AdvantagesSpan,
   AdvantagesContainer,
   AdvantagesCard,
   CardImg,
   ImgContainer,
   CardTitle,
   CardText,
+  AdvantagesTop,
 } from "./Advantages.styled";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 
@@ -14,19 +16,23 @@ export const Advantages = () => {
     <section>
       <div className="container">
         <AdvantagesStyles>
-          <SectionTitle title={'Advantages'}/>
+          <AdvantagesTop>
+            <AdvantagesSpan>
+              Supercharge
+            </AdvantagesSpan>
+            <SectionTitle title={'Your Business'} />
+          </AdvantagesTop>
+
           <AdvantagesContainer>
             <AdvantagesCard>
               <ImgContainer>
                 <CardImg src="/" alt="icon-1" />
               </ImgContainer>
 
-              <CardTitle>Short core benefit 1</CardTitle>
+              <CardTitle>Efficiency Boost</CardTitle>
 
               <CardText>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                possimus facilis blanditiis distinctio porro obcaecati magnam,
-                et omnis fugit?.
+                Revolutionize workflows by automating intricate tasks, paving the way for unparalleled time and energy savings.
               </CardText>
             </AdvantagesCard>
 
@@ -35,12 +41,10 @@ export const Advantages = () => {
                 <CardImg src="/" alt="icon-2" />
               </ImgContainer>
 
-              <CardTitle>Short core benefit 2</CardTitle>
+              <CardTitle>Customer Delight</CardTitle>
 
               <CardText>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                possimus facilis blanditiis distinctio porro obcaecati magnam,
-                et omnis fugit?.
+                Elevate customer interactions with personalized, prompt responses, cultivating enduring satisfaction and loyalty.
               </CardText>
             </AdvantagesCard>
 
@@ -49,12 +53,10 @@ export const Advantages = () => {
                 <CardImg src="/" alt="icon-3" />
               </ImgContainer>
 
-              <CardTitle>Short core benefit 3</CardTitle>
+              <CardTitle>Time Saver</CardTitle>
 
               <CardText>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                possimus facilis blanditiis distinctio porro obcaecati magnam,
-                et omnis fugit?.
+                Get back precious hours by effortlessly entrusting routine tasks to your tireless AI assistant, unlocking a surge in productivity.
               </CardText>
             </AdvantagesCard>
           </AdvantagesContainer>

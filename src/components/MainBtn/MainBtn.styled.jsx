@@ -21,8 +21,6 @@ const rockingAnimation = keyframes`
 `;
 
 export const MainBrtStyles = styled.button`
-  
-  width: 194px;
   height: 56px;
   border-radius: 32px;
   font-family: inherit;

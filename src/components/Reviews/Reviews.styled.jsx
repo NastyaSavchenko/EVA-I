@@ -6,6 +6,15 @@ export const ReviewsStyles = styled.ul`
   margin-top: 80px;
 `;
 
+export const ReviewQuotes = styled.span`
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 0.93;
+  background: var(--primary-gradient, linear-gradient(90deg, #ED3984 0%, #ED3984 1.56%, #7452C8 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
 export const ReviewsInfoContainer = styled.li`
   display: flex;
   justify-content: center;
@@ -21,7 +30,7 @@ export const ReviewsInfo = styled.div`
 
 export const ReviewsText = styled.p`
   font-size: 28px;
-  line-height: 1.4; 
+  line-height: 60px; 
   margin-bottom: 40px;
   color: var(--white);
 `;

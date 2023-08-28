@@ -2,6 +2,7 @@ import {
   PersonImg,
   PersonName,
   PersonPosition,
+  ReviewQuotes,
   // ReviewsImgContainer,
   ReviewsInfo,
   ReviewsInfoContainer,
@@ -15,13 +16,13 @@ export const Reviews = () => {
   return (
     <section>
       <div className="container">
-        <SectionTitle title={"Real stories from real customers"} />
+        <SectionTitle title={"What they say about EVA-I?"} />
         <ReviewsStyles>
           <ReviewsInfoContainer>
             <ReviewsInfo>
               <ReviewsText>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Eveniet velit et magni, quasi fuga amet corporis itaque quia
+                <ReviewQuotes>“</ReviewQuotes>
+                Using EVA-I has been an absolute game-changer for my business. Its 'Free Your Team from FAQs' feature lightened support load, letting us focus on key tasks. 'Helps Customers Track Their Precious Orders' impressed me—automated alerts saved time and improved customer experience.<ReviewQuotes>”</ReviewQuotes>
               </ReviewsText>
 
               <ReviewsPersonContainer>
@@ -29,8 +30,8 @@ export const Reviews = () => {
                   <img src="" alt="img" />
                 </PersonImg>
                 <div>
-                  <PersonName>Name</PersonName>
-                  <PersonPosition>Position, Company</PersonPosition>
+                  <PersonName>Andrii</PersonName>
+                  <PersonPosition>Online store owner</PersonPosition>
                 </div>
               </ReviewsPersonContainer>
             </ReviewsInfo>
