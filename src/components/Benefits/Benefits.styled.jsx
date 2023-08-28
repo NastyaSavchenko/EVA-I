@@ -26,7 +26,7 @@ export const CardInfoTitle = styled.h3`
 export const CardInfoText = styled.p`
   font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.5;
   margin-bottom: 60px;
   color: var(--white);
 `;

@@ -36,15 +36,17 @@ export const Hero = () => {
   return (
     <section>
       <div className="container container--hero" ref={myRef}>
-      <HeroStyles>
-        <HeroTitle>
-          Headline Clearly Positioning
-          <HeroSubTitle>
-            The Primary USP
-          </HeroSubTitle>
-        </HeroTitle>
-        <MainBtn title={"Button"} />
-      </HeroStyles>
+        <HeroStyles>
+          <HeroTitle>
+            Your
+            <HeroSubTitle>
+              AI Companion
+            </HeroSubTitle>
+            for Business Success
+
+          </HeroTitle>
+          <MainBtn title={"Try for free"} />
+        </HeroStyles>
       </div>
     </section>
   );
