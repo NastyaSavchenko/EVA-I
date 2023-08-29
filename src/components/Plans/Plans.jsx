@@ -23,7 +23,7 @@ const pracingData = [
       "Access to templates",
       "Basic analytics",
       "Deploy on Web",
-      "Automate up to 30% of your workflow"
+      "Automate up to 30% of your workflow",
     ],
   },
   {
@@ -35,7 +35,7 @@ const pracingData = [
       "Collaborate with your team members",
       "Multilingual support",
       "Advanced analytics",
-      "Automate up to 60% of your workflow"
+      "Automate up to 60% of your workflow",
     ],
   },
   {
@@ -47,7 +47,7 @@ const pracingData = [
       "User Flow analytics",
       "Intent based pop-ups",
       "Proactive messaging campaigns",
-      "Automate up to 80% of your workflow"
+      "Automate up to 80% of your workflow",
     ],
   },
 ];

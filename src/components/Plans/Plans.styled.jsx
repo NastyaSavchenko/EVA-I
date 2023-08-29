@@ -19,18 +19,21 @@ export const PlansList = styled.ul`
 `;
 
 export const PlanItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 32px;
   width: 406px;
-
   border: 1px solid transparent;
   border-radius: 12px;
   border-image: var(--primary-gradient);
-  border-image-slice: 1; 
+  border-image-slice: 1;
 `;
 
 export const PlanInfo = styled.div`
   padding-bottom: 24px;
   margin-bottom: 24px;
+  width: 100%;
 
   border-bottom: 1px solid transparent;
   border-image: var(--primary-gradient);
@@ -50,10 +53,7 @@ export const PlanPrice = styled.span`
   font-weight: 600;
   line-height: 1.5;
 
-  background: var(
-    --primary-gradient,
-    linear-gradient(90deg, #ed3984 0%, #ed3984 1.56%, #7452c8 100%)
-  );
+  background: var(--primary-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,10 +61,13 @@ export const PlanPrice = styled.span`
 
 export const PlanBenefitsList = styled.ul`
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const BtnBox = styled.div`
+  margin-top: auto;
   display: flex;
   justify-content: center;
-  
 `;
