@@ -36,13 +36,11 @@ export const AdvantagesCard = styled.div`
 
 export const ImgContainer = styled.div`
   display: flex;
-  border: 1px solid var(--light-grey);
   border-radius: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
-  background-color: lightgray;
 `;
 
 export const CardImg = styled.img`

@@ -66,4 +66,5 @@ export const PlanBenefitsList = styled.ul`
 export const BtnBox = styled.div`
   display: flex;
   justify-content: center;
+  
 `;

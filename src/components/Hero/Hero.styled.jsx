@@ -6,7 +6,6 @@ export const HeroStyles = styled.div`
   align-items: center;
   padding: 60px 0px 140px;
 `;
-
 export const HeroTitle = styled.h1`
   margin-bottom: 40px;
   text-align: center;
@@ -22,3 +21,7 @@ export const HeroSubTitle = styled.span`
   background-clip: text;
   color: transparent;
 `;
+
+export const Span = styled.span`
+   display: block;
+`
