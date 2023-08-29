@@ -1,24 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const rockingAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  25% {
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-`;
+import styled from "styled-components";
 
 export const MainBrtStyles = styled.button`
   height: 56px;
@@ -38,21 +18,21 @@ export const MainBrtStyles = styled.button`
   border: ${(props) =>
     props.$btntype === "outline" ? "1px solid var(--primary-pink)" : "none"};
 
-transition: all var(--anim);
+  transition: all var(--anim);
 
   &:hover,
   :focus {
+    transform: translateY(2px);
+    box-shadow: 0px 0px 15px 2px var(--primary-purple);
     color: ${(props) =>
       props.$btntype === "outline" ? "var(--primary-purple)" : "var(--white)"};
-     
+
     border: ${(props) =>
       props.$btntype === "outline"
         ? "1px solid var(--primary-purple)"
         : "none"};
 
-    animation: ${rockingAnimation} 1s infinite ease-in-out;
-    transform-origin: center center;
-    transform-style: preserve-3d;
-    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+    background: ${(props) =>
+      props.$btntype === "outline" ? "var(--dark)" : "var(--primary-purple)"};
   }
 `;

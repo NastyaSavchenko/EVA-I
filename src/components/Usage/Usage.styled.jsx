@@ -58,13 +58,10 @@ export const CardIcon = styled.div`
   width: 80px;
   height: 80px;
   padding: 10px;
-
-  background-color: var(--light-grey);
   background-image: url(${(props) => props.bg});
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  border-radius: 50%;
 `;
 
 export const CardTitle = styled.p`

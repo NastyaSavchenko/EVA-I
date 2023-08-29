@@ -3,7 +3,6 @@ import {
   PersonName,
   PersonPosition,
   ReviewQuotes,
-  // ReviewsImgContainer,
   ReviewsInfo,
   ReviewsInfoContainer,
   ReviewsPersonContainer,
@@ -11,6 +10,7 @@ import {
   ReviewsText,
 } from "./Reviews.styled";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
+import user from "../../assets/images/user.svg";
 
 export const Reviews = () => {
   return (
@@ -22,12 +22,16 @@ export const Reviews = () => {
             <ReviewsInfo>
               <ReviewsText>
                 <ReviewQuotes>“</ReviewQuotes>
-                Using EVA-I has been an absolute game-changer for my business. Its 'Free Your Team from FAQs' feature lightened support load, letting us focus on key tasks. 'Helps Customers Track Their Precious Orders' impressed me—automated alerts saved time and improved customer experience.<ReviewQuotes>”</ReviewQuotes>
+                Using EVA-I has been an absolute game-changer for my business.
+                Its 'Free Your Team from FAQs' feature lightened support load,
+                letting us focus on key tasks. 'Helps Customers Track Their
+                Precious Orders' impressed me—automated alerts saved time and
+                improved customer experience.<ReviewQuotes>”</ReviewQuotes>
               </ReviewsText>
 
               <ReviewsPersonContainer>
                 <PersonImg>
-                  <img src="" alt="img" />
+                  <img src={user} alt="img" />
                 </PersonImg>
                 <div>
                   <PersonName>Andrii</PersonName>
