@@ -18,7 +18,7 @@ export const Error = () => {
         changed or is <br /> temporary unavailable.
       </Text>
       <LinkWrapp>
-        <Link href="/">Go to homepage</Link>
+        <Link to="/">Go to homepage</Link>
         <ProblemBtn type="button">Report problem</ProblemBtn>
       </LinkWrapp>
     </Box>

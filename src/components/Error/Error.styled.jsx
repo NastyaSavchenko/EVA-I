@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Box = styled.div`
   padding-top: 140px;
@@ -44,7 +45,7 @@ export const LinkWrapp = styled.div`
   gap: 32px;
 `;
 
-export const Link = styled.a`
+export const Link = styled(NavLink)`
   padding: 16px 32px;
 
   font-size: 20px;
