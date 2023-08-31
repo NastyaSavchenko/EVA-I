@@ -150,7 +150,7 @@ export const Notification = styled.div`
   line-height: 1.7;
 `;
 
-export const ForgotLink = styled.a`
+export const ForgotLink = styled(NavLink)`
   display: flex;
   font-weight: var(--regular-font-weight);
   justify-content: flex-start;

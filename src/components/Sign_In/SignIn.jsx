@@ -156,7 +156,7 @@ export const SignIn = () => {
               ) : null}
             </Password>
 
-            <ForgotLink href="/forgot-password">Forgot password?</ForgotLink>
+            <ForgotLink to="/forgot-password">Forgot password?</ForgotLink>
 
             <AuthBtn title={"Log in"} handleSubmit={handleSubmit}/>
 
