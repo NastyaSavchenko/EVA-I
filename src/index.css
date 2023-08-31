@@ -15,6 +15,7 @@
   --white: #fff;
   --grey: #5b5b5b;
   --light-grey: #f2f2f2;
+  --neutral-grey: #bfbfbf;
   --neutral-red: #e64035;
 
   --light-pink: #fde8f0;
@@ -140,7 +141,7 @@ section {
 }
 
 .authContainer {
-  padding: 32px 80px 232px;
+  padding: 40px 80px 232px;
   display: flex;
   flex-direction: column;
   gap: 40px;
