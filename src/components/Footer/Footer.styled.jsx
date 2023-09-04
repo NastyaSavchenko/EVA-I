@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const InfoBlock = styled.div`
   display: flex;
@@ -24,15 +25,21 @@ export const LegalList = styled.ul`
 
   > li {
     transition: all var(--anim);
+
     &:not(:last-child) {
       margin-right: 24px;
     }
 
     &:hover {
-      transform: scale(1.1);
+      color: var(--primary-pink);
+      border-color: var(--linear-gradient);
     }
   }
 `;
+
+// export const Link = styled(NavLink)`
+//   display: inline-block;
+// `;
 
 //APP_STORES
 export const AppStores = styled.div`
