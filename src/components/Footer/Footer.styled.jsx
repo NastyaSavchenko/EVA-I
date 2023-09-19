@@ -3,8 +3,26 @@ import { NavLink } from "react-router-dom";
 
 export const InfoBlock = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 36px;
   justify-content: space-between;
-  padding: 120px 80px;
+  padding: 72px 0 100px;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1920px) {
+    flex-direction: row;
+  }
 `;
 
 //INFO_CONTAINER
@@ -50,9 +68,9 @@ export const AppStores = styled.div`
 `;
 
 export const StoreTitle = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: var(--semibold-font-weight);
-  line-height: 1.55;
+  line-height: 1.5;
 `;
 
 export const StoreButtons = styled.li`
@@ -74,7 +92,7 @@ export const StoreImg = styled.img`
 //RIGHTS
 export const Rights = styled.div`
   position: relative;
-  padding: 40px 80px 0;
+  padding: 40px 0 0;
 `;
 
 export const RightsSpan = styled.span`

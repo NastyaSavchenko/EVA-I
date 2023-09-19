@@ -3,28 +3,52 @@ import styled from "styled-components";
 export const UsageCards = styled.ul`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  margin-top: 80px;
-  margin-bottom: 100px;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    margin-top: 80px;
+    margin-bottom: 60px;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
-    gap: 32px;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 1920px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    align-items: flex-start;
   }
 `;
 
 export const UsageCard = styled.li`
   max-width: 515px;
   width: 100%;
+  margin: 0 auto;
 
   &:not(:last-child) {
     margin-bottom: 24px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1024px) {
     flex-basis: calc((100% - 2 * 32px) / 2);
   }
 `;
@@ -55,21 +79,61 @@ export const CardTop = styled.div`
 `;
 
 export const CardIcon = styled.div`
-  width: 80px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   padding: 10px;
   background-image: url(${(props) => props.bg});
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 export const CardTitle = styled.p`
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 1.66;
+  line-height: 1.4;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 24px;
+    line-height: 1.66;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    font-size: 24px;
+    line-height: 1.66;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    font-size: 24px;
+    line-height: 1.66;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 24px;
+    line-height: 1.66;
+  }
 `;
 
 export const CardText = styled.p`

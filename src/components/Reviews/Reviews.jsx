@@ -21,12 +21,13 @@ export const Reviews = () => {
           <ReviewsInfoContainer>
             <ReviewsInfo>
               <ReviewsText>
-                <ReviewQuotes>“</ReviewQuotes>
+                <ReviewQuotes>“ </ReviewQuotes>
                 Using EVA-I has been an absolute game-changer for my business.
                 Its 'Free Your Team from FAQs' feature lightened support load,
                 letting us focus on key tasks. 'Helps Customers Track Their
                 Precious Orders' impressed me—automated alerts saved time and
-                improved customer experience.<ReviewQuotes>”</ReviewQuotes>
+                improved customer experience.
+                <ReviewQuotes> ”</ReviewQuotes>
               </ReviewsText>
 
               <ReviewsPersonContainer>
@@ -39,10 +40,6 @@ export const Reviews = () => {
                 </div>
               </ReviewsPersonContainer>
             </ReviewsInfo>
-
-            {/* <ReviewsImgContainer>
-              <img src="/" alt="image" />
-            </ReviewsImgContainer> */}
           </ReviewsInfoContainer>
         </ReviewsStyles>
       </div>

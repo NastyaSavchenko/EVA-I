@@ -11,7 +11,6 @@ export const Hero = () => {
     if (!vantaEffect) {
       setVantaEffect(
         NET({
-          // el: '.hero',
           el: myRef.current,
           color: 0x7552c8,
           backgroundColor: 0x07061f,

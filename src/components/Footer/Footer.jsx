@@ -20,30 +20,31 @@ export const Footer = () => {
   return (
     <>
       <footer>
-        <InfoBlock>
-          <div>
-            <Logo />
-            <InfoContainer>
-              <LegalList>
-                <li>
-                  <ToTopLink to="/registration">Download Now</ToTopLink>
-                </li>
-                {/* <li>
+        <div className="container">
+          <InfoBlock>
+            <div>
+              <Logo />
+              <InfoContainer>
+                <LegalList>
+                  <li>
+                    <ToTopLink to="/registration">Download Now</ToTopLink>
+                  </li>
+                  {/* <li>
                   <a href="#license">License</a>
                 </li> */}
-              </LegalList>
+                </LegalList>
 
-              <LegalList>
-                <li>
-                  <ToTopLink to="/">About</ToTopLink>
-                </li>
-                <li>
-                  <ToTopLink to="/examples">Features</ToTopLink>
-                </li>
-                <li>
-                  <ToTopLink to="/pricing">Pricing</ToTopLink>
-                </li>
-                {/* <li>
+                <LegalList>
+                  <li>
+                    <ToTopLink to="/">About</ToTopLink>
+                  </li>
+                  <li>
+                    <ToTopLink to="/examples">Features</ToTopLink>
+                  </li>
+                  <li>
+                    <ToTopLink to="/pricing">Pricing</ToTopLink>
+                  </li>
+                  {/* <li>
                   <a href="#news">News</a>
                 </li>
                 <li>
@@ -52,31 +53,32 @@ export const Footer = () => {
                 <li>
                   <a href="#contact">Contact</a>
                 </li> */}
-              </LegalList>
-            </InfoContainer>
-          </div>
-          <AppStores>
-            <StoreTitle>Get the App</StoreTitle>
+                </LegalList>
+              </InfoContainer>
+            </div>
 
-            <ul>
-              <StoreButtons>
-                <a href="/google" target="_blank">
-                  <StoreImg src={Google_Play} alt="Google Play button" />
-                </a>
-              </StoreButtons>
-              <StoreButtons>
-                <a href="/apple" target="_blank">
-                  <StoreImg src={App_Store} alt="Apple store button" />
-                </a>
-              </StoreButtons>
-            </ul>
-          </AppStores>
-        </InfoBlock>
+            <AppStores>
+              <StoreTitle>Get the App</StoreTitle>
+              <ul>
+                <StoreButtons>
+                  <a href="/google" target="_blank">
+                    <StoreImg src={Google_Play} alt="Google Play button" />
+                  </a>
+                </StoreButtons>
+                <StoreButtons>
+                  <a href="/apple" target="_blank">
+                    <StoreImg src={App_Store} alt="Apple store button" />
+                  </a>
+                </StoreButtons>
+              </ul>
+            </AppStores>
+          </InfoBlock>
 
-        <Rights>
-          <RightsSpan>© 2023 All rights reserved.</RightsSpan>
-          <ScrollButton />
-        </Rights>
+          <Rights>
+            <RightsSpan>© 2023 All rights reserved.</RightsSpan>
+            <ScrollButton />
+          </Rights>
+        </div>
       </footer>
     </>
   );

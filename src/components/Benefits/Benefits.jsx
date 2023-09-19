@@ -2,6 +2,9 @@ import { MainBtn } from "../MainBtn/MainBtn";
 import {
   BenefitCard,
   BenefitsStyles,
+  CardImg1,
+  CardImg2,
+  CardImg3,
   CardImgContainer,
   CardInfo,
   CardInfoText,
@@ -15,6 +18,10 @@ export const Benefits = () => {
         <h2 className="hidden-title">Benefits</h2>
         <BenefitsStyles>
           <BenefitCard>
+          <CardImgContainer>
+              <CardImg1 />
+          </CardImgContainer>
+
             <CardInfo>
               <CardInfoTitle>
                 Boost Sales Through Chat Conversations
@@ -26,14 +33,14 @@ export const Benefits = () => {
 
               <MainBtn title={"Try for free"} styles={"outline"} />
             </CardInfo>
-
-            <CardImgContainer>img card 1</CardImgContainer>
           </BenefitCard>
 
           <BenefitCard>
-            <CardImgContainer>img card 2</CardImgContainer>
+            <CardImgContainer style={{order: 1}}>
+            <CardImg2 />
+            </CardImgContainer>
 
-            <CardInfo>
+            <CardInfo style={{order: 2}}>
               <CardInfoTitle>
                 Elevate Your Team with AI Assistance
               </CardInfoTitle>
@@ -47,6 +54,10 @@ export const Benefits = () => {
           </BenefitCard>
 
           <BenefitCard>
+          <CardImgContainer>
+              <CardImg3 />
+            </CardImgContainer>
+
             <CardInfo>
               <CardInfoTitle>
                 Master Your Chatbot's Performance
@@ -58,8 +69,6 @@ export const Benefits = () => {
 
               <MainBtn title={"Try for free"} styles={"outline"} />
             </CardInfo>
-
-            <CardImgContainer>img card 3</CardImgContainer>
           </BenefitCard>
         </BenefitsStyles>
       </div>
