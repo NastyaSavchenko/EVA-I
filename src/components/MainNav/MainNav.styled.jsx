@@ -19,8 +19,24 @@ export const NavLinkStyles = styled(NavLink)`
 `;
 
 export const NavList = styled.ul`
-  display: flex;
+  display: none;
   align-items: center;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: none;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    display: none;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    display: flex;
+  }
+
+  @media (min-width: 1920px) {
+    display: flex;
+  }
 `;
 
 export const NavItem = styled.li`
