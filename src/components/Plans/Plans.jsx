@@ -10,7 +10,6 @@ import {
   PlanBenefitsList,
   BtnBox,
   PricingInfo,
-  Container,
 } from "./Plans.styled";
 
 const pracingData = [
@@ -55,7 +54,7 @@ const pracingData = [
 export const Plans = () => {
   return (
     <section>
-      <Container>
+      <div className="container">
         <SectionTitle title={"Pricing & Plans"} />
         <PricingInfo>
           For personal, team, or client use, we've got the perfect package.
@@ -78,7 +77,7 @@ export const Plans = () => {
             );
           })}
         </PlansList>
-      </Container>
+      </div>
     </section>
   );
 };

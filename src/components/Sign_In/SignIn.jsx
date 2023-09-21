@@ -42,7 +42,7 @@ export const SignIn = () => {
       <SectionTitle title={"Sign in"} />
 
       <LinkText>
-        Don’t have an account? <Link to="/registration">Create an account</Link>
+        Don’t have an account? <Link to="/registration">&nbsp;Create an account</Link>
       </LinkText>
 
       <Formik

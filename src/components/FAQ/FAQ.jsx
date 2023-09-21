@@ -4,6 +4,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Plus from "../../assets/images/plus.svg";
 import Minus from "../../assets/images/minus.svg";
 import { IconButton } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 import { QuestionsList, QuestionsItem } from "./FAQ.styled";
@@ -14,7 +15,7 @@ const CustomExpandIcon = () => {
       sx={{
         ".collapsIconWrapper": {
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "end",
           alignItems: "center",
         },
         ".Mui-expanded & > .collapsIconWrapper": {
@@ -124,6 +125,7 @@ const accordionData = [
 ];
 
 export const FAQ = () => {
+  const theme = useTheme();
   return (
     <section>
       <div className="container">
@@ -139,19 +141,39 @@ export const FAQ = () => {
                     aria-controls={accordion.ariaControls}
                     id={accordion.id}
                     sx={{
-                      padding: "32px",
-                      fontSize: "32px",
+                      padding: "16px 24px",
+                      fontSize: "20px",
                       fontWeight: 600,
-                      lineHeight: 1.37,
+                      lineHeight: 1.4,
+
+                      [theme.breakpoints.between('sm', 'xl')]: {
+                        padding: "32px",
+                        fontSize: "32px",
+                        lineHeight: 1.25,
+                      },
+                      [theme.breakpoints.up('xl')]: {
+                        padding: "32px",
+                        fontSize: "32px",
+                        lineHeight: 1.25,
+                      },
+
                     }}
+                    
                   >
                     <p>{accordion.title}</p>
                   </AccordionSummary>
                   <AccordionDetails
                     sx={{
-                      padding: "32px 32px",
+                      padding: "16px 24px",
                       fontSize: "16px",
                       lineHeight: "1.5",
+
+                      [theme.breakpoints.between('sm', 'xl')]: {
+                        padding: "32px",
+                      },
+                      [theme.breakpoints.up('xl')]: {
+                        padding: "32px",
+                      },
                     }}
                   >
                     <p>{accordion.accordionDetails}</p>

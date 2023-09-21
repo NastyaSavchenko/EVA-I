@@ -14,6 +14,30 @@ import vector from "../../assets/icons/Vector.svg";
 import smile from "../../assets/icons/smile.svg";
 import clock from "../../assets/icons/clock.svg";
 
+const AdvantageData = [
+  {
+    id: 1,
+    icon: `${vector}`,
+    alt: "icon-1",
+    title: "Efficiency Boost",
+    text: "Revolutionize workflows by automating intricate tasks, pavingthe way for unparalleled time and energy savings.",
+  },
+  {
+    id: 2,
+    icon: `${smile}`,
+    alt: "icon-2",
+    title: "Customer Delight",
+    text: "Elevate customer interactions with personalized, prompt responses, cultivating enduring satisfaction and loyalty.",
+  },
+  {
+    id: 3,
+    icon: `${clock}`,
+    alt: "icon-3",
+    title: "Time Saver",
+    text: "Get back precious hours by effortlessly entrusting routine tasks to your tireless AI assistant, unlocking a surge in productivity.",
+  }
+]
+
 export const Advantages = () => {
   return (
     <section>
@@ -25,45 +49,19 @@ export const Advantages = () => {
           </AdvantagesTop>
 
           <AdvantagesContainer>
-            <AdvantagesCard>
+            {AdvantageData.map((advantage) => (
+              <AdvantagesCard key={advantage.id}>
               <ImgContainer>
-                <CardImg src={vector} alt="icon-1" />
+                <CardImg src={advantage.icon} alt={advantage.alt} />
               </ImgContainer>
 
-              <CardTitle>Efficiency Boost</CardTitle>
+              <CardTitle>{advantage.title}</CardTitle>
 
               <CardText>
-                Revolutionize workflows by automating intricate tasks, paving
-                the way for unparalleled time and energy savings.
+                {advantage.text}
               </CardText>
             </AdvantagesCard>
-
-            <AdvantagesCard>
-              <ImgContainer>
-                <CardImg src={smile} alt="icon-2" />
-              </ImgContainer>
-
-              <CardTitle>Customer Delight</CardTitle>
-
-              <CardText>
-                Elevate customer interactions with personalized, prompt
-                responses, cultivating enduring satisfaction and loyalty.
-              </CardText>
-            </AdvantagesCard>
-
-            <AdvantagesCard>
-              <ImgContainer>
-                <CardImg src={clock} alt="icon-3" />
-              </ImgContainer>
-
-              <CardTitle>Time Saver</CardTitle>
-
-              <CardText>
-                Get back precious hours by effortlessly entrusting routine tasks
-                to your tireless AI assistant, unlocking a surge in
-                productivity.
-              </CardText>
-            </AdvantagesCard>
+            ))}
           </AdvantagesContainer>
         </AdvantagesStyles>
       </div>

@@ -39,7 +39,7 @@ export const Registration = ({ setIsRegistrationSuccess, setUserEmail }) => {
     <div>
       <SectionTitle title={"Create an account"} />
       <LinkText>
-        Already have an account? <Link to="/login"> Sign in</Link>
+        Already have an account? <Link to="/login">&nbsp;Sign in</Link>
       </LinkText>
 
       <Formik
