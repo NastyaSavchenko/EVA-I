@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { logIn, logOut, register } from './operations';
+import { logIn, logOut, register, forgotPassword, resetPassword, refreshUser, googleAuth } from './operations';
 
 const initialState = {
   user: { id: null, name: null },
   accessToken: null,
   refreshToken: null,
   isLoggedIn: false,
+  isVerify: false,
 };
 
 const authSlice = createSlice({
@@ -15,12 +16,6 @@ const authSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(register.fulfilled, (state, action) => {
-        console.log(action.payload);
-        state.user.id = action.payload._id;
-        state.user.name = action.payload.name;
-        state.accessToken = action.payload.token;
-      })
-      .addCase(logIn.fulfilled, (state, action) => {
         state.user.id = action.payload._id;
         state.user.name = action.payload.name;
         state.accessToken = action.payload.token;
@@ -29,14 +24,50 @@ const authSlice = createSlice({
       .addCase(register.rejected, (state, action) => {
         console.log(action.payload);
       })
+      .addCase(logIn.fulfilled, (state, action) => {
+        state.user.id = action.payload._id;
+        state.user.name = action.payload.name;
+        state.accessToken = action.payload.token;
+        state.isLoggedIn = true;
+      })
       .addCase(logIn.rejected, (state, action) => {
         console.log(action.payload);
       })
-      .addCase(logOut.fulfilled, (state, action) => {
+      .addCase(logOut.fulfilled, (state) => {
         state.user = { id: null, name: null };
         state.accessToken = null;
-        state.refreshToken = null;
         state.isLoggedIn = false;
+      })
+      .addCase(forgotPassword.fulfilled, (state) => {
+        state.accessToken = null;
+        state.isLoggedIn = false;
+      })
+      .addCase(forgotPassword.rejected, (state, action) => {
+        console.log(action.payload);
+      })
+      .addCase(resetPassword.fulfilled, (state) => {
+        state.accessToken = null;
+        state.isLoggedIn = false;
+      })
+      .addCase(resetPassword.rejected, (state, action) => {
+        console.log(action.payload);
+      })
+      .addCase(refreshUser.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.refreshToken = false;
+        state.isLoggedIn = true;
+      })
+      .addCase(refreshUser.rejected, (state, action) => {
+        console.log(action.payload);
+      })
+      .addCase(googleAuth.fulfilled, (state, action) => {
+        state.user.id = action.payload._id;
+        state.user.name = action.payload.name;
+        state.accessToken = action.payload.token;
+        state.isLoggedIn = true;
+      })
+      .addCase(googleAuth.rejected, (state, action) => {
+        console.log(action.payload);
       });
   },
 });

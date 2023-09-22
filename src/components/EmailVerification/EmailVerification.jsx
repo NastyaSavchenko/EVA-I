@@ -5,15 +5,17 @@ import {
   Link,
   Container,
 } from "./EmailVerification.styled";
+import { verificationCode } from "../../redux/auth/operations";
 
 export const EmailVerification = ({ userEmail }) => {
+verificationCode();
   return (
     <main>
       <Container>
         <Title>Verify your account</Title>
         <EmailBox>
           <p>We have sent a verification link to your email </p>
-          <span>${userEmail}</span>
+          <span>{userEmail}</span>
         </EmailBox>
         <Box>
           <p>If you can’t find the mail, please check your spam folder or</p>
