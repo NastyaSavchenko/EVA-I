@@ -47,6 +47,7 @@ export const Hero = () => {
 
           <MainBtn title={"Try for free"} />
         </HeroStyles>
+        <p>123<sub>9</sub></p>
       </div>
     </section>
   );
