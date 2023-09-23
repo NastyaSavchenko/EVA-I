@@ -17,7 +17,7 @@ export const register = createAsyncThunk('auth/register', async (credentials, th
     setAuthHeader(res.data.token);
     return res.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue(error.response.data.message);
   }
 });
 
@@ -27,7 +27,7 @@ export const logIn = createAsyncThunk('auth/login', async (credentials, thunkAPI
     setAuthHeader(res.data.token);
     return res.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue(error.response.data.message);
   }
 });
 
@@ -36,7 +36,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     await axios.get('/api/auth/logout');
     clearAuthHeader();
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue(error.response.data.message);
   }
 });
 
@@ -44,7 +44,7 @@ export const verificationCode = createAsyncThunk('auth/verify', async (verificat
   try {
     await axios.get(`/api/auth/verify/${verificationCode}`);
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue(error.response.data.message);
   }
 });
 
@@ -53,7 +53,7 @@ export const forgotPassword = createAsyncThunk('auth/forgot-password', async (cr
     const res = await axios.post('/api/auth/forgot-password', credentials);
     return res.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue(error.response.data.message);
   }
 });
 
@@ -62,7 +62,7 @@ export const resetPassword = createAsyncThunk('auth/reset-password', async (cred
     const res = await axios.post(`/api/auth/reset-password/${credentials.resetPasswordToken}`, credentials);
     return res.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue(error.response.data.message);
   }
 });
 
@@ -79,16 +79,25 @@ export const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) 
     const res = await axios.get('/api/auth/current');
     return res.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue(error.response.data.message);
   }
 });
 
 export const googleAuth = createAsyncThunk('auth/googleAuth', async (_, thunkAPI) => {
   try {
-    const res = await axios.get('/auth/google');
+    const res = await axios.get('api/auth/google');
     setAuthHeader(res.data.token);
     return res.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue(error.response.data.message);
+  }
+});
+
+export const waitList = createAsyncThunk('auth/waitlist/add', async (credentials, thunkAPI) => {
+  try {
+    const res = await axios.post(`api/waitlist/add`, credentials);
+    return res.data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.response.data.message);
   }
 });

@@ -27,10 +27,14 @@ import { Formik } from "formik";
 import Divider from "@mui/material/Divider";
 import { logIn } from "../../redux/auth/operations";
 
+
 export const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [emailFocused, setEmailFocused] = useState(false);
   const [passwordFocused, setPasswordFocused] = useState(false);
+  const [loginError, setLoginError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+
   const dispatch = useDispatch();
 
   const handlePasswordVisibility = () => {
@@ -42,7 +46,8 @@ export const SignIn = () => {
       <SectionTitle title={"Sign in"} />
 
       <LinkText>
-        Don’t have an account? <Link to="/registration">&nbsp;Create an account</Link>
+        Don’t have an account?{" "}
+        <Link to="/registration">&nbsp;Create an account</Link>
       </LinkText>
 
       <Formik
@@ -63,21 +68,37 @@ export const SignIn = () => {
 
           if (!values.password) {
             errors.password = "Password is required";
-          } else if (values.password.length < 6) {
-            errors.password = "Password must be at least 6 characters long";
+          } else if (values.password.length < 8) {
+            errors.password = "Password must be at least 8 characters long";
+          } else if (!/[A-Z]/.test(values.password)) {
+            errors.password =
+              "Password must contain at least 1 uppercase letter";
+          } else if (!/\d/.test(values.password)) {
+            errors.password = "Password must contain at least 1 number";
+          } else if (
+            !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\//-]/.test(values.password)
+          ) {
+            errors.password = "Password must contain at least 1 symbol";
           }
 
           return errors;
         }}
-        onSubmit={(values, { setSubmitting, resetForm }) => {
-          console.log(values);
-          dispatch(logIn(values));
-          resetForm();
-          setSubmitting(false);
+        onSubmit={async (values, { resetForm }) => {
+
+          try {
+            const response = await dispatch(logIn(values));
+    
+            if (response.type === "auth/login/rejected") {
+              response.payload === "Wrong password" ?  setPasswordError(response.payload) :
+              setLoginError(response.payload);
+            } 
+          } catch (error) {
+            console.log(error);
+          }
         }}
       >
-        {({ errors, touched, handleSubmit, isSubmitting  }) => (
-          <FormStyles  onSubmit={handleSubmit}>
+        {({ errors, touched, handleSubmit, isSubmitting }) => (
+          <FormStyles onSubmit={handleSubmit}>
             <Email>
               <Label htmlFor="email">Email</Label>
               <FieldEmail
@@ -88,20 +109,20 @@ export const SignIn = () => {
                 placeholder="Email"
                 onFocus={() => setEmailFocused(true)}
                 onBlur={() => setEmailFocused(false)}
-                error={errors.email}
+                error={errors.email || loginError}
               />
-        {emailFocused ? (
+              {emailFocused ? (
                 <Notification type={"Verification"}>
                   <>
                     <img src={Loader} alt="Loader" />
                     Verification...
                   </>
                 </Notification>
-              ) : errors.email ? (
+              ) : errors.email || loginError ? (
                 <Notification type={"error"}>
                   <>
                     <img src={ErrorImg} alt="Error" />
-                    {errors.email}
+                    {errors.email || loginError}
                   </>
                 </Notification>
               ) : null}
@@ -118,14 +139,12 @@ export const SignIn = () => {
                   placeholder="Password"
                   onFocus={() => setPasswordFocused(true)}
                   onBlur={() => setPasswordFocused(false)}
-                  error={errors.password}
+                  error={errors.password || passwordError}
                 />
-                   <VisibilityBtn
+                <VisibilityBtn
                   type="button"
                   onClick={handlePasswordVisibility}
-                  hasError={
-                    errors.password ? "true" : "false"
-                  }
+                  hasError={errors.password || passwordError ? "true" : "false"}
                 >
                   {showPassword ? (
                     <MdOutlineVisibility
@@ -146,11 +165,11 @@ export const SignIn = () => {
                     Verification...
                   </>
                 </Notification>
-              ) : errors.password ? (
+              ) : errors.password || passwordError? (
                 <Notification type={"error"}>
                   <>
                     <img src={ErrorImg} alt="Error" />
-                    {errors.password}
+                    {errors.password || passwordError}
                   </>
                 </Notification>
               ) : null}
@@ -158,7 +177,7 @@ export const SignIn = () => {
 
             <ForgotLink to="/forgot-password">Forgot password?</ForgotLink>
 
-            <AuthBtn title={"Log in"} handleSubmit={handleSubmit}/>
+            <AuthBtn title={"Log in"} handleSubmit={handleSubmit} />
 
             <Divider
               sx={{

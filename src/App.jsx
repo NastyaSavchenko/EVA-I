@@ -7,6 +7,7 @@ import { Layout } from "./components/Layout/Layout";
 import { ErrorPage } from "./pages/Error/ErrorPage";
 import { ForgotPassword } from "./components/ForgotPassword/ForgotPassword";
 import { ResetPassword } from "./components/ResetPassword/ResetPassword";
+import { WaitList } from "./components/WaitList/WaitList";
 
 import { Login } from "./pages/Authentication/Login";
 import { Registr } from "./pages/Authentication/Registr";
@@ -24,6 +25,7 @@ function App() {
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="registration" element={<Registr />} />
+        <Route path="wait-list" element={<WaitList />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

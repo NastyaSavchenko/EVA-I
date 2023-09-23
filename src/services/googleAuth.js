@@ -10,5 +10,3 @@ export const googleAuth = () => {
     const response = api.get('auth/google');
     return response;
   };
-
- 

@@ -5,15 +5,15 @@ import { EmailVerification } from "../../components/EmailVerification/EmailVerif
 import { useState } from "react";
 
 export const Registr = () => {
-  const [isRegistrationSuccess, setIsRegistrationSuccess] = useState(false);
+  const [registrationStatus, setRegistrationStatus] = useState(null);
   const [userEmail, setUserEmail] = useState(null);
   return (
     <main>
       <div className="authContainer">
         <Logo />
-        {!isRegistrationSuccess ? (
+        {registrationStatus !== 201 ? (
           <Registration
-            setIsRegistrationSuccess={setIsRegistrationSuccess}
+            setRegistrationStatus={setRegistrationStatus}
             setUserEmail={setUserEmail}
           />
         ) : (

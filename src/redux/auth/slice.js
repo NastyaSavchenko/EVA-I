@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { logIn, logOut, register, forgotPassword, resetPassword, refreshUser, googleAuth } from './operations';
+import { logIn, logOut, register, forgotPassword, resetPassword, refreshUser, googleAuth, waitList } from './operations';
 
 const initialState = {
   user: { id: null, name: null },
@@ -17,8 +17,8 @@ const authSlice = createSlice({
     builder
       .addCase(register.fulfilled, (state, action) => {
         state.user.id = action.payload._id;
-        state.user.name = action.payload.name;
-        state.accessToken = action.payload.token;
+        state.user.name = action.payload.email;
+        state.accessToken = action.payload.accessToken;
         state.isLoggedIn = true;
       })
       .addCase(register.rejected, (state, action) => {
@@ -26,8 +26,9 @@ const authSlice = createSlice({
       })
       .addCase(logIn.fulfilled, (state, action) => {
         state.user.id = action.payload._id;
-        state.user.name = action.payload.name;
-        state.accessToken = action.payload.token;
+        state.user.name = action.payload.email;
+        state.accessToken = action.payload.accessToken;
+        state.isVerify = action.payload.verify;
         state.isLoggedIn = true;
       })
       .addCase(logIn.rejected, (state, action) => {
@@ -62,11 +63,17 @@ const authSlice = createSlice({
       })
       .addCase(googleAuth.fulfilled, (state, action) => {
         state.user.id = action.payload._id;
-        state.user.name = action.payload.name;
-        state.accessToken = action.payload.token;
+        state.user.name = action.payload.email;
+        state.accessToken = action.payload.accessToken;
         state.isLoggedIn = true;
       })
       .addCase(googleAuth.rejected, (state, action) => {
+        console.log(action.payload);
+      })
+      .addCase(waitList.fulfilled, (state, action) => {
+        console.log(action.payload);
+      })
+      .addCase(waitList.rejected, (state, action) => {
         console.log(action.payload);
       });
   },

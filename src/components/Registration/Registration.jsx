@@ -25,10 +25,11 @@ import Loader from "../../assets/images/loader_Input.svg";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { MdOutlineVisibility } from "react-icons/md";
 
-export const Registration = ({ setIsRegistrationSuccess, setUserEmail }) => {
+export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [emailFocused, setEmailFocused] = useState(false);
   const [passwordFocused, setPasswordFocused] = useState(false);
+  const [registrationError, setRegistrationError] = useState("");
   const dispatch = useDispatch();
 
   const handlePasswordVisibility = () => {
@@ -60,21 +61,37 @@ export const Registration = ({ setIsRegistrationSuccess, setUserEmail }) => {
 
           if (!values.password) {
             errors.password = "Password is required";
-          } else if (values.password.length < 6) {
-            errors.password = "Password must be at least 6 characters long";
+          } else if (values.password.length < 8) {
+            errors.password = "Password must be at least 8 characters long";
+          } else if (!/[A-Z]/.test(values.password)) {
+            errors.password =
+              "Password must contain at least 1 uppercase letter";
+          } else if (!/\d/.test(values.password)) {
+            errors.password = "Password must contain at least 1 number";
+          } else if (
+            !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\//-]/.test(values.password)
+          ) {
+            errors.password = "Password must contain at least 1 symbol";
           }
 
           return errors;
         }}
-        onSubmit={(values, { resetForm }) => {
-          console.log(values);
-          dispatch(register(values));
-          setIsRegistrationSuccess(true);
-          setUserEmail(values.email);
-          resetForm();
+        onSubmit={async (values, { resetForm }) => {
+          try {
+            const response = await dispatch(register(values));
+            if (response.type === 'auth/register/fulfilled') {
+              setRegistrationStatus(201);
+              setUserEmail(values.email);
+              resetForm();
+            } else if (response.type === 'auth/register/rejected') {
+              setRegistrationError(response.payload); 
+            }
+          } catch (error) {
+            console.log(error);
+          }
         }}
       >
-        {({ errors, touched, handleSubmit}) => (
+        {({ errors, touched, handleSubmit }) => (
           <FormStyles onSubmit={handleSubmit}>
             <Email>
               <Label htmlFor="email">Email</Label>
@@ -86,7 +103,7 @@ export const Registration = ({ setIsRegistrationSuccess, setUserEmail }) => {
                 placeholder="Email"
                 onFocus={() => setEmailFocused(true)}
                 onBlur={() => setEmailFocused(false)}
-                error={errors.email}
+                error={errors.email || registrationError}
               />
               {emailFocused ? (
                 <Notification type={"Verification"}>
@@ -95,11 +112,11 @@ export const Registration = ({ setIsRegistrationSuccess, setUserEmail }) => {
                     Verification...
                   </>
                 </Notification>
-              ) : errors.email ? (
+              ) : errors.email || registrationError ? (
                 <Notification type={"error"}>
                   <>
                     <img src={ErrorImg} alt="Error" />
-                    {errors.email}
+                    {errors.email || registrationError}
                   </>
                 </Notification>
               ) : null}
@@ -152,7 +169,7 @@ export const Registration = ({ setIsRegistrationSuccess, setUserEmail }) => {
               ) : null}
             </Password>
 
-            <AuthBtn title={"Continue"} handleSubmit={handleSubmit}/>
+            <AuthBtn title={"Continue"} handleSubmit={handleSubmit} />
 
             <PolicyText>
               <span>By clicking Continue, you agree with the </span>

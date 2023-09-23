@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const GoogleBtnStyles = styled.button`
+export const GoogleBtnStyles = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
