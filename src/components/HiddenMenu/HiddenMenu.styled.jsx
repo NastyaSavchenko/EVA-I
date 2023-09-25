@@ -67,7 +67,7 @@ export const CloseIcon = styled.img`
 export const MenuNav = styled.nav`
   display: flex;
   justify-content: center;
-  padding: 32px 80px;
+  padding: 32px 40px;
 `;
 
 export const NavList = styled.ul`
