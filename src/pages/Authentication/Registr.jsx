@@ -4,7 +4,7 @@ import { EmailVerification } from "../../components/EmailVerification/EmailVerif
 
 import { useState } from "react";
 
-export const Registr = () => {
+const Registr = () => {
   const [registrationStatus, setRegistrationStatus] = useState(null);
   const [userEmail, setUserEmail] = useState(null);
   return (
@@ -23,3 +23,5 @@ export const Registr = () => {
     </main>
   );
 };
+
+export default Registr;

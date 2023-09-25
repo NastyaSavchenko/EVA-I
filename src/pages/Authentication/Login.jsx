@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
-export const Login = () => {
+const Login = () => {
   const { isLoggedIn, isVerify } = useAuth();
   const navigate = useNavigate();
 
@@ -22,3 +22,5 @@ export const Login = () => {
     </main>
   );
 };
+
+export default Login;

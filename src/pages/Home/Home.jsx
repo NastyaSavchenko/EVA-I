@@ -6,7 +6,7 @@ import { Benefits } from "../../components/Benefits/Benefits.jsx";
 import { Hero } from "../../components/Hero/Hero.jsx";
 import { Сustomers } from "../../components/Сustomers/Сustomers.jsx";
 
-export const Home = () => {
+const Home = () => {
   return (
     <main>
       <Hero />
@@ -19,3 +19,5 @@ export const Home = () => {
     </main>
   );
 };
+
+export default Home;

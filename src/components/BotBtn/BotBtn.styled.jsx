@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-export const BotBtnStyles = styled.button`
+export const BotBtnStyles = styled(NavLink)`
   position: sticky;
   bottom: 40px;
   left: calc(100% - 160px);
@@ -29,6 +30,8 @@ export const BotContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2px;
+  width: 64px;
+  height: 60px;
 
   > img {
     display: flex;

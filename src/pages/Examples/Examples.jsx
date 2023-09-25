@@ -1,7 +1,7 @@
 import { Usage } from "../../components/Usage/Usage";
 import { TryBot } from "../../components/TryBot/TryBot";
 
-export const Examples = () => {
+const Examples = () => {
   return (
     <main>
       <Usage />
@@ -9,3 +9,5 @@ export const Examples = () => {
     </main>
   );
 };
+
+export default Examples;
