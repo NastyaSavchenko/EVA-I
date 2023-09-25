@@ -1,25 +1,40 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import mobile1 from "../../assets/images/mobile/Group581.svg";
+import mobile2 from "../../assets/images/mobile/Group583.svg";
+import mobile3 from "../../assets/images/mobile/Group585.svg";
+import tabletPortrait1 from "../../assets/images/tabletPortrait/Group581.svg";
+import tabletPortrait2 from "../../assets/images/tabletPortrait/Group583.svg";
+import tabletPortrait3 from "../../assets/images/tabletPortrait/Group585.svg";
+import tablet1 from "../../assets/images/tablet/Group581.svg";
+import tablet2 from "../../assets/images/tablet/Group583.svg";
+import tablet3 from "../../assets/images/tablet/Group585.svg";
+import desktopL1 from "../../assets/images/desktopL/Group581.svg";
+import desktopL2 from "../../assets/images/desktopL/Group583.svg";
+import desktopL3 from "../../assets/images/desktopL/Group585.svg";
+import desktopXL1 from "../../assets/images/desktopXL/Group581.svg";
+import desktopXL2 from "../../assets/images/desktopXL/Group583.svg";
+import desktopXL3 from "../../assets/images/desktopXL/Group585.svg";
 
 export const BenefitsStyles = styled.ul`
-display: flex;
-flex-direction: column;
-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  gap: 80px;
-}
+  @media (min-width: 768px) and (max-width: 1024px) {
+    gap: 80px;
+  }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
-  gap: 120px;
-}
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    gap: 120px;
+  }
 
-@media (min-width: 1440px) and (max-width: 1920px) {
-  gap: 120px;
-}
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    gap: 120px;
+  }
 
-@media (min-width: 1920px) {
-  gap: 120px;
-}
+  @media (min-width: 1920px) {
+    gap: 120px;
+  }
 `;
 
 export const BenefitCard = styled.li`
@@ -48,20 +63,20 @@ export const CardInfo = styled.div`
   /* width: 406px; */
   width: auto;
 
-@media (min-width: 1024px) and (max-width: 1440px) {
-  width: 515px;
-  order: 1;
-}
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    width: 515px;
+    order: 1;
+  }
 
-@media (min-width: 1440px) and (max-width: 1920px) {
-  width: 600px;
-  order: 1;
-}
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    width: 600px;
+    order: 1;
+  }
 
-@media (min-width: 1920px) {
-  width: 700px;
-  order: 1;
-}
+  @media (min-width: 1920px) {
+    width: 700px;
+    order: 1;
+  }
 `;
 
 export const CardInfoTitle = styled.h3`
@@ -159,22 +174,22 @@ export const CardImg1 = styled.div`
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('src/assets/images/mobile/Group 581.svg');
+  background-image: url(${mobile1});
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    background-image: url('src/assets/images/tabletPortrait/Group 581.svg');
+    background-image: url(${tabletPortrait1});
   }
 
   @media (min-width: 1024px) and (max-width: 1440px) {
-    background-image: url('src/assets/images/tablet/Group 581.svg');
+    background-image: url(${tablet1});
   }
 
   @media (min-width: 1440px) and (max-width: 1920px) {
-    background-image: url('src/assets/images/desktopL/Group 581.svg');
+    background-image: url(${desktopL1});
   }
 
   @media (min-width: 1920px) {
-    background-image: url('src/assets/images/desktopXL/Group 581.svg');
+    background-image: url(${desktopXL1});
   }
 `;
 
@@ -183,22 +198,22 @@ export const CardImg2 = styled.div`
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('src/assets/images/mobile/Group 583.svg');
+  background-image: url(${mobile2});
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    background-image: url('src/assets/images/tabletPortrait/Group 583.svg');
+    background-image: url(${tabletPortrait2});
   }
 
   @media (min-width: 1024px) and (max-width: 1440px) {
-    background-image: url('src/assets/images/tablet/Group 583.svg');
+    background-image: url(${tablet2});
   }
 
   @media (min-width: 1440px) and (max-width: 1920px) {
-    background-image: url('src/assets/images/desktopL/Group 583.svg');
+    background-image: url(${desktopL2});
   }
 
   @media (min-width: 1920px) {
-    background-image: url('src/assets/images/desktopXL/Group 583.svg');
+    background-image: url(${desktopXL2});
   }
 `;
 
@@ -207,21 +222,21 @@ export const CardImg3 = styled.div`
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('src/assets/images/mobile/Group 585.svg');
+  background-image: url(${mobile3});
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    background-image: url('src/assets/images/tabletPortrait/Group 585.svg');
+    background-image: url(${tabletPortrait3});
   }
 
   @media (min-width: 1024px) and (max-width: 1440px) {
-    background-image: url('src/assets/images/tablet/Group 585.svg');
+    background-image: url(${tablet3});
   }
 
   @media (min-width: 1440px) and (max-width: 1920px) {
-    background-image: url('src/assets/images/desktopL/Group 585.svg');
+    background-image: url(${desktopL3});
   }
 
   @media (min-width: 1920px) {
-    background-image: url('src/assets/images/desktopXL/Group 585.svg');
+    background-image: url(${desktopXL3});
   }
 `;
