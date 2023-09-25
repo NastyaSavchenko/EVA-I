@@ -7,10 +7,12 @@ export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => {
     setIsOpen(!isOpen);
+    document.documentElement.style.overflow = 'hidden';
   };
 
   const closeMenu = () => {
     setIsOpen(false);
+    document.documentElement.style.overflow = 'auto'
   };
 
   return (
