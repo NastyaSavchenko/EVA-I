@@ -1,4 +1,4 @@
-import{a as t,j as i,o,S as r,M as d}from"./index-370e4b7e.js";import{n as s}from"./index.browser-7e542916.js";import{T as p}from"./TryBot-4bc3d390.js";const n=t.h4`
+import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}from"./index.browser-7e542916.js";import{T as p}from"./TryBot-a5e77400.js";const n=t.h4`
   margin-bottom: 16px;
   font-size: 20px;
   font-weight: 600;
