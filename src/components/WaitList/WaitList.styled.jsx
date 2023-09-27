@@ -16,8 +16,25 @@ gap: 32px;
 
 export const Topper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1920px) {
+    flex-direction: row;
+  }
 `;
 
 export const Bottom = styled.div`
