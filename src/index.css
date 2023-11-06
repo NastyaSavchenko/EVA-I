@@ -205,3 +205,16 @@ section {
   clip-path: inset(50%);
   margin: -1px;
 }
+
+.language-button {
+  font-size: 24px;
+  line-height: 1.16;
+  padding: 4px 8px;
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+}
+
+.language-button-active {
+  color: var(--primary-pink);
+}

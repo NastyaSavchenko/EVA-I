@@ -15,6 +15,7 @@ import { ScrollButton } from "../ScrollButton/ScrollButton";
 import Google_Play from "../../assets/images/Google_Play_light.svg";
 import App_Store from "../../assets/images/App_Store_light.svg";
 import { ToTopLink } from "../ToTopLink/ToTopLink";
+import { FormattedMessage } from "react-intl";
 
 export const Footer = () => {
   return (
@@ -27,7 +28,9 @@ export const Footer = () => {
               <InfoContainer>
                 <LegalList>
                   <li>
-                    <ToTopLink to="/registration">Download Now</ToTopLink>
+                    <ToTopLink to="/registration">
+                      <FormattedMessage id="footer_download" />
+                    </ToTopLink>
                   </li>
                   {/* <li>
                   <a href="#license">License</a>
@@ -36,13 +39,19 @@ export const Footer = () => {
 
                 <LegalList>
                   <li>
-                    <ToTopLink to="/">About</ToTopLink>
+                    <ToTopLink to="/">
+                      <FormattedMessage id="footer_about" />
+                    </ToTopLink>
                   </li>
                   <li>
-                    <ToTopLink to="/examples">Features</ToTopLink>
+                    <ToTopLink to="/examples">
+                      <FormattedMessage id="footer_features" />
+                    </ToTopLink>
                   </li>
                   <li>
-                    <ToTopLink to="/pricing">Pricing</ToTopLink>
+                    <ToTopLink to="/pricing">
+                      <FormattedMessage id="footer_pricing" />
+                    </ToTopLink>
                   </li>
                   {/* <li>
                   <a href="#news">News</a>
@@ -58,7 +67,9 @@ export const Footer = () => {
             </div>
 
             <AppStores>
-              <StoreTitle>Get the App</StoreTitle>
+              <StoreTitle>
+                <FormattedMessage id="footer_get_app" />
+              </StoreTitle>
               <ul>
                 <StoreButtons>
                   <a href="/google" target="_blank">
@@ -75,7 +86,7 @@ export const Footer = () => {
           </InfoBlock>
 
           <Rights>
-            <RightsSpan>© 2023 All rights reserved.</RightsSpan>
+            <RightsSpan><FormattedMessage id="footer_rights" /></RightsSpan>
             <ScrollButton />
           </Rights>
         </div>

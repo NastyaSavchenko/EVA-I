@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 
 // import { Home } from "./pages/Home/Home";
 // import { Examples } from "./pages/Examples/Examples";
@@ -11,6 +11,9 @@ import ResetPasswordPage from "./pages/ResetPasswordPage/ResetPasswordPage";
 import WaitListPage from "./pages/WaitListPage/WaitListPage";
 import Login from "./pages/Authentication/Login";
 import Registr from "./pages/Authentication/Registr";
+import { LOCALES } from "./i18n/locales";
+import { IntlProvider } from "react-intl";
+import { messages } from "./i18n/messages";
 
 // const Login = lazy(() => import("./pages/Authentication/Login"));
 // const Registr = lazy(() => import("./pages/Authentication/Registr"));
@@ -28,21 +31,40 @@ const Pricing = lazy(() => import("./pages/Pricing/Pricing"));
 // const WaitListPage = lazy(() => import("./pages/WaitListPage/WaitListPage"));
 
 function App() {
+  //localstorage
+function getInitialLocal() {
+  const savedLocale = localStorage.getItem("locale");
+  return savedLocale || LOCALES.ENGLISH;
+};
+
+  const [currentLocale, setCurrentLocale] = useState(getInitialLocal());
+
+  const handleChange = (locale) => {
+    setCurrentLocale(locale);
+    localStorage.setItem('locale', locale);
+  };
+
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="examples" element={<Examples />} />
-          <Route path="pricing" element={<Pricing />} />
-        </Route>
-        <Route path="login" element={<Login />} />
-        <Route path="forgot-password" element={<ForgotPasswordPage />} />
-        <Route path="reset-password" element={<ResetPasswordPage />} />
-        <Route path="registration" element={<Registr />} />
-        <Route path="wait-list" element={<WaitListPage />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      <IntlProvider
+        messages={messages[currentLocale]}
+        locale={currentLocale}
+        defaultLocale={LOCALES.ENGLISH}
+      >
+        <Routes>
+          <Route path="/" element={<Layout currentLocale={currentLocale} handleChange={handleChange} />}>
+            <Route index element={<Home />} />
+            <Route path="examples" element={<Examples />} />
+            <Route path="pricing" element={<Pricing />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="reset-password" element={<ResetPasswordPage />} />
+          <Route path="registration" element={<Registr />} />
+          <Route path="wait-list" element={<WaitListPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </IntlProvider>
     </>
   );
 }
