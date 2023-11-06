@@ -1,15 +1,20 @@
 import { nanoid } from "nanoid";
 import { AiOutlineCheck } from "react-icons/ai";
 import { BenefitsItem, BenefitsText, Box } from "./PlanBenefits.styled";
+import { FormattedMessage } from "react-intl";
 
 export const PlanBenefits = ({ benefits }) => {
   return (
     <>
       {benefits.plan === "Pro" && (
-        <BenefitsText>Everything in Starter, plus</BenefitsText>
+        <BenefitsText>
+          <FormattedMessage id="plans_pro_plus"/>
+        </BenefitsText>
       )}
       {benefits.plan === "Premium" && (
-        <BenefitsText>Everything in Pro, plus</BenefitsText>
+        <BenefitsText>
+          <FormattedMessage id="plans_premium_plus"/>
+        </BenefitsText>
       )}
       {benefits.benefits.map((benefit) => {
         return (
@@ -20,7 +25,7 @@ export const PlanBenefits = ({ benefits }) => {
             />
             </Box>
 
-            {benefit}
+            <FormattedMessage id={benefit}/>
           </BenefitsItem>
         );
       })}
