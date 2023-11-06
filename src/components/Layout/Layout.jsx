@@ -5,10 +5,10 @@ import { Footer } from "../Footer/Footer";
 import { Loader } from "../Loader/Loader";
 import { BotBtn } from "../BotBtn/BotBtn";
 
-export const Layout = () => {
+export const Layout = ({currentLocale, handleChange}) => {
   return (
     <>
-      <AppBar />
+      <AppBar currentLocale={currentLocale} handleChange={handleChange} />
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>

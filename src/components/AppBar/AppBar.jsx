@@ -4,11 +4,11 @@ import { AuthNav } from "../AuthNav/AuthNav";
 import { Header } from "./AppBar.styled";
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
 
-export const AppBar = () => {
+export const AppBar = ({currentLocale, handleChange}) => {
   return (
     <Header>
       <Logo />
-      <MainNav />
+      <MainNav currentLocale={currentLocale} handleChange={handleChange} />
       <AuthNav />
       <BurgerMenu />
     </Header>
