@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 export const AuthNavStyle = styled.div`
   display: none;
-  align-items: center;
 
   @media (min-width: 768px) and (max-width: 1024px) {
     display: none;
@@ -15,10 +14,12 @@ export const AuthNavStyle = styled.div`
 
   @media (min-width: 1440px) and (max-width: 1920px) {
     display: flex;
+    align-items: center;
   }
 
   @media (min-width: 1920px) {
     display: flex;
+    align-items: center;
   }
 `;
 

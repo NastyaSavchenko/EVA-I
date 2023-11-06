@@ -1,4 +1,4 @@
-import{a as e,j as t,S as n}from"./index-370e4b7e.js";import{T as a}from"./TryBot-4bc3d390.js";const s=e.ul`
+import{a as e,j as t,S as n}from"./index-a3cedf8d.js";import{T as a}from"./TryBot-a5e77400.js";const s=e.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
