@@ -7,19 +7,28 @@ import {
   Link,
   ProblemBtn,
 } from "./Error.styled";
+import { FormattedMessage } from "react-intl";
 
 export const Error = () => {
   return (
     <Box>
-      <Title>Oops!</Title>
-      <ErrorTitle>404 - Page not found</ErrorTitle>
+      <Title><FormattedMessage id="error404" /></Title>
+      <ErrorTitle><FormattedMessage id="error404_notFound" /></ErrorTitle>
+
       <Text>
-        The page you are looking for might have been removed, had its name
-        changed or is <br /> temporary unavailable.
+        <FormattedMessage id="error404_page_del" />
+        <br />
+        <FormattedMessage id="error404_page_unavailable" />
       </Text>
+
       <LinkWrapp>
-        <Link to="/">Go to homepage</Link>
-        <ProblemBtn type="button">Report problem</ProblemBtn>
+        <Link to="/">
+          <FormattedMessage id="error404_go_home" />
+        </Link>
+
+        <ProblemBtn type="button">
+          <FormattedMessage id="error404_report_problem" />
+        </ProblemBtn>
       </LinkWrapp>
     </Box>
   );

@@ -25,6 +25,7 @@ import { Formik } from "formik";
 import { Logo } from "../Logo/Logo";
 import { Link } from "react-router-dom";
 import { resetPassword } from "../../redux/auth/operations";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export const ResetPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -37,6 +38,8 @@ export const ResetPassword = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
+  const intl = useIntl();
+
   return (
     <div>
       {!isCreated ? (
@@ -45,11 +48,10 @@ export const ResetPassword = () => {
             <Logo />
           </LogoContainer>
           <ResetStyles className="container">
-            <SectionTitle title={"Create new password"} />
+            <SectionTitle title={<FormattedMessage id="createNewPass" />} />
 
             <LinkText>
-              Password must contain at least 8 characters, including at least 1
-              uppercase letter, 1 number and 1 symbol
+            <FormattedMessage id="createNewPass_subtext" />
             </LinkText>
 
             <Formik
@@ -61,32 +63,33 @@ export const ResetPassword = () => {
                 const errors = {};
 
                 if (!values.password) {
-                  errors.password = "Password is required";
+                  errors.password = <FormattedMessage id="auth_pass_required" />;
                 } else if (values.password.length < 8) {
                   errors.password =
-                    "Password must be at least 8 characters long";
+                  <FormattedMessage id="auth_pass_width" />;
                 } else if (!/[A-Z]/.test(values.password)) {
                   errors.password =
-                    "Password must contain at least 1 uppercase letter";
+                  <FormattedMessage id="auth_pass_upperCase" />;
                 } else if (!/\d/.test(values.password)) {
-                  errors.password = "Password must contain at least 1 number";
+                  errors.password =
+                  <FormattedMessage id="auth_pass_containNumb" />;
                 } else if (
                   !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\//-]/.test(values.password)
                 ) {
-                  errors.password = "Password must contain at least 1 symbol";
+                  errors.password = <FormattedMessage id="auth_pass_length" />;
                 }
 
                 if (!values.confirmPassword) {
-                  errors.password = "Confirm Password is required";
+                  errors.password = <FormattedMessage id="createNewPass_confirm_required" />;
                 } else if (values.password !== values.confirmPassword) {
-                  errors.password = "Passwords do not match";
+                  errors.password = <FormattedMessage id="createNewPass_pass_notMatch" />;
                 }
 
                 return errors;
               }}
               onSubmit={(values, { setSubmitting, resetForm }) => {
                 if (values.password !== values.confirmPassword) {
-                  setConfirmPasswordError("Passwords do not match");
+                  setConfirmPasswordError(<FormattedMessage id="createNewPass_pass_notMatch" />);
                 } else {
                   setConfirmPasswordError("");
                   dispatch(resetPassword({ password: values.password }));
@@ -99,14 +102,16 @@ export const ResetPassword = () => {
               {({ errors, touched, handleSubmit, isSubmitting }) => (
                 <FormStyles onSubmit={handleSubmit}>
                   <Password>
-                    <Label htmlFor="password">Enter new password</Label>
+                    <Label htmlFor="password">
+                    <FormattedMessage id="createNewPass_enterNewPass" />
+                    </Label>
                     <PasswordWrapper>
                       <FieldPass
                         type={showPassword ? "text" : "password"}
                         id="password"
                         name="password"
                         autoComplete="current-password"
-                        placeholder="Password"
+                        placeholder={intl.formatMessage({id: "auth_password"}) }
                         onFocus={() => setPasswordFocused(true)}
                         onBlur={() => setPasswordFocused(false)}
                         error={errors.password}
@@ -132,7 +137,7 @@ export const ResetPassword = () => {
                       <Notification type={"Verification"}>
                         <>
                           <img src={Loader} alt="Loader" />
-                          Verification...
+                          <FormattedMessage id="auth_verification" />
                         </>
                       </Notification>
                     ) : errors.password ? (
@@ -147,7 +152,7 @@ export const ResetPassword = () => {
 
                   <Password>
                     <Label htmlFor="confirmPassword">
-                      Confirm new password
+                    <FormattedMessage id="createNewPass_confirmNewPass" />
                     </Label>
                     <PasswordWrapper>
                       <FieldPass
@@ -155,7 +160,7 @@ export const ResetPassword = () => {
                         id="confirmPassword"
                         name="confirmPassword"
                         autoComplete="current-password"
-                        placeholder="Password"
+                        placeholder={intl.formatMessage({id: "auth_password"}) }
                         onFocus={() => setPasswordFocused(true)}
                         onBlur={() => setPasswordFocused(false)}
                         error={errors.password}
@@ -181,7 +186,7 @@ export const ResetPassword = () => {
                       <Notification type={"Verification"}>
                         <>
                           <img src={Loader} alt="Loader" />
-                          Verification...
+                          <FormattedMessage id="auth_verification" />
                         </>
                       </Notification>
                     ) : errors.password ? (
@@ -195,7 +200,7 @@ export const ResetPassword = () => {
                   </Password>
 
                   <AuthBtn
-                    title={"Reset password"}
+                    title={<FormattedMessage id="createNewPass_reset" />}
                     handleSubmit={handleSubmit}
                   />
                 </FormStyles>
@@ -210,11 +215,11 @@ export const ResetPassword = () => {
           </LogoContainer>
 
           <ResetStyles>
-            <SectionTitle title={"Horay!"} />
-            <Subtitle>You have successfully created new password</Subtitle>
+            <SectionTitle title={<FormattedMessage id="createNewPass_horay" />} />
+            <Subtitle><FormattedMessage id="createNewPass_success" /></Subtitle>
 
             <Link to="/login">
-              <AuthBtn title={"Log in"} />
+              <AuthBtn title={<FormattedMessage id="auth_log_in" />} />
             </Link>
           </ResetStyles>
         </>

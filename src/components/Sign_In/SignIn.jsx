@@ -26,6 +26,7 @@ import { useDispatch } from "react-redux";
 import { Formik } from "formik";
 import Divider from "@mui/material/Divider";
 import { logIn } from "../../redux/auth/operations";
+import { FormattedMessage, useIntl } from "react-intl";
 
 
 export const SignIn = () => {
@@ -35,6 +36,8 @@ export const SignIn = () => {
   const [loginError, setLoginError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
+  const intl = useIntl();
+
   const dispatch = useDispatch();
 
   const handlePasswordVisibility = () => {
@@ -43,11 +46,11 @@ export const SignIn = () => {
 
   return (
     <div>
-      <SectionTitle title={"Sign in"} />
+      <SectionTitle title={<FormattedMessage id="signIn_main_title" />} />
 
       <LinkText>
-        Don’t have an account?{" "}
-        <Link to="/registration">&nbsp;Create an account</Link>
+      <FormattedMessage id="signIn_main_subtitle1" />{" "}
+        <Link to="/registration">&nbsp;<FormattedMessage id="signIn_main_subtitle2" /></Link>
       </LinkText>
 
       <Formik
@@ -59,26 +62,28 @@ export const SignIn = () => {
           const errors = {};
 
           if (!values.email) {
-            errors.email = "Email is required";
+            errors.email = <FormattedMessage id="auth_mail_required" />;
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
           ) {
-            errors.email = "Invalid email address";
+            errors.email = <FormattedMessage id="auth_mail_err" />;
           }
 
           if (!values.password) {
-            errors.password = "Password is required";
+            errors.password = <FormattedMessage id="auth_pass_required" />;
           } else if (values.password.length < 8) {
-            errors.password = "Password must be at least 8 characters long";
+            errors.password =
+            <FormattedMessage id="auth_pass_width" />;
           } else if (!/[A-Z]/.test(values.password)) {
             errors.password =
-              "Password must contain at least 1 uppercase letter";
+            <FormattedMessage id="auth_pass_upperCase" />;
           } else if (!/\d/.test(values.password)) {
-            errors.password = "Password must contain at least 1 number";
+            errors.password =
+            <FormattedMessage id="auth_pass_containNumb" />;
           } else if (
             !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\//-]/.test(values.password)
           ) {
-            errors.password = "Password must contain at least 1 symbol";
+            errors.password = <FormattedMessage id="auth_pass_length" />;
           }
 
           return errors;
@@ -100,13 +105,15 @@ export const SignIn = () => {
         {({ errors, touched, handleSubmit, isSubmitting }) => (
           <FormStyles onSubmit={handleSubmit}>
             <Email>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">
+                <FormattedMessage id="auth_email" />
+              </Label>
               <FieldEmail
                 type="email"
                 id="email"
                 name="email"
                 autoComplete="username"
-                placeholder="Email"
+                placeholder={intl.formatMessage({id: "auth_email"})}
                 onFocus={() => setEmailFocused(true)}
                 onBlur={() => setEmailFocused(false)}
                 error={errors.email || loginError}
@@ -115,7 +122,7 @@ export const SignIn = () => {
                 <Notification type={"Verification"}>
                   <>
                     <img src={Loader} alt="Loader" />
-                    Verification...
+                    <FormattedMessage id="auth_verification" />
                   </>
                 </Notification>
               ) : errors.email || loginError ? (
@@ -129,14 +136,16 @@ export const SignIn = () => {
             </Email>
 
             <Password>
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">
+                <FormattedMessage id="auth_password" />
+              </Label>
               <PasswordWrapper>
                 <FieldPass
                   type={showPassword ? "text" : "password"}
                   id="password"
                   name="password"
                   autoComplete="current-password"
-                  placeholder="Password"
+                  placeholder={intl.formatMessage({id: "auth_password"})}
                   onFocus={() => setPasswordFocused(true)}
                   onBlur={() => setPasswordFocused(false)}
                   error={errors.password || passwordError}
@@ -162,7 +171,7 @@ export const SignIn = () => {
                 <Notification type={"Verification"}>
                   <>
                     <img src={Loader} alt="Loader" />
-                    Verification...
+                    <FormattedMessage id="auth_verification" />
                   </>
                 </Notification>
               ) : errors.password || passwordError? (
@@ -175,9 +184,11 @@ export const SignIn = () => {
               ) : null}
             </Password>
 
-            <ForgotLink to="/forgot-password">Forgot password?</ForgotLink>
+            <ForgotLink to="/forgot-password">
+              <FormattedMessage id="forgotPass_forgot_password" />
+            </ForgotLink>
 
-            <AuthBtn title={"Log in"} handleSubmit={handleSubmit} />
+            <AuthBtn title={<FormattedMessage id="auth_log_in" />} handleSubmit={handleSubmit} />
 
             <Divider
               sx={{
@@ -196,9 +207,9 @@ export const SignIn = () => {
                 },
               }}
             >
-              or
+              <FormattedMessage id="auth_or" />
             </Divider>
-            <GoogleBtn title={"Sign in with Google"} />
+            <GoogleBtn title={<FormattedMessage id="signIn_Google" />} />
           </FormStyles>
         )}
       </Formik>

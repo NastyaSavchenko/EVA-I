@@ -6,24 +6,27 @@ import {
   Container,
 } from "./EmailVerification.styled";
 import { verificationCode } from "../../redux/auth/operations";
+import { FormattedMessage } from "react-intl";
 
 export const EmailVerification = ({ userEmail }) => {
-verificationCode();
+  verificationCode();
   return (
     <main>
       <Container>
-        <Title>Verify your account</Title>
+        <Title><FormattedMessage id="emailVarification_verify" /></Title>
         <EmailBox>
-          <p>We have sent a verification link to your email </p>
+          <p><FormattedMessage id="emailVarification_subtitle" /> </p>
           <span>{userEmail}</span>
         </EmailBox>
         <Box>
-          <p>If you can’t find the mail, please check your spam folder or</p>
-          <Link to="/reset-password">Resend</Link>
+          <p><FormattedMessage id="emailVarification_cant_find_letter" /></p>
+          <Link to="/reset-password">
+            <FormattedMessage id="forgotPass_resend" />
+          </Link>
         </Box>
         <Box>
-          <p>Already have an account?</p>
-          <Link to="/login">Sign in </Link>
+          <p><FormattedMessage id="register_already_have" /></p>
+          <Link to="/login"><FormattedMessage id="auth_log_in" /></Link>
         </Box>
       </Container>
     </main>
