@@ -24,6 +24,7 @@ import ErrorImg from "../../assets/images/error_input.svg";
 import Loader from "../../assets/images/loader_Input.svg";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { MdOutlineVisibility } from "react-icons/md";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -36,11 +37,14 @@ export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
+  const intl = useIntl();
+
   return (
     <div>
-      <SectionTitle title={"Create an account"} />
+      <SectionTitle title={<FormattedMessage id="register_main_title" />} />
       <LinkText>
-        Already have an account? <Link to="/login">&nbsp;Sign in</Link>
+        <FormattedMessage id="register_already_have" />
+        <Link to="/login">&nbsp;<FormattedMessage id="signIn_main_title" /></Link>
       </LinkText>
 
       <Formik
@@ -52,26 +56,28 @@ export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
           const errors = {};
 
           if (!values.email) {
-            errors.email = "Email is required";
+            errors.email = <FormattedMessage id="auth_mail_required" />;
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
           ) {
-            errors.email = "Invalid email address";
+            errors.email = <FormattedMessage id="auth_mail_err" />;
           }
 
           if (!values.password) {
-            errors.password = "Password is required";
+            errors.password = <FormattedMessage id="auth_pass_required" />;
           } else if (values.password.length < 8) {
-            errors.password = "Password must be at least 8 characters long";
+            errors.password =
+              <FormattedMessage id="auth_pass_width" />;
           } else if (!/[A-Z]/.test(values.password)) {
             errors.password =
-              "Password must contain at least 1 uppercase letter";
+              <FormattedMessage id="auth_pass_upperCase" />;
           } else if (!/\d/.test(values.password)) {
-            errors.password = "Password must contain at least 1 number";
+            errors.password =
+              <FormattedMessage id="auth_pass_containNumb" />;
           } else if (
             !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\//-]/.test(values.password)
           ) {
-            errors.password = "Password must contain at least 1 symbol";
+            errors.password = <FormattedMessage id="auth_pass_length" />;
           }
 
           return errors;
@@ -84,7 +90,7 @@ export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
               setUserEmail(values.email);
               resetForm();
             } else if (response.type === 'auth/register/rejected') {
-              setRegistrationError(response.payload); 
+              setRegistrationError(response.payload);
             }
           } catch (error) {
             console.log(error);
@@ -94,13 +100,15 @@ export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
         {({ errors, touched, handleSubmit }) => (
           <FormStyles onSubmit={handleSubmit}>
             <Email>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">
+                <FormattedMessage id="auth_email" />
+              </Label>
               <FieldEmail
                 type="email"
                 id="email"
                 name="email"
                 autoComplete="username"
-                placeholder="Email"
+                placeholder={intl.formatMessage({ id: "auth_email" })}
                 onFocus={() => setEmailFocused(true)}
                 onBlur={() => setEmailFocused(false)}
                 error={errors.email || registrationError}
@@ -109,7 +117,7 @@ export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
                 <Notification type={"Verification"}>
                   <>
                     <img src={Loader} alt="Loader" />
-                    Verification...
+                    <FormattedMessage id="auth_verification" />
                   </>
                 </Notification>
               ) : errors.email || registrationError ? (
@@ -123,14 +131,16 @@ export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
             </Email>
 
             <Password>
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">
+                <FormattedMessage id="auth_password" />
+              </Label>
               <PasswordWrapper>
                 <FieldPass
                   type={showPassword ? "text" : "password"}
                   id="password"
                   name="password"
                   autoComplete="current-password"
-                  placeholder="Password"
+                  placeholder={intl.formatMessage({ id: "auth_password" })}
                   onFocus={() => setPasswordFocused(true)}
                   onBlur={() => setPasswordFocused(false)}
                   error={errors.password}
@@ -156,7 +166,7 @@ export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
                 <Notification type={"Verification"}>
                   <>
                     <img src={Loader} alt="Loader" />
-                    Verification...
+                    <FormattedMessage id="auth_verification" />
                   </>
                 </Notification>
               ) : errors.password ? (
@@ -169,16 +179,16 @@ export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
               ) : null}
             </Password>
 
-            <AuthBtn title={"Continue"} handleSubmit={handleSubmit} />
+            <AuthBtn title={<FormattedMessage id="auth_continue" />} handleSubmit={handleSubmit} />
 
             <PolicyText>
-              <span>By clicking Continue, you agree with the </span>
+              <span><FormattedMessage id="register_by_clicking" />&nbsp;</span>
               <a href="https://reply.io/terms-of-service/" target="_blank">
-                Terms of Service
+                <FormattedMessage id="register_terms_of_service" />
               </a>
-              <span> and </span>
+              <span>&nbsp;<FormattedMessage id="register_and" />&nbsp;</span>
               <a href="https://reply.io/privacy-policy/" target="_blank">
-                Privacy Policy
+                <FormattedMessage id="register_privacy_policy" />
               </a>
             </PolicyText>
 
@@ -195,10 +205,10 @@ export const Registration = ({ setUserEmail, setRegistrationStatus }) => {
                 },
               }}
             >
-              or
+              <FormattedMessage id="auth_or" />
             </Divider>
 
-            <GoogleBtn title={"Continue with Google"} />
+            <GoogleBtn title={<FormattedMessage id="register_continue_Google" />} />
           </FormStyles>
         )}
       </Formik>

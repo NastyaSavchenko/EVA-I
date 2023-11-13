@@ -23,6 +23,7 @@ import { Logo } from "../Logo/Logo";
 import { Link } from "react-router-dom";
 import { waitList } from "../../redux/auth/operations";
 import { useDispatch } from "react-redux";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export const WaitList = () => {
   const [nameFocused, setNameFocused] = useState(false);
@@ -32,6 +33,8 @@ export const WaitList = () => {
   const [joindError, setJoindError] = useState("");
   const [isJoined, setIsJoined] = useState(false);
   const dispatch = useDispatch();
+
+  const intl = useIntl();
 
   return (
     <div>
@@ -43,13 +46,12 @@ export const WaitList = () => {
 
           <WaitListStyles className="container">
             <Topper>
-              <SectionTitle title={"Join the"} />
-              <TitleSpan>&nbsp;waiting list for EVA-I</TitleSpan>
+              <SectionTitle title={<FormattedMessage id="waitList_join_the" />} />
+              <TitleSpan>&nbsp;<FormattedMessage id="waitList_list" /></TitleSpan>
             </Topper>
 
             <p>
-              Leave your email and we will inform you as soon as EVA-I is ready
-              to try
+              <FormattedMessage id="waitList_subtext" />
             </p>
 
             <Formik
@@ -63,27 +65,28 @@ export const WaitList = () => {
                 const errors = {};
 
                 if (!values.name) {
-                  errors.name = "Name is required";
+                  errors.name = <FormattedMessage id="waitList_name_required" />;
                 }
 
                 if (!values.email) {
-                  errors.email = "Email is required";
+                  errors.email =
+                    <FormattedMessage id="auth_mail_required" />;
                 } else if (
                   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
                     values.email
                   )
                 ) {
-                  errors.email = "Invalid email address";
+                  errors.email = <FormattedMessage id="auth_mail_err" />;
                 }
 
                 if (!values.phoneNumber) {
-                  errors.phoneNumber = "Phone number is required";
+                  errors.phoneNumber = <FormattedMessage id="waitList_phone_required" />;
                 } else if (!/^[0-9+]*$/i.test(values.phoneNumber)) {
-                  errors.phoneNumber = "Invalid phone number";
+                  errors.phoneNumber = <FormattedMessage id="waitList_phone_invalid" />;
                 }
 
                 if (!values.socialLink) {
-                  errors.socialLink = "Social link is required";
+                  errors.socialLink = <FormattedMessage id="waitList_social_link_required" />;
                 }
 
                 return errors;
@@ -106,12 +109,14 @@ export const WaitList = () => {
               {({ errors, handleSubmit }) => (
                 <FormStyles onSubmit={handleSubmit}>
                   <Box>
-                    <Label htmlFor="name">Name Surname</Label>
+                    <Label htmlFor="name">
+                      <FormattedMessage id="waitList_name_surname" />
+                    </Label>
                     <FieldForm
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Name Surname"
+                      placeholder={intl.formatMessage({ id: "waitList_name_surname" })}
                       onFocus={() => setNameFocused(true)}
                       onBlur={() => setNameFocused(false)}
                       error={errors.name}
@@ -120,7 +125,7 @@ export const WaitList = () => {
                       <Notification type={"Verification"}>
                         <>
                           <img src={Loader} alt="Loader" />
-                          Verification...
+                          <FormattedMessage id="auth_verification" />
                         </>
                       </Notification>
                     ) : errors.name ? (
@@ -134,13 +139,15 @@ export const WaitList = () => {
                   </Box>
 
                   <Box>
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">
+                      <FormattedMessage id="auth_email" />
+                    </Label>
                     <FieldForm
                       type="email"
                       id="email"
                       name="email"
                       autoComplete="username"
-                      placeholder="Email"
+                      placeholder={intl.formatMessage({ id: "auth_email" })}
                       onFocus={() => setEmailFocused(true)}
                       onBlur={() => setEmailFocused(false)}
                       error={errors.email || joindError}
@@ -149,7 +156,7 @@ export const WaitList = () => {
                       <Notification type={"Verification"}>
                         <>
                           <img src={Loader} alt="Loader" />
-                          Verification...
+                          <FormattedMessage id="auth_verification" />
                         </>
                       </Notification>
                     ) : errors.email || joindError ? (
@@ -163,7 +170,10 @@ export const WaitList = () => {
                   </Box>
 
                   <Box>
-                    <Label htmlFor="phoneNumber">Phone Number (optional)</Label>
+                    <Label htmlFor="phoneNumber">
+                      <FormattedMessage id="waitList_phone_number" />
+                      (<FormattedMessage id="waitList_optional" />)
+                    </Label>
                     <FieldForm
                       id="phoneNumber"
                       name="phoneNumber"
@@ -176,7 +186,7 @@ export const WaitList = () => {
                       <Notification type={"Verification"}>
                         <>
                           <img src={Loader} alt="Loader" />
-                          Verification...
+                          <FormattedMessage id="auth_verification" />
                         </>
                       </Notification>
                     ) : errors.phoneNumber ? (
@@ -190,11 +200,14 @@ export const WaitList = () => {
                   </Box>
 
                   <Box>
-                    <Label htmlFor="socialLink">Social Link (optional)</Label>
+                    <Label htmlFor="socialLink">
+                    <FormattedMessage id="waitList_social_link" /> 
+                      (<FormattedMessage id="waitList_optional" />)
+                    </Label>
                     <FieldForm
                       id="socialLink"
                       name="socialLink"
-                      placeholder="Social Link/URL"
+                      placeholder={intl.formatMessage({ id: "waitList_social_link_URL" })}
                       onFocus={() => setSocialFocused(true)}
                       onBlur={() => setSocialFocused(false)}
                       error={errors.socialLink}
@@ -203,7 +216,7 @@ export const WaitList = () => {
                       <Notification type={"Verification"}>
                         <>
                           <img src={Loader} alt="Loader" />
-                          Verification...
+                          <FormattedMessage id="auth_verification" />
                         </>
                       </Notification>
                     ) : errors.socialLink ? (
@@ -216,23 +229,23 @@ export const WaitList = () => {
                     ) : null}
                   </Box>
                   <Bottom>
-                    <AuthBtn title={"Join"} handleSubmit={handleSubmit} />
+                    <AuthBtn title={<FormattedMessage id="waitList_join" />} handleSubmit={handleSubmit} />
                     <PolicyText>
                       <span>
-                        By clicking Continue, you agree with the&nbsp;{" "}
+                      <FormattedMessage id="register_by_clicking" />&nbsp;{" "}
                       </span>
                       <a
                         href="https://reply.io/terms-of-service/"
                         target="_blank"
                       >
-                        Terms of Service
+                        <FormattedMessage id="register_terms_of_service" />
                       </a>
-                      <span> &nbsp;and&nbsp; </span>
+                      <span> &nbsp;<FormattedMessage id="register_and" />&nbsp; </span>
                       <a
                         href="https://reply.io/privacy-policy/"
                         target="_blank"
                       >
-                        Privacy Policy
+                        <FormattedMessage id="register_privacy_policy" />
                       </a>
                     </PolicyText>
                   </Bottom>
@@ -248,13 +261,13 @@ export const WaitList = () => {
           </LogoContainer>
 
           <CongratsStyles>
-            <SectionTitle title={"Congrats!"} />
+            <SectionTitle title={<FormattedMessage id="waitList_congrats" />} />
             <Subtitle>
-              You have been successfully added to the waiting list
+            <FormattedMessage id="waitList_success_added" />
             </Subtitle>
 
             <Link to="/">
-              <AuthBtn title={"Back"} />
+              <AuthBtn title={<FormattedMessage id="waitList_back_btn" />} />
             </Link>
           </CongratsStyles>
         </>
