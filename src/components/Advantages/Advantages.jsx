@@ -9,6 +9,7 @@ import {
   CardText,
   AdvantagesTop,
 } from "./Advantages.styled";
+import { FormattedMessage } from "react-intl";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 import vector from "../../assets/icons/Vector.svg";
 import smile from "../../assets/icons/smile.svg";
@@ -19,24 +20,24 @@ const AdvantageData = [
     id: 1,
     icon: `${vector}`,
     alt: "icon-1",
-    title: "Efficiency Boost",
-    text: "Revolutionize workflows by automating intricate tasks, pavingthe way for unparalleled time and energy savings.",
+    title: <FormattedMessage id="advantage_title_1" />,
+    text: <FormattedMessage id="advantage_text_1" />,
   },
   {
     id: 2,
     icon: `${smile}`,
     alt: "icon-2",
-    title: "Customer Delight",
-    text: "Elevate customer interactions with personalized, prompt responses, cultivating enduring satisfaction and loyalty.",
+    title: <FormattedMessage id="advantage_title_2" />,
+    text: <FormattedMessage id="advantage_text_2" />,
   },
   {
     id: 3,
     icon: `${clock}`,
     alt: "icon-3",
-    title: "Time Saver",
-    text: "Get back precious hours by effortlessly entrusting routine tasks to your tireless AI assistant, unlocking a surge in productivity.",
-  }
-]
+    title: <FormattedMessage id="advantage_title_3" />,
+    text: <FormattedMessage id="advantage_text_3" />,
+  },
+];
 
 export const Advantages = () => {
   return (
@@ -44,23 +45,23 @@ export const Advantages = () => {
       <div className="container">
         <AdvantagesStyles>
           <AdvantagesTop>
-            <AdvantagesSpan>Supercharge</AdvantagesSpan>
-            <SectionTitle title={"Your Business"} />
+            <AdvantagesSpan>
+              <FormattedMessage id="advantage_title_span" />
+            </AdvantagesSpan>
+            <SectionTitle title={<FormattedMessage id="advantage_title" />} />
           </AdvantagesTop>
 
           <AdvantagesContainer>
             {AdvantageData.map((advantage) => (
               <AdvantagesCard key={advantage.id}>
-              <ImgContainer>
-                <CardImg src={advantage.icon} alt={advantage.alt} />
-              </ImgContainer>
+                <ImgContainer>
+                  <CardImg src={advantage.icon} alt={advantage.alt} />
+                </ImgContainer>
 
-              <CardTitle>{advantage.title}</CardTitle>
+                <CardTitle>{advantage.title}</CardTitle>
 
-              <CardText>
-                {advantage.text}
-              </CardText>
-            </AdvantagesCard>
+                <CardText>{advantage.text}</CardText>
+              </AdvantagesCard>
             ))}
           </AdvantagesContainer>
         </AdvantagesStyles>

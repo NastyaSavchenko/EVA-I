@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import { MainBtn } from "../MainBtn/MainBtn";
 import {
   BenefitCard,
@@ -15,59 +16,70 @@ export const Benefits = () => {
   return (
     <section>
       <div className="container">
-        <h2 className="hidden-title">Benefits</h2>
+        <h2 className="hidden-title">
+          <FormattedMessage id="Benefits_title" />
+        </h2>
         <BenefitsStyles>
           <BenefitCard>
-          <CardImgContainer>
+            <CardImgContainer>
               <CardImg1 />
-          </CardImgContainer>
+            </CardImgContainer>
 
             <CardInfo>
               <CardInfoTitle>
-                Boost Sales Through Chat Conversations
+                <FormattedMessage id="Benefits_CardInfoTitle_1" />
               </CardInfoTitle>
 
               <CardInfoText>
-                Transform chats into purchases with tailored product suggestions, real-time stock updates, and timely promotions. Showcase your offerings non-stop, across all platforms, and at any volume.
+                <FormattedMessage id="Benefits_CardInfoText_1" />
               </CardInfoText>
 
-              <MainBtn title={"Try for free"} styles={"outline"} />
+              <MainBtn
+                title={<FormattedMessage id="Benefits_MainBtn" />}
+                styles={"outline"}
+              />
             </CardInfo>
           </BenefitCard>
 
           <BenefitCard>
-            <CardImgContainer style={{order: 1}}>
-            <CardImg2 />
+            <CardImgContainer style={{ order: 1 }}>
+              <CardImg2 />
             </CardImgContainer>
 
-            <CardInfo style={{order: 2}}>
+            <CardInfo style={{ order: 2 }}>
               <CardInfoTitle>
-                Elevate Your Team with AI Assistance
+                <FormattedMessage id="Benefits_CardInfoTitle_2" />
               </CardInfoTitle>
 
               <CardInfoText>
-                Manage customer messages, enable order tracking, and automate FAQs. Let your team concentrate on important inquiries as EVA-I takes care of the rest.
+                <FormattedMessage id="Benefits_CardInfoText_2" />
               </CardInfoText>
 
-              <MainBtn title={"Try for free"} styles={"outline"} />
+              <MainBtn
+                title={<FormattedMessage id="Benefits_MainBtn" />}
+                styles={"outline"}
+              />
             </CardInfo>
           </BenefitCard>
 
           <BenefitCard>
-          <CardImgContainer>
+            <CardImgContainer>
               <CardImg3 />
             </CardImgContainer>
 
             <CardInfo>
               <CardInfoTitle>
-                Master Your Chatbot's Performance
+                <FormattedMessage id="Benefits_CardInfoTitle_3" />
               </CardInfoTitle>
 
               <CardInfoText>
-                You wield full authority over training, knowledge base, persona, and user experience, crafting a customized chatbot solution that's uniquely yours.
+                <FormattedMessage id="Benefits_CardInfoText_3" />
               </CardInfoText>
 
-              <MainBtn title={"Try for free"} styles={"outline"} />
+              <MainBtn
+                title={<FormattedMessage id="Benefits_MainBtn" />}
+                styles={"outline"}
+              />
             </CardInfo>
           </BenefitCard>
         </BenefitsStyles>
