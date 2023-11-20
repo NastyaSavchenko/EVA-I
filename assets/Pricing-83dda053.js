@@ -1,4 +1,4 @@
-import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}from"./index.browser-7e542916.js";import{T as p}from"./TryBot-a5e77400.js";const n=t.h4`
+import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";import{n as x}from"./index.browser-7e542916.js";import{T as o}from"./TryBot-fc406521.js";const a=t.h4`
   margin-bottom: 16px;
   font-size: 20px;
   font-weight: 600;
@@ -8,7 +8,7 @@ import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}fro
     font-size: 24px;
     line-height: 1.17;
   }
-`,x=t.li`
+`,l=t.li`
   display: flex;
   align-items: center;
   padding: 8px 0px;
@@ -30,7 +30,7 @@ import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}fro
   width: 32px;
   height: 32px;
   margin-right: 16px;
-`,l=({benefits:e})=>i.jsxs(i.Fragment,{children:[e.plan==="Pro"&&i.jsx(n,{children:"Everything in Starter, plus"}),e.plan==="Premium"&&i.jsx(n,{children:"Everything in Pro, plus"}),e.benefits.map(a=>i.jsxs(x,{children:[i.jsx(m,{children:i.jsx(o,{style:{width:"32px",height:"32px"}})}),a]},s()))]}),c=t.p`
+`,h=({benefits:n})=>i.jsxs(i.Fragment,{children:[n.plan==="plan_pro"&&i.jsx(a,{children:i.jsx(e,{id:"plans_pro_plus"})}),n.plan==="plan_premium"&&i.jsx(a,{children:i.jsx(e,{id:"plans_premium_plus"})}),n.benefits.map(r=>i.jsxs(l,{children:[i.jsx(m,{children:i.jsx(p,{style:{width:"32px",height:"32px"}})}),i.jsx(e,{id:r})]},x()))]}),c=t.p`
   text-align: center;
   font-size: 28px;
   line-height: 1.42;
@@ -52,7 +52,7 @@ import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}fro
   @media (min-width: 1920px) {
     margin-bottom: 80px;
   }
-`,h=t.ul`
+`,g=t.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +73,7 @@ import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}fro
   @media (min-width: 1920px) {
     flex-direction: row;
   }
-`,g=t.li`
+`,_=t.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,7 +87,7 @@ import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}fro
   width: 100%;
   max-width: 406px;
   }
-`,w=t.div`
+`,f=t.div`
   padding-bottom: 24px;
   margin-bottom: 24px;
   width: 100%;
@@ -95,7 +95,7 @@ import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}fro
   border-bottom: 1px solid transparent;
   border-image: var(--primary-gradient);
   border-image-slice: 1;
-`,f=t.p`
+`,w=t.p`
   font-size: 24px;
   font-weight: 600;
   line-height: 1.33;
@@ -105,7 +105,7 @@ import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}fro
   @media (min-width: 768px) {
     line-height: 1.25;
   }
-`,u=t.span`
+`,j=t.span`
   font-size: 40px;
   font-weight: 600;
   line-height: 1.25;
@@ -130,13 +130,13 @@ import{a as t,j as i,o,S as r,M as d}from"./index-a3cedf8d.js";import{n as s}fro
   @media (min-width: 1920px) {
     line-height: 2;
   }
-`,b=t.ul`
+`,u=t.ul`
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`,y=t.div`
+`,b=t.div`
   margin-top: auto;
   display: flex;
   justify-content: center;
-`,j=[{id:1,plan:"Starter",price:19,benefits:["No-Code builder","Access to templates","Basic analytics","Deploy on Web","Automate up to 30% of your workflow"]},{id:2,plan:"Pro",price:79,benefits:["Integrate with your systems & apps","Collaborate with your team members","Multilingual support","Advanced analytics","Automate up to 60% of your workflow"]},{id:3,plan:"Premium",price:199,benefits:["Advanced out of the box integrations","User Flow analytics","Intent based pop-ups","Proactive messaging campaigns","Automate up to 80% of your workflow"]}],P=()=>i.jsx("section",{children:i.jsxs("div",{className:"container",children:[i.jsx(r,{title:"Pricing & Plans"}),i.jsx(c,{children:"For personal, team, or client use, we've got the perfect package."}),i.jsx(h,{children:j.map(e=>i.jsxs(g,{tabIndex:0,children:[i.jsxs(w,{children:[i.jsx(f,{children:e.plan}),i.jsxs(u,{children:["$",e.price,"/mo"]})]}),i.jsx(b,{children:i.jsx(l,{benefits:e})}),i.jsx(y,{children:i.jsx(d,{title:"Get plan",styles:"pay"})})]},e.id))})]})}),z=()=>i.jsxs("main",{children:[i.jsx(P,{}),i.jsx(p,{})]});export{z as default};
+`,y=[{id:1,plan:"plan_starter",price:19,benefits:["plans_starter_1","plans_starter_2","plans_starter_3","plans_starter_4","plans_starter_5"]},{id:2,plan:"plan_pro",price:79,benefits:["plans_pro_1","plans_pro_2","plans_pro_3","plans_pro_4","plans_pro_5"]},{id:3,plan:"plan_premium",price:199,benefits:["plans_premium_1","plans_premium_2","plans_premium_3","plans_premium_4","plans_premium_5"]}],P=()=>i.jsx("section",{children:i.jsxs("div",{className:"container",children:[i.jsx(s,{title:i.jsx(e,{id:"pricing_main_title"})}),i.jsx(c,{children:i.jsx(e,{id:"pricing_main_subtitle"})}),i.jsx(g,{children:y.map(n=>i.jsxs(_,{tabIndex:0,children:[i.jsxs(f,{children:[i.jsx(w,{children:i.jsx(e,{id:n.plan})}),i.jsxs(j,{children:["$",n.price,"/",i.jsx(e,{id:"pricing_month"})]})]}),i.jsx(u,{children:i.jsx(h,{benefits:n})}),i.jsx(b,{children:i.jsx(d,{title:i.jsx(e,{id:"pricing_get_button"}),styles:"pay"})})]},n.id))})]})}),k=()=>i.jsxs("main",{children:[i.jsx(P,{}),i.jsx(o,{})]});export{k as default};
