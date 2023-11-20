@@ -44,6 +44,12 @@ function getInitialLocal() {
     localStorage.setItem('locale', locale);
   };
 
+  const handleChangeSelect = (e) => {
+    setCurrentLocale(e.target.value);
+    // storing locale in the localstorage
+    localStorage.setItem("locale", e.target.value);
+  };
+
   return (
     <>
       <IntlProvider
@@ -52,7 +58,7 @@ function getInitialLocal() {
         defaultLocale={LOCALES.ENGLISH}
       >
         <Routes>
-          <Route path="/" element={<Layout currentLocale={currentLocale} handleChange={handleChange} />}>
+          <Route path="/" element={<Layout currentLocale={currentLocale} handleChange={handleChange} onSelect={handleChangeSelect} />}>
             <Route index element={<Home />} />
             <Route path="examples" element={<Examples />} />
             <Route path="pricing" element={<Pricing />} />

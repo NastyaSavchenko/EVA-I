@@ -82,6 +82,9 @@ export const NavItem = styled.li`
   &:nth-of-type(3) {
     margin-bottom: 40px;
   }
+  &:last-child {
+    margin-top: 24px;
+  }
 `;
 
 export const NavLinkStyles = styled(NavLink)`

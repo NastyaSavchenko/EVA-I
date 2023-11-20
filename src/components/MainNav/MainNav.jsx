@@ -1,6 +1,6 @@
 import { FormattedMessage } from "react-intl";
 import { NavLinkStyles, NavList, NavItem } from "./MainNav.styled";
-import { Language_switcher } from "../Language_switcher/Language_switcher";
+// import { Language_switcher } from "../Language_switcher/Language_switcher";
 
 export const MainNav = ({ currentLocale, handleChange }) => {
   return (
