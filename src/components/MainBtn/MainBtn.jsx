@@ -1,13 +1,15 @@
 import { MainBrtStyles, MainBrtlink } from "./MainBtn.styled";
 
 export const MainBtn = ({ title, styles }) => {
-  if (title === "Get plan") {
-    return <MainBrtlink  to='/wait-list' $btntype={styles}>
-    {title}
-  </MainBrtlink>
+  if (title === "Get plan" || "Купити") {
+    return (
+      <MainBrtlink to="/wait-list" $btntype={styles}>
+        {title}
+      </MainBrtlink>
+    );
   }
-  return title === "Try for free" ? (
-    <MainBrtlink  to='/registration' $btntype={styles}>
+  return title === "Try for free" || "Спробувати" ? (
+    <MainBrtlink to="/registration" $btntype={styles}>
       {title}
     </MainBrtlink>
   ) : (

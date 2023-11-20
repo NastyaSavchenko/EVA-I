@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { MainBtn } from "../MainBtn/MainBtn";
 import { HeroStyles, HeroSubTitle, HeroTitle, Span } from "./Hero.styled";
 import NET from "vanta/dist/vanta.net.min";
+import { FormattedMessage } from "react-intl";
 
 export const Hero = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -39,13 +40,20 @@ export const Hero = () => {
       <div className="container container--hero">
         <HeroStyles>
           <HeroTitle>
-            Your
-            <HeroSubTitle> AI Companion </HeroSubTitle>
-            for Business
-            <Span>Success</Span>
+            <FormattedMessage id="hero_title_1" />
+
+            <HeroSubTitle>
+              {" "}
+              <FormattedMessage id="hero_subtitle" />
+            </HeroSubTitle>
+            <FormattedMessage id="hero_title_2" />
+            <Span>
+              {" "}
+              <FormattedMessage id="hero_span" />
+            </Span>
           </HeroTitle>
 
-          <MainBtn title={"Try for free"} />
+          <MainBtn title={<FormattedMessage id="hero_MainBtn" />} />
         </HeroStyles>
       </div>
     </section>
