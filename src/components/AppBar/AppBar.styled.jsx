@@ -10,3 +10,26 @@ export const Header = styled.header`
     padding: 32px 80px 16px;
   }
 `;
+
+export const LeftSide = styled.div`
+  display: flex;
+  gap: 10px;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    display: none;
+  }
+  
+  @media (min-width: 1920px) {
+    display: none;
+  }
+`;

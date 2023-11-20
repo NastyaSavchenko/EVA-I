@@ -1,5 +1,5 @@
 import { NavLinkStyles, NavList, NavItem } from "./MainNav.styled";
-import { Language_switcher } from "../Language_switcher/Language_switcher";
+// import { Language_switcher } from "../Language_switcher/Language_switcher";
 
 export const MainNav = ({currentLocale, handleChange}) => {
   return (
@@ -14,10 +14,9 @@ export const MainNav = ({currentLocale, handleChange}) => {
         <NavItem>
           <NavLinkStyles to="pricing">Pricing</NavLinkStyles>
         </NavItem>
-        {/* <Language_switcher currentLocale={currentLocale} handleChange={handleChange}/> */}
       </NavList>
 
-      <Language_switcher currentLocale={currentLocale} handleChange={handleChange}/>
+      {/* <Language_switcher currentLocale={currentLocale} handleChange={handleChange}/> */}
 
     </nav>
   );
