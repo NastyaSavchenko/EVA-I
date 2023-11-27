@@ -1,34 +1,41 @@
 import { nanoid } from "nanoid";
 import { AiOutlineCheck } from "react-icons/ai";
-import { BenefitsItem, BenefitsText, Box } from "./PlanBenefits.styled";
-import { FormattedMessage } from "react-intl";
+import { BenefitsItem, Box, PlanSpan } from "./PlanBenefits.styled";
+import { useIntl } from "react-intl";
 
 export const PlanBenefits = ({ benefits }) => {
+  const intl = useIntl();
+  const currentLocale = intl.locale;
+
+  const modifiedBenefits = benefits.benefits.map((benefit, index) => {
+    if (index === 0 && benefits.benefits.length >= 6) {
+      if (currentLocale === "ukr-UA") {
+        return (
+          <div>
+            {benefit} <PlanSpan>{benefits.span}</PlanSpan>
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            All <PlanSpan>{benefits.span}</PlanSpan> {benefit}
+          </div>
+        );
+      }
+    }
+    return  benefit;
+  });
+
   return (
     <>
-      {/* {benefits.plan === "plan_pro" && (
-        <BenefitsText>
-          <FormattedMessage id="plans_pro_plus"/>
-        </BenefitsText>
-      )} */}
-      {/* {benefits.plan === "plan_premium" && (
-        <BenefitsText>
-          <FormattedMessage id="plans_premium_plus"/>
-        </BenefitsText>
-      )} */}
-      {benefits.benefits.map((benefit) => {
-        return (
-          <BenefitsItem key={nanoid()}>
-            <Box>
-            <AiOutlineCheck
-              style={{ width: "32px", height: "32px" }}
-            />
-            </Box>
-
-            <FormattedMessage id={benefit}/>
-          </BenefitsItem>
-        );
-      })}
+      {modifiedBenefits.map((benefit) => (
+        <BenefitsItem key={nanoid()}>
+          <Box>
+            <AiOutlineCheck style={{ width: "32px", height: "32px" }} />
+          </Box>
+          {benefit}
+        </BenefitsItem>
+      ))}
     </>
   );
 };
