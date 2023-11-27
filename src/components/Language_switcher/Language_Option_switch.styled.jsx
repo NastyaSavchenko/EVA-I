@@ -49,8 +49,8 @@ export const Select = styled.select`
 
   background-color: var(--dark);
   border: none;
-  padding: 8px;
-  font-size: 14px;
+  padding: 5px;
+  font-size: 20px;
   cursor: pointer;
   color: var(--white);
   border-radius: 8px;

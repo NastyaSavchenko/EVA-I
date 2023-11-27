@@ -39,12 +39,20 @@ function getInitialLocal() {
 
   const [currentLocale, setCurrentLocale] = useState(getInitialLocal());
 
-  const handleChange = (locale) => {
+  const handleChange = (locale, e) => {
     setCurrentLocale(locale);
     localStorage.setItem('locale', locale);
+
+    setCurrentLocale(e.target.value);
+    // storing locale in the localstorage
+    localStorage.setItem("locale", e.target.value);
   };
 
-  const handleChangeSelect = (e) => {
+  const handleChangeSelect = (e, locale) => {
+
+    setCurrentLocale(locale);
+    localStorage.setItem('locale', locale);
+
     setCurrentLocale(e.target.value);
     // storing locale in the localstorage
     localStorage.setItem("locale", e.target.value);

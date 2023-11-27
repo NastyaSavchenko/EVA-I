@@ -18,10 +18,13 @@ export const BotBtnStyles = styled(NavLink)`
 
   background: var(--light-gradient);
 
+  transition: all 0.2s ease-in;
+
   &:hover,
   :focus {
     width: 68px;
     height: 68px;
+    padding-top: 1px;
   }
 `;
 
@@ -29,7 +32,7 @@ export const BotContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2px;
+  /* padding: 2px; */
   width: 64px;
   height: 60px;
 
@@ -38,6 +41,9 @@ export const BotContainer = styled.div`
     align-content: center;
     width: 52px;
     height: 52px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    transition: all 0.2s ease-in;
   }
 
   ${BotBtnStyles}:hover & > img, ${BotBtnStyles}:focus & > img {
