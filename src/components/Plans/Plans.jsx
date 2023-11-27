@@ -31,6 +31,7 @@ const pracingData = [
     plan: "plan_pro",
     price: 79,
     benefits: [
+      "plans_pro_0",
       "plans_pro_1",
       "plans_pro_2",
       "plans_pro_3",
@@ -43,6 +44,7 @@ const pracingData = [
     plan: "plan_premium",
     price: 199,
     benefits: [
+      "plans_premium_0",
       "plans_premium_1",
       "plans_premium_2",
       "plans_premium_3",
@@ -60,17 +62,21 @@ export const Plans = () => {
         <PricingInfo>
         <FormattedMessage id="pricing_main_subtitle"/>
         </PricingInfo>
+
         <PlansList>
           {pracingData.map((plan) => {
             return (
               <PlanItem key={plan.id} tabIndex={0}>
                 <PlanInfo>
                   <PlanName><FormattedMessage id={plan.plan} /></PlanName>
+
                   <PlanPrice>${plan.price}/<FormattedMessage id="pricing_month" /></PlanPrice>
                 </PlanInfo>
+
                 <PlanBenefitsList>
                   <PlanBenefits benefits={plan} />
                 </PlanBenefitsList>
+
                 <BtnBox>
                   <MainBtn title={<FormattedMessage id="pricing_get_button" />} styles={"pay"} />
                 </BtnBox>
