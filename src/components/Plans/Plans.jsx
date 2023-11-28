@@ -16,40 +16,43 @@ import { FormattedMessage } from "react-intl";
 const pracingData = [
   {
     id: 1,
-    plan: "plan_starter",
+    plan: <FormattedMessage id="plan_starter" />,
     price: 19,
+    span: '',
     benefits: [
-      "plans_starter_1",
-      "plans_starter_2",
-      "plans_starter_3",
-      "plans_starter_4",
-      "plans_starter_5",
+      <FormattedMessage id="plans_starter_1" />,
+      <FormattedMessage id="plans_starter_2" />,
+      <FormattedMessage id="plans_starter_3" />,
+      <FormattedMessage id="plans_starter_4" />,
+      <FormattedMessage id="plans_starter_5" />,
     ],
   },
   {
     id: 2,
-    plan: "plan_pro",
+    plan: <FormattedMessage id="plan_pro" />,
     price: 79,
+    span: <FormattedMessage id="plan_pro_span" />,
     benefits: [
-      "plans_pro_0",
-      "plans_pro_1",
-      "plans_pro_2",
-      "plans_pro_3",
-      "plans_pro_4",
-      "plans_pro_5",
+      <FormattedMessage id="plans_pro_0" />,
+      <FormattedMessage id="plans_pro_1" />,
+      <FormattedMessage id="plans_pro_2" />,
+      <FormattedMessage id="plans_pro_3" />,
+      <FormattedMessage id="plans_pro_4" />,
+      <FormattedMessage id="plans_pro_5" />,
     ],
   },
   {
     id: 3,
-    plan: "plan_premium",
+    plan: <FormattedMessage id="plan_premium" />,
     price: 199,
+    span: <FormattedMessage id="plan_premium_span" />,
     benefits: [
-      "plans_premium_0",
-      "plans_premium_1",
-      "plans_premium_2",
-      "plans_premium_3",
-      "plans_premium_4",
-      "plans_premium_5",
+      <FormattedMessage id="plans_premium_0" />,
+      <FormattedMessage id="plans_premium_1" />,
+      <FormattedMessage id="plans_premium_2" />,
+      <FormattedMessage id="plans_premium_3" />,
+      <FormattedMessage id="plans_premium_4" />,
+      <FormattedMessage id="plans_premium_5" />,
     ],
   },
 ];
@@ -58,9 +61,9 @@ export const Plans = () => {
   return (
     <section>
       <div className="container">
-        <SectionTitle title={<FormattedMessage id="pricing_main_title"/>} />
+        <SectionTitle title={<FormattedMessage id="pricing_main_title" />} />
         <PricingInfo>
-        <FormattedMessage id="pricing_main_subtitle"/>
+          <FormattedMessage id="pricing_main_subtitle" />
         </PricingInfo>
 
         <PlansList>
@@ -68,9 +71,11 @@ export const Plans = () => {
             return (
               <PlanItem key={plan.id} tabIndex={0}>
                 <PlanInfo>
-                  <PlanName><FormattedMessage id={plan.plan} /></PlanName>
+                  <PlanName>{plan.plan}</PlanName>
 
-                  <PlanPrice>${plan.price}/<FormattedMessage id="pricing_month" /></PlanPrice>
+                  <PlanPrice>
+                    ${plan.price}/<FormattedMessage id="pricing_month" />
+                  </PlanPrice>
                 </PlanInfo>
 
                 <PlanBenefitsList>
@@ -78,7 +83,10 @@ export const Plans = () => {
                 </PlanBenefitsList>
 
                 <BtnBox>
-                  <MainBtn title={<FormattedMessage id="pricing_get_button" />} styles={"pay"} />
+                  <MainBtn
+                    title={<FormattedMessage id="pricing_get_button" />}
+                    styles={"pay"}
+                  />
                 </BtnBox>
               </PlanItem>
             );

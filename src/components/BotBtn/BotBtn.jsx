@@ -1,5 +1,6 @@
 import { BotBtnStyles, BotContainer } from "./BotBtn.styled";
 import logo from "../../assets/logo/Logo.svg";
+import logoPath from "../../assets/icons/logo_infinity.svg";
 
 export const BotBtn = () => {
   return (
@@ -9,9 +10,9 @@ export const BotBtn = () => {
     //   </BotContainer>
     // </BotBtnStyles>
     <BotBtnStyles to="wait-list">
-    <BotContainer>
-      <img src={logo} alt="EVA-I logo" />
-    </BotContainer>
-  </BotBtnStyles>
+      <BotContainer>
+        <img src={logoPath} alt="EVA-I logo" />
+      </BotContainer>
+    </BotBtnStyles>
   );
 };

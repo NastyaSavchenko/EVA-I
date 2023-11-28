@@ -7,17 +7,21 @@ import { Language_Option_switch } from "../Language_switcher/Language_Option_swi
 import { Language_switcher } from "../Language_switcher/Language_switcher";
 
 export const AppBar = ({ currentLocale, handleChange, onSelect }) => {
+  console.log(currentLocale)
   return (
     <Header>
       <Logo />
       <MainNav />
-      <AuthNav currentLocale={currentLocale} handleChange={handleChange} onSelect={onSelect} />
+      <AuthNav
+        currentLocale={currentLocale}
+        handleChange={handleChange}
+        onSelect={onSelect}
+      />
 
       <LeftSide>
-        <Language_Option_switch onSelect={onSelect} />
+        <Language_Option_switch onSelect={onSelect}  currentLocale={currentLocale}/>
         <BurgerMenu />
       </LeftSide>
-
     </Header>
   );
 };

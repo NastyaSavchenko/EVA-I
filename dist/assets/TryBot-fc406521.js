@@ -1,4 +1,4 @@
-import{a as n,W as t,j as i,S as a,M as e}from"./index-a3cedf8d.js";const o=n.div`
+import{a as t,W as a,j as i,S as o,F as n,M as e}from"./index-96eabb60.js";const s=t.div`
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ import{a as n,W as t,j as i,S as a,M as e}from"./index-a3cedf8d.js";const o=n.di
   @media (min-width: 1920px) {
     margin-top: 40px;
   }
-`,r=t`
+`,d=a`
   0% {
     background-position: 0% 50%;
   }
@@ -28,8 +28,8 @@ import{a as n,W as t,j as i,S as a,M as e}from"./index-a3cedf8d.js";const o=n.di
   100% {
     background-position: 0% 50%;
   }
-`,d=n.div`
+`,r=t.div`
   background: var(--special-background);
   background-size: 200% 200%;
-  animation: ${r} 5s ease infinite;
-`,p=()=>i.jsx(d,{children:i.jsx("section",{id:"specialBackground",children:i.jsxs("div",{className:"container",children:[i.jsx(a,{title:"Ready to Experience the Future? Try for free today!"}),i.jsx(o,{children:i.jsx(e,{title:"Try for free"})})]})})});export{p as T};
+  animation: ${d} 5s ease infinite;
+`,p=()=>i.jsx(r,{children:i.jsx("section",{id:"specialBackground",children:i.jsxs("div",{className:"container",children:[i.jsx(o,{title:i.jsx(n,{id:"tryBot_main_title"})}),i.jsx(s,{children:i.jsx(e,{title:i.jsx(n,{id:"tryForFree_button"})})})]})})});export{p as T};

@@ -20,6 +20,14 @@ export const QuestionsList = styled.ul`
   }
 `;
 
+export const AccordionText = styled.p`
+  width: 200px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+`;
+
 export const QuestionsItem = styled.li`
   &:not(:last-child) {
     margin-bottom: 32px;

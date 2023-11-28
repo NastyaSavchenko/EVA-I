@@ -36,4 +36,9 @@ export const Box = styled.div`
   width: 32px;
   height: 32px;
   margin-right: 16px;
-`
+`;
+
+export const PlanSpan = styled.span`
+  font-weight: 900;
+  color: var(--main-white);
+`;

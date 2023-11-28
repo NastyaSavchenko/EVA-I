@@ -48,9 +48,8 @@ export const messages = {
     plan_starter: "Starter",
     plan_pro: "Pro",
     plan_premium: "Premium",
-
-    plans_pro_plus: "Everything in Starter, plus",
-    plans_premium_plus: "Everything in Pro, plus",
+    plan_pro_span: "STARTER",
+    plan_premium_span: "PRO",
 
     plans_starter_1: "No-Code builder",
     plans_starter_2: "Access to templates",
@@ -58,14 +57,14 @@ export const messages = {
     plans_starter_4: "Deploy on Web",
     plans_starter_5: "Automate up to 30% of your workflow",
 
-    plans_pro_0: "All STARTER plan features",
+    plans_pro_0: "plan features",
     plans_pro_1: "Integrate with your systems & apps ",
     plans_pro_2: "Collaborate with your team members",
     plans_pro_3: "Multilingual support",
     plans_pro_4: "Advanced analytics",
     plans_pro_5: "Automate up to 60% of your workflow",
 
-    plans_premium_0: "All PRO plan features",
+    plans_premium_0: "plan features",
     plans_premium_1: "Advanced out of the box integrations",
     plans_premium_2: "User Flow analytics",
     plans_premium_3: "Intent based pop-ups",
@@ -286,9 +285,8 @@ export const messages = {
     plan_starter: "Початковий",
     plan_pro: "Професійний",
     plan_premium: "Преміум",
-
-    plans_pro_plus: "Все в Початковому, плюс",
-    plans_premium_plus: "Все в Професійному, плюс",
+    plan_pro_span: "ПОЧАТКОВИЙ",
+    plan_premium_span: "ПРОФЕСІЙНИЙ",
 
     plans_starter_1: "Конструктор без коду",
     plans_starter_2: "Доступ до шаблонів",
@@ -296,14 +294,14 @@ export const messages = {
     plans_starter_4: "Розгортання в Інтернеті",
     plans_starter_5: "Автоматизація до 30% робочого процесу",
 
-    plans_pro_0: "Усі функції доступні в плані ПОЧАТКОВИЙ",
+    plans_pro_0: "Усі функції доступні в плані",
     plans_pro_1: "Інтеграція з системами та програмами",
     plans_pro_2: "Співпраця з членами команди",
     plans_pro_3: "Багатомовна підтримка",
     plans_pro_4: "Розширена аналітика",
     plans_pro_5: "Автоматизація до 60% робочого процесу",
 
-    plans_premium_0: "Усі функції доступні в плані ПРОФЕСІЙНИЙ", 
+    plans_premium_0: "Усі функції доступні в плані", 
     plans_premium_1: "Розширені стандартні інтеграції",
     plans_premium_2: "Аналітика шляху користувачів",
     plans_premium_3: "Спливаючі вікна на основі намірів",

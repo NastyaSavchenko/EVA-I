@@ -1,4 +1,4 @@
-import{a as e,j as t,S as n}from"./index-a3cedf8d.js";import{T as a}from"./TryBot-a5e77400.js";const s=e.ul`
+import{a as t,j as i,S as n,F as a}from"./index-96eabb60.js";import{T as d}from"./TryBot-fc406521.js";const s=t.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -35,7 +35,7 @@ import{a as e,j as t,S as n}from"./index-a3cedf8d.js";import{T as a}from"./TryBo
     margin-bottom: 60px;
     align-items: flex-start;
   }
-`,o=e.li`
+`,x=t.li`
   max-width: 515px;
   width: 100%;
   margin: 0 auto;
@@ -47,7 +47,7 @@ import{a as e,j as t,S as n}from"./index-a3cedf8d.js";import{T as a}from"./TryBo
   @media (min-width: 1024px) {
     flex-basis: calc((100% - 2 * 32px) / 2);
   }
-`,r=e.div`
+`;t.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,18 +59,18 @@ import{a as e,j as t,S as n}from"./index-a3cedf8d.js";import{T as a}from"./TryBo
 
   border-radius: 12px;
   background-color: var(--light-grey);
-`,d=e.div`
+`;const r=t.div`
   display: flex;
   flex-direction: column;
-`,x=e.div`
+`,p=t.div`
   display: flex;
   gap: 24px;
   margin-bottom: 16px;
-`,p=e.div`
+`,o=t.div`
   width: 56px;
   height: 56px;
   padding: 10px;
-  background-image: url(${i=>i.bg});
+  background-image: url(${e=>e.bg});
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -94,7 +94,7 @@ import{a as e,j as t,S as n}from"./index-a3cedf8d.js";import{T as a}from"./TryBo
     width: 80px;
     height: 80px;
   }
-`,m=e.p`
+`,m=t.p`
   display: flex;
   align-items: center;
   font-size: 20px;
@@ -120,7 +120,7 @@ import{a as e,j as t,S as n}from"./index-a3cedf8d.js";import{T as a}from"./TryBo
     font-size: 24px;
     line-height: 1.66;
   }
-`,l=e.p`
+`,g=t.p`
   font-size: 16px;
   line-height: 1.5;
-`,c="/EVA-I/assets/layers-52c5bff9.svg",h="/EVA-I/assets/layout-491ba207.svg",g="/EVA-I/assets/users-60162eca.svg",w="/EVA-I/assets/message-circle-edd728d0.svg",f=[{id:"Step 1",img:"/",alt:"PHOTO/VIDEO 1",icon:`${c}`,title:"Empower with relevant knowledge",text:"Simply upload files or import content via URLs to equip your chatbot with the information it needs to excel in its role."},{id:"Step 2",img:"/",alt:"PHOTO/VIDEO 2",icon:`${h}`,title:"Craft unique versions",text:"Customize chatbots for diverse roles, settings, and user experiences."},{id:"Step 3",img:"/",alt:"PHOTO/VIDEO 3",icon:`${g}`,title:"Spread across teams and customers",text:"Effortlessly integrate your chatbot with shareable links, inline embeds, or popup windows, granting smooth access to employees and customers alike."},{id:"Step 4",img:"/",alt:"PHOTO/VIDEO 4",icon:`${w}`,title:"Test EVA-I by yourself",text:"Interact with your chatbot by simply asking questions on the chat screen to instantly receive accurate and relevant answers."}],u=()=>t.jsx("section",{children:t.jsxs("div",{className:"container",children:[t.jsx(n,{title:"Check out how it works"}),t.jsx(s,{children:f.map(i=>t.jsxs(o,{children:[t.jsx(r,{children:t.jsx("img",{src:i.img,alt:i.alt})}),t.jsxs(d,{children:[t.jsxs(x,{children:[t.jsx(p,{bg:i.icon}),t.jsx(m,{children:i.title})]}),t.jsx(l,{children:i.text})]})]},i.id))})]})}),j=()=>t.jsxs("main",{children:[t.jsx(u,{}),t.jsx(a,{})]});export{j as default};
+`,l="/EVA-I/assets/layers-52c5bff9.svg",c="/EVA-I/assets/layout-491ba207.svg",h="/EVA-I/assets/users-60162eca.svg",w="/EVA-I/assets/message-circle-edd728d0.svg",f=[{id:"Step 1",img:"/",alt:"PHOTO/VIDEO 1",icon:`${l}`,key1:"usage_card1_title",key2:"usage_card1_text"},{id:"Step 2",img:"/",alt:"PHOTO/VIDEO 2",icon:`${c}`,key1:"usage_card2_title",key2:"usage_card2_text"},{id:"Step 3",img:"/",alt:"PHOTO/VIDEO 3",icon:`${h}`,key1:"usage_card3_title",key2:"usage_card3_text"},{id:"Step 4",img:"/",alt:"PHOTO/VIDEO 4",icon:`${w}`,key1:"usage_card4_title",key2:"usage_card4_text"}],u=()=>i.jsx("section",{children:i.jsxs("div",{className:"container",children:[i.jsx(n,{title:i.jsx(a,{id:"usage_main_title"})}),i.jsx(s,{children:f.map(e=>i.jsx(x,{children:i.jsxs(r,{children:[i.jsxs(p,{children:[i.jsx(o,{bg:e.icon}),i.jsx(m,{children:i.jsx(a,{id:e.key1})})]}),i.jsx(g,{children:i.jsx(a,{id:e.key2})})]})},e.id))})]})}),b=()=>i.jsxs("main",{children:[i.jsx(u,{}),i.jsx(d,{})]});export{b as default};

@@ -21,7 +21,6 @@ export const NavLinkStyles = styled(NavLink)`
 export const NavList = styled.ul`
   display: none;
   align-items: center;
-  margin-left: 245px;
 
   @media (min-width: 768px) and (max-width: 1024px) {
     display: none;
@@ -46,5 +45,4 @@ export const NavItem = styled.li`
   &:not(:last-child) {
     margin-right: 32px;
   }
-
 `;
