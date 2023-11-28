@@ -1,4 +1,4 @@
-import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";import{n as x}from"./index.browser-7e542916.js";import{T as o}from"./TryBot-fc406521.js";const a=t.h4`
+import{s as t,u as x,j as i,F as n,M as o}from"./index-3fb2b6ae.js";import{n as l}from"./index.browser-7e542916.js";import{A as m}from"./index.esm-1db26935.js";import{S as h}from"./SectionTitle-ff509550.js";import{T as c}from"./TryBot-04b2471e.js";t.h4`
   margin-bottom: 16px;
   font-size: 20px;
   font-weight: 600;
@@ -8,7 +8,7 @@ import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";impor
     font-size: 24px;
     line-height: 1.17;
   }
-`,l=t.li`
+`;const g=t.li`
   display: flex;
   align-items: center;
   padding: 8px 0px;
@@ -26,11 +26,14 @@ import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";impor
     font-size: 24px;
     line-height: 1.17;
   }
-`,m=t.div`
+`,j=t.div`
   width: 32px;
   height: 32px;
   margin-right: 16px;
-`,h=({benefits:n})=>i.jsxs(i.Fragment,{children:[n.plan==="plan_pro"&&i.jsx(a,{children:i.jsx(e,{id:"plans_pro_plus"})}),n.plan==="plan_premium"&&i.jsx(a,{children:i.jsx(e,{id:"plans_premium_plus"})}),n.benefits.map(r=>i.jsxs(l,{children:[i.jsx(m,{children:i.jsx(p,{style:{width:"32px",height:"32px"}})}),i.jsx(e,{id:r})]},x()))]}),c=t.p`
+`,s=t.span`
+  font-weight: 900;
+  color: var(--main-white);
+`,_=({benefits:e})=>{const r=x().locale,d=e.benefits.map((a,p)=>p===0&&e.benefits.length>=6?r==="ukr-UA"?i.jsxs("div",{children:[a," ",i.jsx(s,{children:e.span})]}):i.jsxs("div",{children:["All ",i.jsx(s,{children:e.span})," ",a]}):a);return i.jsx(i.Fragment,{children:d.map(a=>i.jsxs(g,{children:[i.jsx(j,{children:i.jsx(m,{style:{width:"32px",height:"32px"}})}),a]},l()))})},f=t.p`
   text-align: center;
   font-size: 28px;
   line-height: 1.42;
@@ -52,7 +55,7 @@ import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";impor
   @media (min-width: 1920px) {
     margin-bottom: 80px;
   }
-`,g=t.ul`
+`,w=t.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +76,7 @@ import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";impor
   @media (min-width: 1920px) {
     flex-direction: row;
   }
-`,_=t.li`
+`,u=t.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,7 +90,7 @@ import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";impor
   width: 100%;
   max-width: 406px;
   }
-`,f=t.div`
+`,b=t.div`
   padding-bottom: 24px;
   margin-bottom: 24px;
   width: 100%;
@@ -95,7 +98,7 @@ import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";impor
   border-bottom: 1px solid transparent;
   border-image: var(--primary-gradient);
   border-image-slice: 1;
-`,w=t.p`
+`,y=t.p`
   font-size: 24px;
   font-weight: 600;
   line-height: 1.33;
@@ -105,7 +108,7 @@ import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";impor
   @media (min-width: 768px) {
     line-height: 1.25;
   }
-`,j=t.span`
+`,P=t.span`
   font-size: 40px;
   font-weight: 600;
   line-height: 1.25;
@@ -130,13 +133,13 @@ import{a as t,j as i,F as e,o as p,S as s,M as d}from"./index-96eabb60.js";impor
   @media (min-width: 1920px) {
     line-height: 2;
   }
-`,u=t.ul`
+`,v=t.ul`
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`,b=t.div`
+`,B=t.div`
   margin-top: auto;
   display: flex;
   justify-content: center;
-`,y=[{id:1,plan:"plan_starter",price:19,benefits:["plans_starter_1","plans_starter_2","plans_starter_3","plans_starter_4","plans_starter_5"]},{id:2,plan:"plan_pro",price:79,benefits:["plans_pro_1","plans_pro_2","plans_pro_3","plans_pro_4","plans_pro_5"]},{id:3,plan:"plan_premium",price:199,benefits:["plans_premium_1","plans_premium_2","plans_premium_3","plans_premium_4","plans_premium_5"]}],P=()=>i.jsx("section",{children:i.jsxs("div",{className:"container",children:[i.jsx(s,{title:i.jsx(e,{id:"pricing_main_title"})}),i.jsx(c,{children:i.jsx(e,{id:"pricing_main_subtitle"})}),i.jsx(g,{children:y.map(n=>i.jsxs(_,{tabIndex:0,children:[i.jsxs(f,{children:[i.jsx(w,{children:i.jsx(e,{id:n.plan})}),i.jsxs(j,{children:["$",n.price,"/",i.jsx(e,{id:"pricing_month"})]})]}),i.jsx(u,{children:i.jsx(h,{benefits:n})}),i.jsx(b,{children:i.jsx(d,{title:i.jsx(e,{id:"pricing_get_button"}),styles:"pay"})})]},n.id))})]})}),k=()=>i.jsxs("main",{children:[i.jsx(P,{}),i.jsx(o,{})]});export{k as default};
+`,k=[{id:1,plan:i.jsx(n,{id:"plan_starter"}),price:19,span:"",benefits:[i.jsx(n,{id:"plans_starter_1"}),i.jsx(n,{id:"plans_starter_2"}),i.jsx(n,{id:"plans_starter_3"}),i.jsx(n,{id:"plans_starter_4"}),i.jsx(n,{id:"plans_starter_5"})]},{id:2,plan:i.jsx(n,{id:"plan_pro"}),price:79,span:i.jsx(n,{id:"plan_pro_span"}),benefits:[i.jsx(n,{id:"plans_pro_0"}),i.jsx(n,{id:"plans_pro_1"}),i.jsx(n,{id:"plans_pro_2"}),i.jsx(n,{id:"plans_pro_3"}),i.jsx(n,{id:"plans_pro_4"}),i.jsx(n,{id:"plans_pro_5"})]},{id:3,plan:i.jsx(n,{id:"plan_premium"}),price:199,span:i.jsx(n,{id:"plan_premium_span"}),benefits:[i.jsx(n,{id:"plans_premium_0"}),i.jsx(n,{id:"plans_premium_1"}),i.jsx(n,{id:"plans_premium_2"}),i.jsx(n,{id:"plans_premium_3"}),i.jsx(n,{id:"plans_premium_4"}),i.jsx(n,{id:"plans_premium_5"})]}],z=()=>i.jsx("section",{children:i.jsxs("div",{className:"container",children:[i.jsx(h,{title:i.jsx(n,{id:"pricing_main_title"})}),i.jsx(f,{children:i.jsx(n,{id:"pricing_main_subtitle"})}),i.jsx(w,{children:k.map(e=>i.jsxs(u,{tabIndex:0,children:[i.jsxs(b,{children:[i.jsx(y,{children:e.plan}),i.jsxs(P,{children:["$",e.price,"/",i.jsx(n,{id:"pricing_month"})]})]}),i.jsx(v,{children:i.jsx(_,{benefits:e})}),i.jsx(B,{children:i.jsx(o,{title:i.jsx(n,{id:"pricing_get_button"}),styles:"pay"})})]},e.id))})]})}),T=()=>i.jsxs("main",{children:[i.jsx(z,{}),i.jsx(c,{})]});export{T as default};

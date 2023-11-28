@@ -1,4 +1,4 @@
-import{a as t,W as a,j as i,S as o,F as n,M as e}from"./index-96eabb60.js";const s=t.div`
+import{s as n,W as a,j as i,F as t,M as o}from"./index-3fb2b6ae.js";import{S as s}from"./SectionTitle-ff509550.js";const e=n.div`
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -28,8 +28,8 @@ import{a as t,W as a,j as i,S as o,F as n,M as e}from"./index-96eabb60.js";const
   100% {
     background-position: 0% 50%;
   }
-`,r=t.div`
+`,r=n.div`
   background: var(--special-background);
   background-size: 200% 200%;
   animation: ${d} 5s ease infinite;
-`,p=()=>i.jsx(r,{children:i.jsx("section",{id:"specialBackground",children:i.jsxs("div",{className:"container",children:[i.jsx(o,{title:i.jsx(n,{id:"tryBot_main_title"})}),i.jsx(s,{children:i.jsx(e,{title:i.jsx(n,{id:"tryForFree_button"})})})]})})});export{p as T};
+`,m=()=>i.jsx(r,{children:i.jsx("section",{id:"specialBackground",children:i.jsxs("div",{className:"container",children:[i.jsx(s,{title:i.jsx(t,{id:"tryBot_main_title"})}),i.jsx(e,{children:i.jsx(o,{title:i.jsx(t,{id:"tryForFree_button"})})})]})})});export{m as T};
