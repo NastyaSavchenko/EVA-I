@@ -1,147 +1,16 @@
-import { BallTriangle } from "react-loader-spinner";
-import { LoaderWrapp } from "./Loader.styled";
-
+import { LoaderWrapp, Img } from "./Loader.styled";
+import logoPath from "../../assets/icons/logo_infinity.svg";
 export const Loader = () => {
   return (
     <LoaderWrapp>
-      <BallTriangle
-        height={100}
-        width={100}
-        radius={5}
-        color="#ed3984"
-        ariaLabel="ball-triangle-loading"
-        wrapperClass={{}}
-        wrapperStyle=""
-        visible={true}
-      />
+      {/* <svg id="eYbGat4o82k1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+<style><![CDATA[
+#eYbGat4o82k3_tr {animation: eYbGat4o82k3_tr__tr 3000ms linear infinite normal forwards}@keyframes eYbGat4o82k3_tr__tr { 0% {transform: translate(121px,139.822155px) rotate(1800deg)} 66.666667% {transform: translate(121px,139.822155px) rotate(2160deg)} 100% {transform: translate(121px,139.822155px) rotate(2160deg)}} #eYbGat4o82k3_ts {animation: eYbGat4o82k3_ts__ts 3000ms linear infinite normal forwards}@keyframes eYbGat4o82k3_ts__ts { 0% {transform: scale(1,1)} 66.666667% {transform: scale(1,1)} 83.333333% {transform: scale(0,0)} 100% {transform: scale(1,1)}} #eYbGat4o82k3 {animation: eYbGat4o82k3_c_o 3000ms linear infinite normal forwards}@keyframes eYbGat4o82k3_c_o { 0% {opacity: 1} 66.666667% {opacity: 1} 83.333333% {opacity: 0} 100% {opacity: 1}}
+]]></style>
+<defs><linearGradient id="eYbGat4o82k4-fill" x1="-14" y1="-0.3503" x2="13.562" y2="-0.3503" spreadMethod="pad" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0)"><stop id="eYbGat4o82k4-fill-0" offset="3.81226%" stop-color="#ed3984"/><stop id="eYbGat4o82k4-fill-1" offset="100%" stop-color="#7552c8"/></linearGradient><linearGradient id="eYbGat4o82k5-fill" x1="14.1523" y1="-14" x2="-14.401597" y2="13.5618" spreadMethod="pad" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0)"><stop id="eYbGat4o82k5-fill-0" offset="0%" stop-color="#ed3984"/><stop id="eYbGat4o82k5-fill-1" offset="100%" stop-color="#7552c8"/></linearGradient><linearGradient id="eYbGat4o82k6-fill" x1="13.973" y1="-14" x2="-13.597" y2="13.562" spreadMethod="pad" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0)"><stop id="eYbGat4o82k6-fill-0" offset="0%" stop-color="#ed3984"/><stop id="eYbGat4o82k6-fill-1" offset="100%" stop-color="#7552c8"/></linearGradient><linearGradient id="eYbGat4o82k7-fill" x1="-15.7911" y1="77.3488" x2="227.786" y2="236.254" spreadMethod="pad" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0)"><stop id="eYbGat4o82k7-fill-0" offset="0%" stop-color="#ed3984"/><stop id="eYbGat4o82k7-fill-1" offset="100%" stop-color="#7552c8"/></linearGradient></defs><g transform="translate(29 10.177845)"><g id="eYbGat4o82k3_tr" transform="translate(121,139.822155) rotate(1800)"><g id="eYbGat4o82k3_ts" transform="scale(1,1)"><g id="eYbGat4o82k3" transform="translate(-121,-139.82216)"><circle r="14" transform="matrix(0 1-1 0 121 15)" fill="url(#eYbGat4o82k4-fill)"/><circle r="14" transform="matrix(0 1 1 0 14 201)" fill="url(#eYbGat4o82k5-fill)"/><circle r="14" transform="matrix(0 1-1 0 228 201)" fill="url(#eYbGat4o82k6-fill)"/></g></g></g><path d="M120.5,51.6909c-7.522-.2267-13.582-6.2991-13.836-13.8508C57.1189,44.8426,19,87.6127,19,139.329c0,13.562,2.6215,26.509,7.383,38.357c1.8958-.935,4.028-1.459,6.2822-1.459c5.0349,0,9.4612,2.618,12.0039,6.573L120.5,139.019v-87.3281Zm.445,88.2261L45.1803,183.66c1.1248,2.051,1.7649,4.408,1.7649,6.916c0,4.952-2.4968,9.318-6.2945,11.897C59.3215,226.428,88.3716,241.822,121,241.822c32.628,0,61.679-15.394,80.35-39.349-3.798-2.579-6.295-6.945-6.295-11.898c0-2.348.561-4.565,1.557-6.521L120.75,140.255l.195-.338Zm88.39,36.309c-5.194,0-9.74,2.786-12.239,6.953L121.5,139.533v-87.8466c7.469-.2915,13.466-6.347,13.709-13.8641C184.816,44.7696,223,87.5685,223,139.329c0,13.562-2.621,26.509-7.383,38.357-1.896-.935-4.028-1.46-6.282-1.46Z" clip-rule="evenodd" fill="url(#eYbGat4o82k7-fill)" fill-rule="evenodd"/></g></svg>
+ */}
+
+      <Img src={logoPath} alt="Logo" />
     </LoaderWrapp>
   );
 };
-
-// import { Box, Сircle1, Сircle2, Сircle3, SvgWrapp } from "./Loader.styled";
-
-// export const Loader = () => {
-//   return (
-//     <main>
-//       <div
-//         style={{
-
-//           borderRadius: "50%",
-//           display: "flex",
-//           justifyContent: "center",
-//           alignItems: "center",
-//         }}
-//       >
-//         <Box>
-//           <Сircle1></Сircle1>
-//           <SvgWrapp>
-//             <svg
-//               width="300"
-//               height="300"
-//               viewBox="0 0 80 80"
-//               fill="none"
-//               xmlns="http://www.w3.org/2000/svg"
-//             >
-//               <g clip-path="url(#clip0_739_1288)">
-//                 <style>
-//                   {`
-//                 @keyframes rotateAnimation {
-//                   from {
-//                     transform: rotate(0deg);
-//                   }
-//                   to {
-//                     transform: rotate(360deg);
-//                   }
-//                 }
-
-//                 @keyframes fadeAndMoveAnimation {
-//                   0% {
-//                     opacity: 0;
-//                     transform: translate(0, 0);
-//                   }
-//                   100% {
-//                     opacity: 1;
-//                     transform: translate(0, -25px);
-//                   }
-//                 }
-//               `}
-//                 </style>
-
-//                 <path
-//                   id="4"
-//                   fill-rule="evenodd"
-//                   clip-rule="evenodd"
-//                   d="M39.9998 20.7975H39.9998C37.852 20.7975 36.0937 19.1215 35.9494 17C21.8506 18.98 11 31.1462 11 45.859C11 49.7918 11.7753 53.5426 13.1807 56.9656C13.6688 56.7568 14.2059 56.6412 14.7698 56.6412C16.2275 56.6412 17.5058 57.4132 18.2218 58.5724L39.9998 45.9378V20.7975ZM17.259 63.9442C18.2148 63.1978 18.8298 62.0316 18.8298 60.721C18.8298 60.0327 18.6602 59.3843 18.3607 58.8155L40.1377 46.1815L61.8063 58.7527C61.4858 59.3363 61.3034 60.0072 61.3034 60.721C61.3034 61.9938 61.8835 63.1305 62.7924 63.8786C57.4822 70.6515 49.2465 75 40 75C30.7833 75 22.5709 70.6796 17.259 63.9442ZM40.2788 20.788C42.2981 20.6503 43.9123 19.0289 44.0502 17C58.1491 18.9799 68.9999 31.1461 68.9999 45.859C68.9999 49.7739 68.2317 53.5085 66.8384 56.9188C66.3812 56.7396 65.8838 56.6412 65.3634 56.6412C63.9312 56.6412 62.6722 57.3865 61.9494 58.512L40.2788 45.9396V20.788Z"
-//                   fill="url(#paint3_linear_739_1288)"
-//                   //   style={{
-//                   //     animation: "fadeAndMoveAnimation 2s ease-in-out 5s forwards",
-//                   //   }}
-//                 />
-//               </g>
-//               <defs>
-//                 <linearGradient
-//                   id="paint0_linear_739_1288"
-//                   x1="36"
-//                   y1="9"
-//                   x2="44"
-//                   y2="9"
-//                   gradientUnits="userSpaceOnUse"
-//                 >
-//                   <stop stop-color="#ED3984" />
-//                   <stop offset="0.015625" stop-color="#ED3984" />
-//                   <stop offset="1" stop-color="#7452C8" />
-//                 </linearGradient>
-//                 <linearGradient
-//                   id="paint1_linear_739_1288"
-//                   x1="4"
-//                   y1="65"
-//                   x2="12"
-//                   y2="65"
-//                   gradientUnits="userSpaceOnUse"
-//                 >
-//                   <stop stop-color="#ED3984" />
-//                   <stop offset="0.015625" stop-color="#ED3984" />
-//                   <stop offset="1" stop-color="#7452C8" />
-//                 </linearGradient>
-//                 <linearGradient
-//                   id="paint2_linear_739_1288"
-//                   x1="0"
-//                   y1="4"
-//                   x2="8"
-//                   y2="4"
-//                   gradientUnits="userSpaceOnUse"
-//                 >
-//                   <stop stop-color="#ED3984" />
-//                   <stop offset="0.015625" stop-color="#ED3984" />
-//                   <stop offset="1" stop-color="#7452C8" />
-//                 </linearGradient>
-//                 <linearGradient
-//                   id="paint3_linear_739_1288"
-//                   x1="17.67"
-//                   y1="26.28"
-//                   x2="81.0974"
-//                   y2="40.7534"
-//                   gradientUnits="userSpaceOnUse"
-//                 >
-//                   <stop stop-color="#ED3984" />
-//                   <stop offset="1" stop-color="#7452C8" />
-//                 </linearGradient>
-//                 <clipPath id="clip0_739_1288">
-//                   <rect
-//                     width="72"
-//                     height="70"
-//                     fill="white"
-//                     transform="translate(4 5)"
-//                   />
-//                 </clipPath>
-//               </defs>
-//             </svg>
-//           </SvgWrapp>
-
-//           <Сircle2></Сircle2>
-//           <Сircle3></Сircle3>
-//         </Box>
-//       </div>
-//     </main>
-//   );
-// };

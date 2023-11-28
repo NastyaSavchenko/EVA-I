@@ -8,7 +8,7 @@ import { IconButton } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import { SectionTitle } from "../SectionTitle/SectionTitle";
-import { QuestionsList, QuestionsItem } from "./FAQ.styled";
+import { QuestionsList, QuestionsItem, AccordionText } from "./FAQ.styled";
 
 const CustomExpandIcon = () => {
   return (
@@ -112,6 +112,7 @@ export const FAQ = () => {
                     aria-controls={accordion.ariaControls}
                     id={accordion.id}
                     sx={{
+                      color: "#FFF",
                       padding: "16px 24px",
                       fontSize: "20px",
                       fontWeight: 600,
@@ -129,7 +130,7 @@ export const FAQ = () => {
                       },
                     }}
                   >
-                    <p>{accordion.title}</p>
+                    <AccordionText>{accordion.title}</AccordionText>
                   </AccordionSummary>
                   <AccordionDetails
                     sx={{

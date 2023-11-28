@@ -24,7 +24,7 @@ export const BotBtnStyles = styled(NavLink)`
   :focus {
     width: 68px;
     height: 68px;
-    padding-top: 1px;
+    /* padding-top: 1px; */
   }
 `;
 
@@ -34,15 +34,15 @@ export const BotContainer = styled.div`
   justify-content: center;
   /* padding: 2px; */
   width: 64px;
-  height: 60px;
+  height: 64px;
 
   > img {
     display: flex;
     align-content: center;
     width: 52px;
     height: 52px;
-    padding-bottom: 1px;
-    padding-right: 1px;
+    /* padding-bottom: 1px;
+    padding-right: 1px; */
     transition: all 0.2s ease-in;
   }
 
