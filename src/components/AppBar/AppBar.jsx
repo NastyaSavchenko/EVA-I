@@ -19,6 +19,7 @@ export const AppBar = ({ currentLocale, handleChange, onSelect }) => {
       />
 
       <LeftSide>
+        <Language_switcher handleChange={handleChange} currentLocale={currentLocale}/>
         <Language_Option_switch onSelect={onSelect}  currentLocale={currentLocale}/>
         <BurgerMenu />
       </LeftSide>
