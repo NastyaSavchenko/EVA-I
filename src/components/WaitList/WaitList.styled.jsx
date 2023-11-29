@@ -2,8 +2,14 @@ import styled from "styled-components";
 import { Form, Field } from "formik";
 
 export const LogoContainer = styled.div`
-  margin-top: 40px;
-  margin-left: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 20px 16px;
+
+  @media (min-width: 768px) {
+    padding: 32px 80px 16px;
+  }
 `;
 
 export const WaitListStyles = styled.div`
@@ -53,6 +59,12 @@ export const TitleSpan = styled.span`
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  @media (max-width: 385px) {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+  }
 `;
 
 export const FormStyles = styled(Form)`
