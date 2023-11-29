@@ -5,13 +5,11 @@ export const LangOPTSwitcher = styled.div`
   align-items: center;
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  display: flex;
-  align-items: center;
+  display: none;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
-  display: flex;
-  align-items: center;
+  display: none;
 }
 
 @media (min-width: 1440px) and (max-width: 1920px) {
@@ -58,7 +56,7 @@ export const Select = styled.select`
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(255, 0, 183, 0.5);
+    /* box-shadow: 0 0 5px rgba(255, 0, 183, 0.5); */
   }
 `;
 

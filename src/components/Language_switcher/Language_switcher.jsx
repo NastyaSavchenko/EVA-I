@@ -4,7 +4,7 @@ import { LangDivider, LangIcon, LangSwitcher } from "./Language_switcher.styled"
 
 export const Language_switcher = (props) => {
   return (
-    <LangSwitcher className="switcher">
+    <LangSwitcher className="switcher_button">
       <LangIcon src={lang} alt="" />{" "}
 
       <button
