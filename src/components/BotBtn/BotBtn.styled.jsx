@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const BotBtnStyles = styled(NavLink)`
-  position: sticky;
+  /* position: sticky; */
+  position: fixed;
   bottom: 40px;
   left: calc(100% - 160px);
 
@@ -19,6 +20,10 @@ export const BotBtnStyles = styled(NavLink)`
   background: var(--light-gradient);
 
   transition: all 0.2s ease-in;
+
+  @media (max-width: 768px) {
+    left: calc(100% - 100px);
+  }
 
   &:hover,
   :focus {
