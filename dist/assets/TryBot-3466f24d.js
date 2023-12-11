@@ -1,4 +1,4 @@
-import{s as n,W as a,j as i,F as t,M as o}from"./index-3fb2b6ae.js";import{S as s}from"./SectionTitle-ff509550.js";const e=n.div`
+import{s as n,W as a,j as i,F as t,M as o}from"./index-37e438cb.js";import{S as s}from"./SectionTitle-34e1c1ed.js";const e=n.div`
   margin-top: 20px;
   display: flex;
   justify-content: center;
