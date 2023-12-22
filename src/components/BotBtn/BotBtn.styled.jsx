@@ -17,7 +17,7 @@ export const BotBtnStyles = styled(NavLink)`
   border: none;
   z-index: 1;
 
-  background: var(--light-gradient);
+  background: var(--primary-gradient);
 
   transition: all 0.2s ease-in;
 
@@ -37,7 +37,7 @@ export const BotContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 2px; */
+  padding-bottom: 5px;
   width: 64px;
   height: 64px;
 
