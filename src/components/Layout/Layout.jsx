@@ -99,7 +99,7 @@ import { AppBar } from "../AppBar/AppBar";
 import { Footer } from "../Footer/Footer";
 import { Loader } from "../Loader/Loader";
 import { BotBtn } from "../BotBtn/BotBtn";
-import { ModalWindow } from "../ModalWindow/ModalWindow";
+// import { ModalWindow } from "../ModalWindow/ModalWindow";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export const Layout = ({ currentLocale, handleChange, onSelect }) => {
@@ -134,8 +134,7 @@ export const Layout = ({ currentLocale, handleChange, onSelect }) => {
 
   return (
     <>
-      {/* {showModal && <ModalWindow showModal={showModal} isOpacity={isOpacity} />} */}
-      <ModalWindow showModal={showModal} isOpacity={isOpacity} />
+      {/* <ModalWindow showModal={showModal} isOpacity={isOpacity} /> */}
       <AppBar currentLocale={currentLocale} handleChange={handleChange} onSelect={onSelect} />
       <Suspense fallback={<Loader />}>
         <Outlet />
