@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { Form, Field } from "formik";
 
 export const LinkText = styled.p`
-  margin-top: 8px;
-  margin-bottom: 40px;
+  margin-top: 32px;
+  /* margin-bottom: 40px; */
   text-align: center;
   font-size: 16px;
   line-height: 1.25;
