@@ -60,10 +60,28 @@ export const TitleSpan = styled.span`
   background-clip: text;
   color: transparent;
 
-  @media (max-width: 385px) {
-    display: flex;
-    justify-content: center;
+  @media (max-width: 768px) {
     font-size: 1.8rem;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 36px;
+    line-height: 1.55;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    font-size: 36px;
+    line-height: 1.55;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    font-size: 40px;
+    line-height: 2;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 40px;
   }
 `;
 
