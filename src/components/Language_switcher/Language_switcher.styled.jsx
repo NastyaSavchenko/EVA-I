@@ -6,21 +6,25 @@ export const LangSwitcher = styled.div`
 @media (min-width: 768px) and (max-width: 1024px) {
   display: flex;
   align-items: center;
+  margin-right: 8px;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
   display: flex;
   align-items: center;
+  margin-right: 8px;
 }
 
 @media (min-width: 1440px) and (max-width: 1920px) {
   display: flex;
   align-items: center;
+  margin-right: 8px;
 }
 
 @media (min-width: 1920px) {
   display: flex;
   align-items: center;
+  margin-right: 8px;
 }
 `;
 

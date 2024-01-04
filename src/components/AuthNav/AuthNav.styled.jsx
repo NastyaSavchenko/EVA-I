@@ -15,11 +15,13 @@ export const AuthNavStyle = styled.div`
   @media (min-width: 1440px) and (max-width: 1920px) {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   @media (min-width: 1920px) {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 `;
 

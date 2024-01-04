@@ -49,13 +49,6 @@ export const SignIn = () => {
     <div>
       <SectionTitle title={<FormattedMessage id="signIn_main_title" />} />
 
-      <LinkText>
-        <FormattedMessage id="signIn_main_subtitle1" />{" "}
-        <Link to="/registration">
-          &nbsp;
-          <FormattedMessage id="signIn_main_subtitle2" />
-        </Link>
-      </LinkText>
       {isLoading ? (
         <Loader />
       ) : (
@@ -223,6 +216,14 @@ export const SignIn = () => {
                 <FormattedMessage id="auth_or" />
               </Divider>
               <GoogleBtn title={<FormattedMessage id="signIn_Google" />} />
+              
+              <LinkText>
+                <FormattedMessage id="signIn_main_subtitle1" />{" "}
+                <Link to="/registration">
+                  &nbsp;
+                  <FormattedMessage id="signIn_main_subtitle2" />
+                </Link>
+              </LinkText>
             </FormStyles>
           )}
         </Formik>

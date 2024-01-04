@@ -10,9 +10,9 @@ export const AuthNav = ({ currentLocale, handleChange }) => {
         currentLocale={currentLocale}
         handleChange={handleChange}
       />
-      <LoginLink to="login">
+      {/* <LoginLink to="login">
         <FormattedMessage id="authLink_1" />
-      </LoginLink>
+      </LoginLink> */}
       <MainBtn title={<FormattedMessage id="auth_MainBtn" />} />
     </AuthNavStyle>
   );

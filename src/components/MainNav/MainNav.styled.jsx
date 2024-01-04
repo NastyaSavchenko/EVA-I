@@ -9,11 +9,10 @@ export const NavLinkStyles = styled(NavLink)`
   transition: color var(--anim);
 
   &.active {
-    color: var(--primary-pink);
+    color: var(--white);
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--primary-pink);
   }
 `;
