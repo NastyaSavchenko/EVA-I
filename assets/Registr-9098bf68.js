@@ -1,4 +1,4 @@
-import{s,f as b,r as n,u as L,j as r,F as i,k as V,v as z,i as P}from"./index-d1972e5b.js";import{F as B,a as _,u as M,b as A,L as j,E as f,A as C}from"./AuthBtn-fc23ee52.js";import{S as D}from"./SectionTitle-c39f0279.js";import{D as T,G as R}from"./GoogleBtn-203cbed8.js";import{a as I}from"./index.esm-43a27989.js";import{M as N}from"./index.esm-ff59643c.js";import"./styled-56f81a7c.js";const Z=s.p`
+import{s,f as b,r as n,u as L,j as r,F as i,k as V,v as z,i as P}from"./index-ef38ec5a.js";import{F as B,a as _,u as M,b as A,L as j,E as f,A as C}from"./AuthBtn-d921219c.js";import{S as D}from"./SectionTitle-3606d1b7.js";import{D as T,G as R}from"./GoogleBtn-6105dbe7.js";import{a as I}from"./index.esm-b704c665.js";import{M as N}from"./index.esm-2710f5a5.js";import"./styled-002004ec.js";const Z=s.p`
   margin-top: 8px;
   margin-bottom: 40px;
   text-align: center;
