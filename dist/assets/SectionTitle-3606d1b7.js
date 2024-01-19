@@ -1,4 +1,4 @@
-import{A as i,s as e,j as n}from"./index-d1972e5b.js";const a=i`
+import{A as i,s as e,j as n}from"./index-ef38ec5a.js";const a=i`
   @media (min-width: 768px) and (max-width: 1024px) {
     font-size: 36px;
     line-height: 1.55;
