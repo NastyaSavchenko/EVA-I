@@ -235,14 +235,14 @@ export const WaitList = () => {
                       <FormattedMessage id="register_by_clicking" />&nbsp;{" "}
                       </span>
                       <a
-                        href="https://reply.io/terms-of-service/"
+                        href="/"
                         target="_blank"
                       >
                         <FormattedMessage id="register_terms_of_service" />
                       </a>
                       <span> &nbsp;<FormattedMessage id="register_and" />&nbsp; </span>
                       <a
-                        href="https://reply.io/privacy-policy/"
+                        href="/"
                         target="_blank"
                       >
                         <FormattedMessage id="register_privacy_policy" />
